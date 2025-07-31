@@ -1,5 +1,5 @@
 export default {
-  spec_dir: "build",
+  spec_dir: "./testdemo/src/app",
   spec_files: [
     "**/*[sS]pec.?(m)js"
   ],
