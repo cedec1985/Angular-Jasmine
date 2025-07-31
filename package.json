@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "tsc",
     "watch": "ng build --watch --configuration development",
-    "test": "npm test",
+    "test": "ng test",
     "e2e": "ng e2e"
   },
   "prettier": {
