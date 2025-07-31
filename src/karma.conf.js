@@ -44,20 +44,14 @@ module.exports = function (/** @type {{ set: (arg0: {
         frameworks: ['jasmine', '@angular-devkit/build-angular'],
         // list of files / patterns to load in the browser
         files: [
-            'src/app/src/*spec.?(m)ts',
-            'src/app/src/*.spec.?(m)ts',
-            'src/app/src/*.ts',
-            'src/*spec.?(m)ts',
-            'src/*.spec.?(m)ts',
-            'src/*.ts'
+           "**/*.spec.ts",
+           "**/*.ts",
         ],
         // list of files / patterns to exclude
         exclude: [],
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
         preprocessors: {},
-
-        external: ['src/styles.css'],
         plugins: [
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
@@ -66,12 +60,6 @@ module.exports = function (/** @type {{ set: (arg0: {
             require('@angular-devkit/build-angular/plugins/karma'),
             require('karma-webpack'),
         ],
-        client :{jasmine: {
-            // you can add configuration options for Jasmine here
-            // the possible options are listed at http://jasmine.github.io/api/edge/Configuration.html
-            // for example, you can disable the random execution with `random: false`
-            random: false
-        }},
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
