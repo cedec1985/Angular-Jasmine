@@ -12,9 +12,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "external": ["@angular/core/testing","@angular/platform-browser/testing","src/styles.css"],
           "options": {
-            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -65,9 +63,7 @@
           "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
-          "main": "src/test.ts",
           "builder": "@angular-devkit/build-angular:karma",
-          "external": ["@angular/platform-browser/testing","@angular/platform-browser/testing","src/styles.css"],
           "options": {
             "polyfills": [
               "zone.js",
