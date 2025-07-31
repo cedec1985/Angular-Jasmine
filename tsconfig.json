@@ -13,7 +13,7 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "ES6",
+    "target": "ES2022",
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "allowJs": true,

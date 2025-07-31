@@ -14,7 +14,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
-    "target": "es6",
+    "target": "ES2022",
     "module": "ES2022",
     "moduleResolution": "node",
     "outDir": "./dist/out-tsc",
