@@ -12,6 +12,7 @@
       "architect": {
         "build": {
           "builder": "@angular/build:application",
+          "external": ["@angular/platform-browser","@angular/platform-browser-dynamic","src/styles.css"],
           "options": {
             "browser": "src/main.ts",
             "polyfills": [
@@ -25,6 +26,7 @@
               }
             ],
             "styles": [
+
               "src/styles.css"
             ]
           },
