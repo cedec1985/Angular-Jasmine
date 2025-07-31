@@ -1,8 +1,8 @@
 export default {
-  spec_dir: "./build",
+  spec_dir: "./dist/out-tsc",
   spec_files: [
-    "testdemo/src/app/*[sS]pec.?(m)js",
-    "testdemo/src/app/*.[sS]pec.?(m)js",
+    "./dist/out-tsc/**/*.[sS]pec.?(m)js",
+    "./dist/out-tsc/**/*[sS]pec.?(m)js",
   ],
   helpers: [
     "helpers/**/*.?(m)js"
