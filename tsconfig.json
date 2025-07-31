@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -23,7 +24,10 @@
     "sourceMap": true,
     "typeRoots": [
       "../node_modules/@types"
-  ]},
+  ],
+  "paths": {
+      "zone.js/node": ["node_modules/zone.js/dist/zone-node.js"]
+    }},
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
