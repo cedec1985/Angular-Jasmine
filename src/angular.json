@@ -14,7 +14,7 @@
           "builder": "@angular/build:application",
           "external": ["@angular/core/testing","@angular/platform-browser/testing","src/styles.css"],
           "options": {
-            "browser": "main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -27,7 +27,7 @@
             ],
 
             "styles": [
-              "styles.css"
+              "src/styles.css"
             ]
           },
           "configurations": {
@@ -87,7 +87,7 @@
 
 
             "styles": [
-              "styles.css"
+              "src/styles.css"
             ]
           }
         }
