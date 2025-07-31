@@ -47,9 +47,9 @@ module.exports = function (/** @type {{ set: (arg0: {
         files: [
            "testdemo/src/app/*[sS]pec.?(m)ts",
             "testdemo/src/app/*.[sS]pec.?(m)ts",
-            { pattern: 'testdemo/src/app/*.ts', watched: false },
-            { pattern: 'testdemo/src/app/*.js', watched: false },
-            { pattern: 'testdemo/src/app/*.mjs', watched: false }
+            { pattern: 'testdemo/src/app/*.ts', watched: true },
+            { pattern: 'testdemo/src/app/*.js', watched: true },
+            { pattern: 'testdemo/src/app/*.mjs', watched: true }
         ],
         // list of files / patterns to exclude
         exclude: [],
