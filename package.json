@@ -8,7 +8,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "jasmine",
     "e2e": "ng e2e"
-
   },
   "prettier": {
     "overrides": [
@@ -28,6 +27,7 @@
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
     "@angular/router": "^20.1.0",
+    "@testing-library/angular": "~14.4.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.8.1",
     "zone.js": "~0.15.0"
