@@ -14,7 +14,7 @@
           "builder": "@angular/build:application",
           "external": ["@angular/core/testing","@angular/platform-browser/testing","src/styles.css"],
           "options": {
-            "browser": "src/main.ts",
+            "browser": "main.ts",
             "polyfills": [
               "zone.js"
             ],
