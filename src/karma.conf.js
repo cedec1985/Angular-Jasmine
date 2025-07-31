@@ -45,11 +45,11 @@ module.exports = function (/** @type {{ set: (arg0: {
         frameworks: ['jasmine', '@angular-devkit/build-angular'],
         // list of files / patterns to load in the browser
         files: [
-           "testdemo/src/app/*[sS]pec.?(m)ts",
-            "testdemo/src/app/*.[sS]pec.?(m)ts",
-            { pattern: 'testdemo/src/app/*.ts', watched: true },
-            { pattern: 'testdemo/src/app/*.js', watched: true },
-            { pattern: 'testdemo/src/app/*.mjs', watched: true }
+           "./src/app/*[sS]pec.?(m)ts",
+            "./src/app/*.[sS]pec.?(m)ts",
+            { pattern: './src/app/*.ts', watched: true },
+            { pattern: './src/app/*.js', watched: true },
+            { pattern: './src/app/*.mjs', watched: true }
         ],
         // list of files / patterns to exclude
         exclude: [],
