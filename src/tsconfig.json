@@ -4,7 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
-    "baseUrl": "./",
+    "baseUrl": "",
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -16,6 +16,7 @@
     "forceConsistentCasingInFileNames": true,
     "target": "ES2022",
     "module": "ES2022",
+     "lib": ["ES2022", "dom"],
     "moduleResolution": "node",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

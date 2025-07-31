@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular/build:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "external": ["@angular/core/testing","@angular/platform-browser/testing","src/styles.css"],
           "options": {
             "browser": "src/main.ts",
@@ -50,7 +50,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular/build:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "testdemo:build:production"
@@ -62,10 +62,11 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "main": "src/test.ts",
+          "builder": "@angular-devkit/build-angular:karma",
           "external": ["@angular/platform-browser/testing","@angular/platform-browser/testing","src/styles.css"],
           "options": {
             "polyfills": [
