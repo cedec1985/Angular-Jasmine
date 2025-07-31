@@ -8,15 +8,16 @@ import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AppComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

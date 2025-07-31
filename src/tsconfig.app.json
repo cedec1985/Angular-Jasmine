@@ -5,7 +5,7 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [],
-    "module": "ES2022",
+    "module": "commonjs",
     "forceConsistentCasingInFileNames": true
   },
 
