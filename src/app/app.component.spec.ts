@@ -30,3 +30,7 @@ beforeEach(() => {
     expect(app).toBeTruthy();
   });
 });
+function expect(app: any) {
+  throw new Error('Function not implemented.');
+}
+
