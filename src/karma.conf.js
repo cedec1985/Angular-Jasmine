@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use strict";
 // Karma configuration
 // Generated on Fri Jul 25 2025 12:35:06 GMT+0200 (heure d’été d’Europe centrale)
