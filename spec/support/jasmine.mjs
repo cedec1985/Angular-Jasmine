@@ -3,7 +3,6 @@ export default {
   spec_files: [
     "testdemo/src/app/*[sS]pec.?(m)js",
     "testdemo/src/app/*.[sS]pec.?(m)js",
-
   ],
   helpers: [
     "helpers/**/*.?(m)js"
