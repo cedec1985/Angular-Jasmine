@@ -13,7 +13,7 @@
     "polyfills.ts"
   ],
   "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
+  "testdemo/src/app/*.spec.ts",
+  "testdemo/src/app/*.ts",
   ]
 }

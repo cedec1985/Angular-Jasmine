@@ -45,8 +45,8 @@ module.exports = function (/** @type {{ set: (arg0: {
         frameworks: ['jasmine', '@angular-devkit/build-angular'],
         // list of files / patterns to load in the browser
         files: [
-           "**/*.spec.ts",
-           "**/*.ts",
+           "testdemo/src/app/*[sS]pec.?(m)ts",
+            "testdemo/src/app/*.[sS]pec.?(m)ts",
         ],
         // list of files / patterns to exclude
         exclude: [],
