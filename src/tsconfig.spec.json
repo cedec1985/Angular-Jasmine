@@ -5,7 +5,7 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
      "types": [
-      "jasmine","node"
+      "jasmine"
     ]
   },
   "files": [
