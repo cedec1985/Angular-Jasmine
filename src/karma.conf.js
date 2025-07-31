@@ -57,7 +57,7 @@ module.exports = function (/** @type {{ set: (arg0: {
             require('karma-chrome-launcher'),
             require('karma-coverage'),
             require('karma-jasmine-html-reporter'),
-      //      require('@angular-devkit/build-angular/plugins/karma'),
+            require('@angular-devkit/build-angular/plugins/karma'),
             require('karma-webpack'),
         ],
         // test results reporter to use
