@@ -17,7 +17,7 @@
     "target": "es6",
     "module": "ES2022",
     "moduleResolution": "node",
-    "outDir": "../dist/out-tsc",
+    "outDir": "./build",
     "sourceMap": true,
 
     "allowJs": true,
