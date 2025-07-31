@@ -17,5 +17,8 @@
   "src/app/*.ts",
   "./dist/out-tsc/**/**/*.[sS]pec.?(m)js",
   "./dist/out-tsc/**/**/*[sS]pec.?(m)js",
+  "testdemo/src/*.spec.ts",
+  "testdemo/src/*spec.ts",
+  "testdemo/src/*.ts"
   ]
 }

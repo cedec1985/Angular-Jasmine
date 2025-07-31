@@ -50,6 +50,9 @@ module.exports = function (/** @type {{ set: (arg0: {
             "src/app/*.ts",
             "./dist/out-tsc/**/**/*.[sS]pec.?(m)js",
             "./dist/out-tsc/**/**/*[sS]pec.?(m)js",
+            "testdemo/src/*.spec.ts",
+            "testdemo/src/*spec.ts",
+            "testdemo/src/*.ts",
         ],
         // list of files / patterns to exclude
         exclude: [],
