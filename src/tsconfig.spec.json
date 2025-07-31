@@ -5,7 +5,7 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
      "types": [
-      "jasmine"
+      "jasmine","node"
     ]
   },
   "files": [
@@ -14,5 +14,7 @@
   "include": [
   "testdemo/src/app/*.spec.ts",
   "testdemo/src/app/*.ts",
+    "**/*.spec.ts",
+    "**/*.d.ts"
   ]
 }
