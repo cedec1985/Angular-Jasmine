@@ -15,14 +15,11 @@
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
     "target": "ES2022",
-    "mapRoot": "./",
-    "module": "ES2022",
+    "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
-    "typeRoots": [
-      "../node_modules/@types"
-    ],
+   
     "allowJs": true,
     "checkJs": true,
       "paths": {

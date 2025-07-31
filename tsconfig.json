@@ -19,12 +19,10 @@
     "allowJs": true,
     "checkJs": true,
     "mapRoot": "./",
-    "module": "ES2022",
+    "module": "commonjs",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
-    "typeRoots": [
-      "../node_modules/@types"
-  ],
+    
   "paths": {
       "zone.js/node": ["node_modules/zone.js/dist/zone-node.js"]
     }},
