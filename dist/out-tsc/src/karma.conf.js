@@ -1,0 +1,92 @@
+// @ts-nocheck
+"use strict";
+// Karma configuration
+// Generated on Fri Jul 25 2025 12:35:06 GMT+0200 (heure d’été d’Europe centrale)
+module.exports = function (/** @type {{ set: (arg0: {
+  // base path that will be used to resolve all patterns (eg. files, exclude)
+  basePath: string;
+  // frameworks to use
+  // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
+  frameworks: string[];
+  // list of files / patterns to load in the browser
+  files: string[];
+  // list of files / patterns to exclude
+  exclude: never[];
+  // preprocess matching files before serving them to the browser
+  // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
+  preprocessors: {}; plugins: any[];
+  // test results reporter to use
+  // possible values: 'dots', 'progress'
+  // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
+  reporters: string[];
+  // web server port
+  port: number;
+  // enable / disable colors in the output (reporters and logs)
+  colors: boolean;
+  // level of logging
+  // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+  logLevel: any;
+  // enable / disable watching file and executing tests whenever any file changes
+  autoWatch: boolean;
+  // start these browsers
+  // available browser launchers: https://www.npmjs.com/search?q=keywords:karma-launcher
+  browsers: string[];
+  // Continuous Integration mode
+  // if true, Karma captures browsers, runs the tests and exits
+  singleRun: boolean;
+  // Concurrency level
+  // how many browser instances should be started simultaneously
+  concurrency: number; restartOnFileChange: boolean; }) => void; LOG_INFO: any; }} */ config) {
+    config.set({
+        // base path that will be used to resolve all patterns (eg. files, exclude)
+        basePath: '',
+        // frameworks to use
+        // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
+        frameworks: ['jasmine', '@angular-devkit/build-angular'],
+        // list of files / patterns to load in the browser
+        files: [
+            "testdemo/src/app/*[sS]pec.?(m)ts",
+            "testdemo/src/app/*.[sS]pec.?(m)ts",
+            { pattern: 'testdemo/src/app/*.ts', watched: false },
+            { pattern: 'testdemo/src/app/*.js', watched: false },
+            { pattern: 'testdemo/src/app/*.mjs', watched: false }
+        ],
+        // list of files / patterns to exclude
+        exclude: [],
+        // preprocess matching files before serving them to the browser
+        // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
+        preprocessors: {},
+        plugins: [
+            require('karma-jasmine'),
+            require('karma-chrome-launcher'),
+            require('karma-coverage'),
+            require('karma-jasmine-html-reporter'),
+            require('@angular-devkit/build-angular/plugins/karma'),
+            require('karma-webpack'),
+        ],
+        // test results reporter to use
+        // possible values: 'dots', 'progress'
+        // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
+        reporters: ['progress', 'kjhtml'],
+        // web server port
+        port: 9876,
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
+        // level of logging
+        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+        logLevel: config.LOG_INFO,
+        // enable / disable watching file and executing tests whenever any file changes
+        autoWatch: true,
+        // start these browsers
+        // available browser launchers: https://www.npmjs.com/search?q=keywords:karma-launcher
+        browsers: ['Chrome'],
+        // Continuous Integration mode
+        // if true, Karma captures browsers, runs the tests and exits
+        singleRun: false,
+        // Concurrency level
+        // how many browser instances should be started simultaneously
+        concurrency: Infinity,
+        restartOnFileChange: true
+    });
+};
+//# sourceMappingURL=../../../src/karma.conf.js.map
