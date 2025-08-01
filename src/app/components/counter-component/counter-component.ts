@@ -20,10 +20,12 @@ ngOnChanges() : void{
 public increment() : void {
   this.count++;
   this.countChange.emit(this.count);
+  this.notify();
 }
 public decrement() : void {
     this.count--;
     this.countChange.emit(this.count);
+    this.notify();
 }
 public reset() : void {
     const count = parseInt(this.startCount.toString(),10);
