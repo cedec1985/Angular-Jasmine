@@ -49,13 +49,13 @@ module.exports = function(/** @type {{ set: (arg0: {
       'app/*spec.ts'
     ],
     Plugins: [
-      'karma-jasmine',
-      'karma-chrome-launcher',
-      'karma-jasmine-html-reporter',
-      'karma-coverage-istanbul-reporter',
-      '@angular-devkit/build-angular/plugins/karma',
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma'),
     ],
-    
+
     // list of files / patterns to exclude
     exclude: [
     ],
