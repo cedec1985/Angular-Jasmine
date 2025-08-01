@@ -4,6 +4,9 @@ export default {
       "app/*.?(m)js",
       "app/*.spec.?(m)js",
       "app/*spec.?(m)js",
+      "app/*.ts",
+      "app/*.spec.ts",
+      "app/**/*spec.ts",
   ],
   helpers: [
     "helpers/**/*.?(m)js"

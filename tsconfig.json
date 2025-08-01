@@ -19,6 +19,7 @@
     "moduleResolution": "node",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "esModuleInterop": true,
 
     "allowJs": true,
     "checkJs": true,
@@ -32,14 +33,5 @@
     "strictInputAccessModifiers": true,
     "typeCheckHostBindings": true,
     "strictTemplates": true
-  },
-  "files": [],
-  "references": [
-    {
-      "path": "./src/tsconfig.app.json"
-    },
-    {
-      "path": "./src/tsconfig.spec.json"
-    }
-  ]
+  }
 }

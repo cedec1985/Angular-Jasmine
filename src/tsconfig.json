@@ -19,6 +19,7 @@
     "moduleResolution": "node",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
+    "esModuleInterop": true,  
 
     "allowJs": true,
     "checkJs": true,

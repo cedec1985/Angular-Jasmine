@@ -5,9 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "tsc",
     "watch": "ng build --watch --configuration development",
-    "test": "jasmine",
+    "test": "npm test",
+    "build": "tsc",
     "e2e": "ng e2e"
   },
   "prettier": {
