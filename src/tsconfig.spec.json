@@ -17,6 +17,5 @@
     "app/*.ts",
     "app/*.spec.js",
     "app/*spec.js",
-    "app/*.js"
-, "app/add.ts", "app/add.spec.ts"  ]
+    "app/*.js"  ]
 }

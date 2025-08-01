@@ -44,9 +44,12 @@ module.exports = function(/** @type {{ set: (arg0: {
     frameworks: ['jasmine','@angular-devkit/build-angular'],
     // list of files / patterns to load in the browser
     files: [
-      'app/*.ts',
-      'app/*.spec.ts',
-      'app/*spec.ts'
+    'app/*.spec.ts',
+    'app/*spec.ts',
+    'app/*.ts',
+    'app/*.spec.js',
+    'app/*spec.js',
+    'app/*.js'
     ],
     Plugins: [
       require('karma-jasmine'),
@@ -55,6 +58,7 @@ module.exports = function(/** @type {{ set: (arg0: {
       require('@angular-devkit/build-angular/plugins/karma'),
       require('karma-coverage'),
       require('karma-webpack'),
+      require('karma-junit-reporter'),
     ],
 
     // list of files / patterns to exclude
@@ -67,7 +71,7 @@ module.exports = function(/** @type {{ set: (arg0: {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
-    reporters: ['progress','kjhtml'],
+    reporters: ['progress','kjhtml','junit'],
     // web server port
     port: 9876,
     // enable / disable colors in the output (reporters and logs)
@@ -85,6 +89,13 @@ module.exports = function(/** @type {{ set: (arg0: {
     singleRun: false,
     // Concurrency level
     // how many browser instances should be started simultaneously
-    concurrency: Infinity
+    concurrency: Infinity,
+
+    client: {
+  jasmine: {
+    failSpecWithNoExpectations: false,
+  },
+  clearContext: false // leave Jasmine Spec Runner output visible in browser
+},
   })
 }
