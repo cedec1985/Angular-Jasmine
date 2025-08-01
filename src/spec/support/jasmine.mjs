@@ -1,12 +1,10 @@
 export default {
-  spec_dir: "./dist/out-tsc",
+  spec_dir: ".dist/out-tsc",
   spec_files: [
-      "app/*.?(m)js",
-      "app/*.spec.?(m)js",
-      "app/*spec.?(m)js",
-      "app/*.ts",
-      "app/*.spec.ts",
-      "app/**/*spec.ts",
+    "app/*.?(m)js",
+    "app/*.ts",
+    "app/*.spec.?(m)js",
+    "app/*.spec.ts",
   ],
   helpers: [
     "helpers/**/*.?(m)js"
