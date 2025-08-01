@@ -42,7 +42,7 @@ module.exports = function (/** @type {{ set: (arg0: {
         basePath: '',
         // frameworks to use
         // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
-        frameworks: ['jasmine', '@angular-devkit/build-angular'],
+        frameworks: ['jasmine', '@angular-devkit/build-angular','requirejs'],
         // list of files / patterns to load in the browser
         files: [
              "./dist/out-tsc/**/**/*.[sS]pec.?(m)js",
