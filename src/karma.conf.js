@@ -1,7 +1,41 @@
 // Karma configuration
 // Generated on Fri Aug 01 2025 10:10:26 GMT+0200 (heure d’été d’Europe centrale)
 
-module.exports = function(config) {
+module.exports = function(/** @type {{ set: (arg0: {
+  // base path that will be used to resolve all patterns (eg. files, exclude)
+  basePath: string;
+  // frameworks to use
+  // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
+  frameworks: string[];
+  // list of files / patterns to load in the browser
+  files: string[]; Plugins: any[];
+  // list of files / patterns to exclude
+  exclude: never[];
+  // preprocess matching files before serving them to the browser
+  // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
+  preprocessors: {};
+  // test results reporter to use
+  // possible values: 'dots', 'progress'
+  // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
+  reporters: string[];
+  // web server port
+  port: number;
+  // enable / disable colors in the output (reporters and logs)
+  colors: boolean;
+  // level of logging
+  // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+  logLevel: any;
+  // enable / disable watching file and executing tests whenever any file changes
+  autoWatch: boolean;
+  // start these browsers
+  // available browser launchers: https://www.npmjs.com/search?q=keywords:karma-launcher
+  browsers: string[];
+  // Continuous Integration mode
+  // if true, Karma captures browsers, runs the tests and exits
+  singleRun: boolean;
+  // Concurrency level
+  // how many browser instances should be started simultaneously
+  concurrency: number; }) => void; LOG_INFO: any; }} */ config) {
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -15,13 +49,13 @@ module.exports = function(config) {
       'app/*spec.ts'
     ],
     Plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-coverage'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-webpack')
+      'karma-jasmine',
+      'karma-chrome-launcher',
+      'karma-jasmine-html-reporter',
+      'karma-coverage-istanbul-reporter',
+      '@angular-devkit/build-angular/plugins/karma',
     ],
+    
     // list of files / patterns to exclude
     exclude: [
     ],
