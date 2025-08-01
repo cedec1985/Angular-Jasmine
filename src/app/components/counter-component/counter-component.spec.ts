@@ -51,7 +51,7 @@ function expectCount(count: number): void {
     const value = 'not a number';
     setFieldValue(fixture, 'reset-input', value);
     click(fixture, 'reset-button');
-    fixture.detectChanges();
+    fixture.detectChanges();p
     expectCount(startCount);
     });
   it('emits countChanges events', () => {
