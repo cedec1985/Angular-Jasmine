@@ -1,5 +1,5 @@
 export default {
-  spec_dir: "./build",
+  spec_dir: "./dist/out-tsc",
   spec_files: [
       "app/*.?(m)js",
       "app/*.spec.?(m)js",

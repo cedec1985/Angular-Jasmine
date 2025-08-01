@@ -3,14 +3,14 @@
 {
   "extends": "../src/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./build",
+    "outDir": "../out-tsc/app",
     "types": [],
     "module": "ES2022",
     "forceConsistentCasingInFileNames": true
   },
 
   "exclude": [
-  //"**/*.spec.ts",
- // "test.ts",
+  "**/*.spec.ts",
+  "test.ts",
   ]
 }
