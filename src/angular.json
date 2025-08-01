@@ -71,6 +71,9 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "jasmine": {
+              "config": "spec/support/jasmine.mjs"
+            },
             "styles": [
               "src/styles.css"
             ]

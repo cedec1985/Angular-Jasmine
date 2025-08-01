@@ -45,14 +45,12 @@ module.exports = function (/** @type {{ set: (arg0: {
         frameworks: ['jasmine', '@angular-devkit/build-angular'],
         // list of files / patterns to load in the browser
         files: [
-            "src/app/*.spec.ts",
-            "src/app/*spec.ts",
-            "src/app/*.ts",
             "./dist/out-tsc/**/**/*.[sS]pec.?(m)js",
             "./dist/out-tsc/**/**/*[sS]pec.?(m)js",
-            "testdemo/src/*.spec.ts",
-            "testdemo/src/*spec.ts",
-            "testdemo/src/*.ts",
+            "./dist/out-tsc/**/**/*.js",
+            "testdemo/src/app/*.spec.ts",
+            "testdemo/src/app/*spec.ts",
+            "testdemo/src/app/*.ts",
         ],
         // list of files / patterns to exclude
         exclude: [],
@@ -66,6 +64,7 @@ module.exports = function (/** @type {{ set: (arg0: {
             require('karma-jasmine-html-reporter'),
             require('@angular-devkit/build-angular/plugins/karma'),
             require('karma-webpack'),
+            require('karma-requirejs'),
         ],
         client: {
             clearContext: false // leave Jasmine Spec Runner output visible in browser

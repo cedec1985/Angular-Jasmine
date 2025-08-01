@@ -12,13 +12,11 @@
     "test.ts"
   ],
   "include": [
-  "src/app/*.spec.ts",
-  "src/app/*spec.ts",
-  "src/app/*.ts",
-  "./dist/out-tsc/**/**/*.[sS]pec.?(m)js",
-  "./dist/out-tsc/**/**/*[sS]pec.?(m)js",
-  "testdemo/src/*.spec.ts",
-  "testdemo/src/*spec.ts",
-  "testdemo/src/*.ts"
+    "./dist/out-tsc/**/**/*.[sS]pec.?(m)js",
+            "./dist/out-tsc/**/**/*[sS]pec.?(m)js",
+            "./dist/out-tsc/**/**/*.js",
+            "testdemo/src/app/*.spec.ts",
+            "testdemo/src/app/*spec.ts",
+            "testdemo/src/app/*.ts",
   ]
 }
