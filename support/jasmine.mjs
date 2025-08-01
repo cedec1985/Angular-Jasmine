@@ -4,11 +4,7 @@ export default {
     "app/*.?(m)js",
     "app/*.ts",
     "app/*.spec.?(m)js",
-    "app/*.spec.ts",
-    "dist/out-tsc/**/*.?(m)js",
-    "dist/out-tsc/**/*.ts",
-    "dist/out-tsc/**/*.spec.?(m)js",
-    "dist/out-tsc/**/*.spec.ts",
+    "app/*.spec.ts"
   ],
   helpers: [
     "helpers/**/*.?(m)js"
