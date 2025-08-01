@@ -61,4 +61,6 @@
     "karma-typescript": "^5.5.4",
     "requirejs": "^2.3.7",
     "tslib": "^2.8.1",
- 
+    "typescript": "~5.8.2"
+  }
+}
