@@ -52,8 +52,9 @@ module.exports = function(/** @type {{ set: (arg0: {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma'),
+      require('karma-coverage'),
+      require('karma-webpack'),
     ],
 
     // list of files / patterns to exclude
