@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CounterComponent } from './counter-component';
 import {take,toArray} from 'rxjs/operators';
-import { click, expectText, setFieldValue } from './test-utils';
+import { click, expectText, setFieldValue } from 'test-utils';
 
 const startCount = 123;
 const newCount = 456;
