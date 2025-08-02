@@ -23,6 +23,7 @@
     "outDir": "./build",
     "allowJs": true,
     "checkJs": true,
+    "types": ["jasmine"],
       "paths": {
       "zone.js/node": ["node_modules/zone.js/dist/zone-node.js"]
     }
