@@ -59,6 +59,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "karma-junit-reporter": "^2.0.1",
     "karma-typescript": "^5.5.4",
+    "ng-test-utils": "^0.0.19",
     "requirejs": "^2.3.7",
     "test-utils": "^1.1.1",
     "tslib": "^2.8.1",
