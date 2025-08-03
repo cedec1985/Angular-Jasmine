@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { BrowserTestingModule } from '@angular/platform-browser/testing';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { routes } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    BrowserTestingModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
