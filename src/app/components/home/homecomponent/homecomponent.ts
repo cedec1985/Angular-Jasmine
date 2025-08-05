@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { CounterComponent } from 'app/components/counter/counter-component';
+
 
 @Component({
   selector: 'app-homecomponent',
-  imports: [],
+  imports: [CounterComponent],
   templateUrl: './homecomponent.html',
   styleUrl: './homecomponent.css'
 })

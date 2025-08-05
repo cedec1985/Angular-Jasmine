@@ -1,1 +1,11 @@
 <p>homecomponent works!</p>
+
+<section aria-label="Counter">
+  <app-counter-component [startCount]="5" (countChange)="handleCountChange($event)"></app-counter-component>
+  <app-counter-component [startCount]="8" (countChange)="handleCountChange($event)"></app-counter-component>
+  <app-counter-component [startCount]="10" (countChange)="handleCountChange($event)"></app-counter-component>
+</section>
+
+<section aria-label="Counter connected to the service">
+
+</section>

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
+import { Homecomponent } from './components/home/homecomponent/homecomponent';
+import { TodosService } from './services/todos-service';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,10 @@ import { BrowserTestingModule } from '@angular/platform-browser/testing';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    AppComponent
+    AppComponent,
+    Homecomponent
   ],
-  providers: [],
+  providers: [TodosService],
   bootstrap: []
 })
 export class AppModule { }
