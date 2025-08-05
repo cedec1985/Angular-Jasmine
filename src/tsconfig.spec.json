@@ -17,5 +17,5 @@
     "app/*.ts",
     "app/*.spec.js",
     "app/*spec.js",
-    "app/*.js"  ]
+    "app/*.js", "app/components/counter/counter-component.spec.ts", "app/components/counter/counter-component.ts", "app/components/counter/counter-component2.spec.ts", "app/services/todos-service.ts", "app/services/todos-service.spec.ts"  ]
 }

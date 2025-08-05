@@ -1,0 +1,25 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { click, expectText, setFieldValue } from '../../spec.helpers.component';
+import { Homecomponent } from './homecomponent';
+
+describe('Homecomponent', () => {
+  let component: Homecomponent;
+  let fixture: ComponentFixture<Homecomponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [Homecomponent]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(Homecomponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+

@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { CounterComponent } from './components/counter/counter-component';
 
-const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: 'counter-component', component: CounterComponent }
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
