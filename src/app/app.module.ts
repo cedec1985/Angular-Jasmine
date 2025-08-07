@@ -8,6 +8,7 @@ import { routes } from './app.routes';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
 import { Homecomponent } from './components/home/homecomponent/homecomponent';
 import { TodosService } from './services/todos-service';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TodosService } from './services/todos-service';
     HttpClientModule,
     RouterModule.forRoot(routes),
     AppComponent,
-    Homecomponent
+    Homecomponent,
+    StoreModule.forRoot({})
   ],
   providers: [TodosService],
   bootstrap: []
