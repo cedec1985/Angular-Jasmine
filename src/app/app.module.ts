@@ -1,14 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
-import { routes } from './app.routes';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
+import { RouterModule } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import { AppComponent } from './app.component';
+import { routes } from './app.routes';
 import { Homecomponent } from './components/home/homecomponent/homecomponent';
 import { TodosService } from './services/todos-service';
-import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [

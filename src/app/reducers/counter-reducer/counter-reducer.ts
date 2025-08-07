@@ -13,7 +13,7 @@ const reducer = createReducer(
 );
 
 export function counterReducer(
-  state: CounterState | undefined,
+  state: CounterState,
   action: Action,
 ): CounterState {
   return reducer(state, action);

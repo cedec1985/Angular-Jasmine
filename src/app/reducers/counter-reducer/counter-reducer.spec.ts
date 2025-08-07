@@ -1,18 +1,18 @@
+import { counterReducer } from '../../reducers/counter-reducer/counter-reducer';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CounterReducer } from './counter-reducer';
-
-describe('CounterReducer', () => {
-  let component: CounterReducer;
-  let fixture: ComponentFixture<CounterReducer>;
+describe('counterReducer', () => {
+  let component: typeof counterReducer;
+  let fixture: ComponentFixture<typeof counterReducer>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CounterReducer]
+      imports: [counterReducer],
+      declarations: [counterReducer]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CounterReducer);
+    fixture = TestBed.createComponent(this.counterReducer);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
