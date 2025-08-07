@@ -51,7 +51,6 @@
     "@types/karma-webpack": "^4.0.0",
     "@types/node": "^20.19.9",
     "@types/typescript": "^0.4.29",
-    "@types/ng-test-utils": "^0.0.19",
     "jasmine": "^5.9.0",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.0",
