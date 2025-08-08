@@ -12,5 +12,11 @@
   "exclude": [
   "**/*.spec.ts",
    "test.ts",
-  ]
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.html",
+    "src/**/*.css",
+    "src/**/*.scss"
+  ],
 }

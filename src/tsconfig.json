@@ -44,5 +44,11 @@
     {
       "path": "./tsconfig.spec.json"
     }
-  ]
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.html",
+    "src/**/*.css",
+    "src/**/*.scss"
+  ],
 }
