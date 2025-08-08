@@ -1,5 +1,5 @@
 export default {
-  spec_dir: "./../build",
+  spec_dir: "./build",
   spec_files: [
     '**/app/*.spec.ts',
     '**/app/*spec.ts',
