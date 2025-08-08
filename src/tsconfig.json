@@ -37,9 +37,9 @@
     "strictTemplates": true
   },
   "include": [
-    "**/*.ts",
-    "**/*.html",
-    "**/*.css",
-    "**/*.scss"
+    "app//**/*.ts",
+    "app/**/*.html",
+    "app/**/*.css",
+    "app/**/*.scss"
   ],
 }
