@@ -36,8 +36,8 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
-  "files": [ "*.ts",
-    "*.html",
-    "*.css",
+  "files": [ "src/*.ts",
+    "src/*.html",
+    "src/*.css",
     "src/*.scss"],
 }
