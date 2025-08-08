@@ -66,7 +66,7 @@ module.exports = function(/** @type {{ set: (arg0: {
     ],
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
-    preprocessors: {"**/*.ts": "karma-typescript" 
+    preprocessors: {"**/*.ts": "karma-typescript"
     },
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -89,7 +89,7 @@ module.exports = function(/** @type {{ set: (arg0: {
     singleRun: false,
     // Concurrency level
     // how many browser instances should be started simultaneously
-    concurrency: Infinity,
+    concurrency: Infinity, 
 
     client: {
   jasmine: {
