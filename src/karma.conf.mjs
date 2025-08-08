@@ -89,13 +89,7 @@ module.exports = function(/** @type {{ set: (arg0: {
     singleRun: false,
     // Concurrency level
     // how many browser instances should be started simultaneously
-    concurrency: Infinity,
-
-    client: {
-  jasmine: {
-    failSpecWithNoExpectations: false,
-  },
-  clearContext: false // leave Jasmine Spec Runner output visible in browser
+    concurrency: Infinity
 },
-  })
-}
+  )}
+
