@@ -18,9 +18,9 @@
     "**/app/*.spec.js",
     "**/app/*spec.js",
     "**/app/*.js",
-     "src/**/*.ts",
-    "src/**/*.html",
-    "src/**/*.css",
-    "src/**/*.scss"
+     "src/*.ts",
+    "src/*.html",
+    "src/*.css",
+    "src/*.scss"
   ]
 }
