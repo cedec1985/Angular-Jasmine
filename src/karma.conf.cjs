@@ -44,12 +44,12 @@ module.exports = function(/** @type {{ set: (arg0: {
     frameworks: ['jasmine','@angular-devkit/build-angular','karma-typescript'],
     // list of files / patterns to load in the browser
     files: [
-    'app/*.spec.ts',
-    'app/*spec.ts',
-    'app/*.ts',
-    'app/*.spec.js',
-    'app/*spec.js',
-    'app/*.js'
+    '**/app/*.spec.ts',
+    '**/app/*spec.ts',
+    '**/app/*.ts',
+    '**/app/*.spec.js',
+    '**/app/*spec.js',
+    '**/app/*.js'
     ],
     Plugins: [
       require('karma-jasmine'),
@@ -89,7 +89,7 @@ module.exports = function(/** @type {{ set: (arg0: {
     singleRun: false,
     // Concurrency level
     // how many browser instances should be started simultaneously
-    concurrency: Infinity, 
+    concurrency: Infinity,
 
     client: {
   jasmine: {
