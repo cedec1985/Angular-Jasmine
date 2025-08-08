@@ -17,12 +17,12 @@
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "tsconfig.app.json",
-             "outputPath": "testdemo/src/dist",
-             "index": "index.html",
-            "main": "main.ts",
+            "tsConfig": "src/tsconfig.app.json",
+             "outputPath": "src/dist",
+             "index": "src/index.html",
+            "main": "src/main.ts",
             "styles": [
-              "styles.css"
+              "src/styles.css"
             ]
           },
           "configurations": {
@@ -71,10 +71,11 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.cjs",
+            "main": "src/test.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.mjs",
             "styles": [
-              "styles.css"
+              "src/styles.css"
             ]
           }
         }
@@ -85,3 +86,4 @@
     "analytics": false
   }
 }
+
