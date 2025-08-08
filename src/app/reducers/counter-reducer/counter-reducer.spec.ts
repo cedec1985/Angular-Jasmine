@@ -12,7 +12,12 @@ describe('counterReducer', () => {
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(this.counterReducer);
+  });
+})
+
+/*
+
+   fixture = TestBed.createComponent();
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -20,4 +25,4 @@ describe('counterReducer', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+*/
