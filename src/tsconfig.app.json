@@ -13,10 +13,12 @@
   "src/.spec.ts",
    "src/test.ts",
   ],
+  /*
   "include": [
     "src/*.ts",
     "src/*.html",
     "src/*.css",
     "src/*.scss"
   ],
+  */
 }

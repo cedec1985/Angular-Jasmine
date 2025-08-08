@@ -35,9 +35,5 @@
     "strictInputAccessModifiers": true,
     "typeCheckHostBindings": true,
     "strictTemplates": true
-  },
-  "files": [ "src/*.ts",
-    "src/*.html",
-    "src/*.css",
-    "src/*.scss"],
+  }
 }
