@@ -1,7 +1,11 @@
 import { __decorate } from "tslib";
 import { Component } from '@angular/core';
-import { CounterComponent } from 'app/components/counter/counter-component';
+import { CounterComponent } from "../../counter/counter-component.js";
+
 let Homecomponent = class Homecomponent {
+    /**
+   * @param {any} count
+   */
     handleCountChange(count) {
         console.log('countChange event from CounterComponent', count);
     }

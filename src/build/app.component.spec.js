@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { AppComponent } from './app.component.js';
 describe('AppComponent', () => {
     let component;
     let fixture;

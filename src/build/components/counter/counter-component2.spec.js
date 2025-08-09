@@ -1,11 +1,18 @@
 import { __awaiter } from "tslib";
 import { TestBed } from '@angular/core/testing';
-import { CounterComponent } from './counter-component';
+import { CounterComponent } from './counter-component.js';
 import { By } from '@angular/platform-browser';
 describe('CounterComponent', () => {
+    /**
+   * @type {import("@angular/core/testing").ComponentFixture<any>}
+   */
     let fixture;
+    /**
+   * @type {import("@angular/core").DebugElement}
+   */
     let debugElement;
     // Arrange
+    // @ts-ignore
     beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
         yield TestBed.configureTestingModule({
             declarations: [CounterComponent],

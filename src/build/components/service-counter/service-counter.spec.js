@@ -1,9 +1,17 @@
 import { __awaiter } from "tslib";
 import { TestBed } from '@angular/core/testing';
-import { ServiceCounterComponent } from '../service-counter/service-counter';
+import { ServiceCounterComponent } from '../service-counter/service-counter.js';
 describe('ServiceCounter', () => {
-    let component;
+    /**
+    * @type {import("@angular/core/testing").ComponentFixture<any>}
+   */
     let fixture;
+    /**
+   * @type {import("@angular/core").DebugElement}
+   */
+    let component;
+    // Arrange
+    // @ts-ignore
     beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
         yield TestBed.configureTestingModule({
             imports: [ServiceCounterComponent],

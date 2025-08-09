@@ -1,4 +1,4 @@
-import { Attribut } from './attribut.directive';
+import { Attribut } from './attribut.directive.js';
 describe('Attribut', () => {
     it('should create an instance', () => {
         const directive = new Attribut();

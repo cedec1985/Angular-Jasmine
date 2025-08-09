@@ -22,6 +22,9 @@ let CounterService = class CounterService {
         this.count--;
         this.notify();
     }
+    /**
+   * @param {number} newCount
+   */
     reset(newCount) {
         this.count = newCount;
         this.notify();

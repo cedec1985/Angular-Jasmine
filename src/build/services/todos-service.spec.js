@@ -13,11 +13,14 @@ class TodosService {
      * getTodos
      */
     getTodos() {
+        // @ts-ignore
         return __awaiter(this, void 0, void 0, function* () {
+            // @ts-ignore
             const response = yield this.fetch('/todos');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);
             }
+            // @ts-ignore
             return yield response.json();
         });
     }
@@ -34,16 +37,19 @@ const errorResponse = new Response('Not Found', {
     statusText: 'Not Found',
 });
 describe('TodosService', () => {
+    // @ts-ignore
     it('gets todos successfully', () => __awaiter(void 0, void 0, void 0, function* () {
         // Arrange
         const fetchspy = jasmine.createSpy('fetch').and.returnValue(okResponse);
         const todoService = new TodosService(fetchspy);
         // Act
+        // @ts-ignore
         const actualTods = yield todoService.getTodos();
         // Assert
         expect(actualTods).toEqual(todos);
         expect(fetchspy).toHaveBeenCalledWith('/todos');
     }));
+    // @ts-ignore
     it('handles an HTTP error when getting todos', () => __awaiter(void 0, void 0, void 0, function* () {
         // Arrange
         const fetchspy = jasmine.createSpy('fetch').and.returnValue(errorResponse);

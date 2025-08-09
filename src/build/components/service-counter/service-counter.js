@@ -1,6 +1,9 @@
 import { __decorate } from "tslib";
 import { Injectable } from '@angular/core';
 let ServiceCounterComponent = class ServiceCounterComponent {
+    /**
+   * @param {any} counterService
+   */
     constructor(counterService) {
         this.counterService = counterService;
         this.count$ = this.counterService.getCount();
@@ -11,6 +14,9 @@ let ServiceCounterComponent = class ServiceCounterComponent {
     decrement() {
         this.counterService.decrement();
     }
+    /**
+   * @param {string} newCount
+   */
     reset(newCount) {
         const count = parseInt(newCount, 10);
         if (!Number.isNaN(count)) {
