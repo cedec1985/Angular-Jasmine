@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { Homecomponent } from './components/home/homecomponent/homecomponent';
 import { TodosService } from './services/todos-service';
-import { CounterComponent } from './components/counter/counter-component';
 
 @NgModule({
   declarations: [

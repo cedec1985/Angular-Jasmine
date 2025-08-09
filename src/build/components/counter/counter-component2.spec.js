@@ -14,7 +14,6 @@ describe('CounterComponent', () => {
     // @ts-ignore
     beforeEach(async() => {
         TestBed.configureTestingModule({
-            declarations: [CounterComponent],
             imports: [CounterComponent],
         }).compileComponents();
         fixture = TestBed.createComponent(CounterComponent);
