@@ -1,4 +1,3 @@
-import { __awaiter } from "tslib";
 import { TestBed } from '@angular/core/testing';
 import { CounterComponent } from './counter-component.js';
 import { By } from '@angular/platform-browser';
@@ -13,14 +12,15 @@ describe('CounterComponent', () => {
     let debugElement;
     // Arrange
     // @ts-ignore
-    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
-        yield TestBed.configureTestingModule({
+    beforeEach(async() => {
+        TestBed.configureTestingModule({
             declarations: [CounterComponent],
+            imports: [CounterComponent],
         }).compileComponents();
         fixture = TestBed.createComponent(CounterComponent);
         fixture.detectChanges();
         debugElement = fixture.debugElement;
-    }));
+    });
     it('increments the count', () => {
         // Act
         const incrementButton = debugElement.query(By.css('[data-testid="increment-button"]'));
