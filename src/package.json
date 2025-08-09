@@ -10,12 +10,11 @@
     "build": "tsc",
     "e2e": "ng e2e"
   },
-    "homepage": "https://github.com/cedec1985/Typescript-Jasmine",
-	      "repository": {
-		    "type": "git",
-		    "url": "https://github.com/cedec1985/Typescript-Jasmine.git"
-	},
-
+  "homepage": "https://github.com/cedec1985/Typescript-Jasmine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cedec1985/Typescript-Jasmine.git"
+  },
   "prettier": {
     "overrides": [
       {
@@ -45,6 +44,7 @@
     "@angular/build": "^20.1.3",
     "@angular/cli": "^20.1.4",
     "@angular/compiler-cli": "^20.0.0",
+    "@angular/platform-browser-dynamic": "^20.1.6",
     "@testing-library/angular": "^18.0.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/user-event": "^14.5.2",
