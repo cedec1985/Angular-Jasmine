@@ -1,10 +1,13 @@
-import { __awaiter } from "tslib";
-import { TestBed } from '@angular/core/testing';
+// @ts-nocheck
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { take, toArray } from 'rxjs/operators';
 import { click, expectText, setFieldValue } from '../../spec.helpers.component.js';
 import { CounterComponent } from './counter-component.js';
+import { DebugElement } from "@angular/core";
+
 const startCount = 123;
 const newCount = 456;
+
 describe('CounterComponent', () => {
   /**
    * @type {import("@angular/core/testing").ComponentFixture<any>}
@@ -14,10 +17,9 @@ describe('CounterComponent', () => {
    * @type {import("@angular/core").DebugElement}
    */
     let component;
+    let startCount;
 
-    
     // Arrange
-
     /**
    * @param {number} count
    */
@@ -26,23 +28,22 @@ describe('CounterComponent', () => {
         expectText(fixture, 'count', count.toString());
     }
 
-    // @ts-ignore
-    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
+    beforeEach(async() => {
 
    //     fixture.autoDetectChanges(); // Enable auto-detection
-        yield TestBed.configureTestingModule({
+        TestBed.configureTestingModule({
             imports: [CounterComponent],
             declarations: [CounterComponent],
         })
             .compileComponents();
         fixture = TestBed.createComponent(CounterComponent);
         component = fixture.componentInstance;
-        // @ts-ignore
+
         component.startCount = startCount;
-        // @ts-ignore
         component.ngOnChanges();
         fixture.detectChanges();
-    }));
+    })
+
     it('shows the start count', () => {
         expectCount(startCount);
     });
@@ -78,8 +79,7 @@ describe('CounterComponent', () => {
     it('emits countChanges events', () => {
         let actualCounts;
 
-        // @ts-ignore
-        component.countChange.pipe(take(3), toArray()).subscribe(counts => actualCounts = counts);
+        component.countChange.pipe(take(3), toArray()).subscribe((/** @type {any} */ counts) => actualCounts = counts);
 
         click(fixture, 'increment-button');
 
@@ -89,8 +89,6 @@ describe('CounterComponent', () => {
 
         click(fixture, 'reset-button');
 
-        // @ts-ignore
         expect(actualCounts).toEqual([startCount + 1, startCount - 1, newCount]);
+    })
     });
-});
-
