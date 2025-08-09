@@ -10,10 +10,8 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { Homecomponent } from './components/home/homecomponent/homecomponent';
 import { TodosService } from './services/todos-service';
-let AppModule = class AppModule {
-};
-AppModule = __decorate([
-    NgModule({
+
+  NgModule({
         declarations: [],
         imports: [
             BrowserModule,
@@ -28,6 +26,5 @@ AppModule = __decorate([
         providers: [TodosService],
         bootstrap: []
     })
-], AppModule);
-export { AppModule };
+
 //# sourceMappingURL=app.module.js.map
