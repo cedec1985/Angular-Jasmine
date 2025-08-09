@@ -17,8 +17,7 @@ function expectCount(count: number): void {
   beforeEach(async () => {
    fixture.autoDetectChanges();                   // Enable auto-detection
     await TestBed.configureTestingModule({
-      imports: [CounterComponent],
-      declarations: [CounterComponent],
+      imports: [CounterComponent]
     })
     .compileComponents();
 
