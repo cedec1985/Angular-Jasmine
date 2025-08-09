@@ -6,19 +6,30 @@ import { CounterComponent } from './counter-component.js';
 const startCount = 123;
 const newCount = 456;
 describe('CounterComponent', () => {
-    // @ts-ignore
-    let component;
-    // @ts-ignore
+  /**
+   * @type {import("@angular/core/testing").ComponentFixture<any>}
+   */
     let fixture;
-    // @ts-ignore
+    /**
+   * @type {import("@angular/core").DebugElement}
+   */
+    let component;
+
+    
+    // Arrange
+
+    /**
+   * @param {number} count
+   */
     function expectCount(count) {
-        // @ts-ignore
+
         expectText(fixture, 'count', count.toString());
     }
+
     // @ts-ignore
     beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
-        // @ts-ignore
-        fixture.autoDetectChanges(); // Enable auto-detection
+
+   //     fixture.autoDetectChanges(); // Enable auto-detection
         yield TestBed.configureTestingModule({
             imports: [CounterComponent],
             declarations: [CounterComponent],
@@ -26,7 +37,9 @@ describe('CounterComponent', () => {
             .compileComponents();
         fixture = TestBed.createComponent(CounterComponent);
         component = fixture.componentInstance;
+        // @ts-ignore
         component.startCount = startCount;
+        // @ts-ignore
         component.ngOnChanges();
         fixture.detectChanges();
     }));
@@ -34,44 +47,50 @@ describe('CounterComponent', () => {
         expectCount(startCount);
     });
     it('increments the count', () => {
-        // @ts-ignore
+
         click(fixture, 'increment-button');
+         fixture.detectChanges();
         expectCount(startCount + 1);
     });
     it('decrements the count', () => {
-        // @ts-ignore
+
         click(fixture, 'decrement-button');
+         fixture.detectChanges();
         expectCount(startCount - 1);
     });
     it('resets the count', () => {
-        // @ts-ignore
+
         setFieldValue(fixture, 'reset-input', newCount.toString());
-        // @ts-ignore
+
         click(fixture, 'reset-button');
+         fixture.detectChanges();
         expectCount(newCount);
     });
     it('does not reset if the value is not a number', () => {
         const value = 'not a number';
-        // @ts-ignore
+
         setFieldValue(fixture, 'reset-input', value);
-        // @ts-ignore
+
         click(fixture, 'reset-button');
+         fixture.detectChanges();
         expectCount(startCount);
     });
     it('emits countChanges events', () => {
         let actualCounts;
+
         // @ts-ignore
         component.countChange.pipe(take(3), toArray()).subscribe(counts => actualCounts = counts);
-        // @ts-ignore
+
         click(fixture, 'increment-button');
-        // @ts-ignore
+
         click(fixture, 'decrement-button');
-        // @ts-ignore
+
         setFieldValue(fixture, 'reset-input', newCount.toString());
-        // @ts-ignore
+
         click(fixture, 'reset-button');
+
         // @ts-ignore
         expect(actualCounts).toEqual([startCount + 1, startCount - 1, newCount]);
     });
 });
-//# sourceMappingURL=counter-component.spec.js.map
+
