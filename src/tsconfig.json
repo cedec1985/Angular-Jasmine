@@ -39,7 +39,9 @@
   "include": [
     "app//**/*.ts",
     "app/**/*.html",
-    "app/**/*.css",
-    "app/**/*.scss"
+    "app/**/*.json",
+    "app/**/*.js",
+  //  "app/**/*.css",
+  //  "app/**/*.scss"
   ],
 }

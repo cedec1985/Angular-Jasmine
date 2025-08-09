@@ -10,6 +10,12 @@
     "build": "tsc",
     "e2e": "ng e2e"
   },
+    "homepage": "https://github.com/cedec1985/Typescript-Jasmine",
+	      "repository": {
+		    "type": "git",
+		    "url": "https://github.com/cedec1985/Typescript-Jasmine.git"
+	},
+
   "prettier": {
     "overrides": [
       {
