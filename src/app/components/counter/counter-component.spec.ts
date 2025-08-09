@@ -15,7 +15,7 @@ function expectCount(count: number): void {
 }
 
   beforeEach(async () => {
-   fixture.autoDetectChanges();                   // Enable auto-detection
+
     await TestBed.configureTestingModule({
       imports: [CounterComponent]
     })
@@ -33,21 +33,25 @@ function expectCount(count: number): void {
   });
   it('increments the count', () => {
     click(fixture, 'increment-button');
+    fixture.detectChanges();
     expectCount(startCount + 1);
   });
   it('decrements the count', () => {
     click(fixture, 'decrement-button');
+    fixture.detectChanges();
     expectCount(startCount - 1);
   });
   it('resets the count', () => {
     setFieldValue(fixture, 'reset-input', newCount.toString());
     click(fixture, 'reset-button');
+    fixture.detectChanges();
     expectCount(newCount);
   });
   it('does not reset if the value is not a number', () => {
     const value = 'not a number';
     setFieldValue(fixture, 'reset-input', value);
     click(fixture, 'reset-button');
+    fixture.detectChanges();
     expectCount(startCount);
     });
   it('emits countChanges events', () => {
