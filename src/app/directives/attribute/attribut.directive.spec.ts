@@ -1,8 +1,9 @@
-import { Attribut } from './attribut.directive';
+import { ElementRef } from '@angular/core';
+import { Attribute } from './attribut.directive';
 
-describe('Attribut', () => {
+describe('Attribute', () => {
   it('should create an instance', () => {
-    const directive = new Attribut();
+    const directive = new Attribute(ElementRef.prototype as unknown as ElementRef);
     expect(directive).toBeTruthy();
   });
 });
