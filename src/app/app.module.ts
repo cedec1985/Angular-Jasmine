@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { Homecomponent } from './components/home/homecomponent/homecomponent';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Homecomponent } from './components/home/homecomponent/homecomponent';
     RouterModule.forRoot(routes),
     AppComponent,
     Homecomponent,
-    StoreModule.forRoot({})
+    StoreModule.forRoot({}),
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

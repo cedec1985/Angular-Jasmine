@@ -1,14 +1,14 @@
 import { Directive,ElementRef,HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appAttribut]'
+  selector: '[appAttribute]'
 })
 export class Attribute {
 
   constructor(private el :ElementRef) {
  console.log(el);
 }
-  @Input('appAttribut') color: string | undefined;
+  @Input('appAttribute') color: string | undefined;
   // This input allows the directive to accept a color value
 
   @HostListener('mouseenter') onMouseEnter() {
