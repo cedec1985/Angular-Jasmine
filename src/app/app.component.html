@@ -22,7 +22,7 @@
 
 <p>(3) changer un style précis suivant une condition</p>
 <button (click)="changeStyle3()">changer le style - flag3={{flag3}}</button>
-<div [style.color]="flag3 ? colorA : colorB">"C'est des malades !" (Les visiteurs)</div>      
+<div [style.color]="flag3 ? colorA : colorB">"C'est des malades !" (Les visiteurs)</div>
 
 <hr>
 <h2>NgClass</h2>
@@ -52,13 +52,10 @@
 
 <h1>PARTIE 2 : STRUCTURAL DIRECTIVES </h1>
 
-
-<p>*** (3)</p>
 <ng-container *ngIf="isok;then content_ok else content_not_ok"></ng-container>
 <ng-template #content_ok>isok={{isok}} - "it's OK"</ng-template>
 <ng-template #content_not_ok>isok={{isok}} - "is <b>not</b> OK"</ng-template>
 
-<p>*** (6)</p>
 <p *ngIf="numbs">
   numbs=<ng-container *ngFor="let n of numbs">{{n}} </ng-container>
 </p>
