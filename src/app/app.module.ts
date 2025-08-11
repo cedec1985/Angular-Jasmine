@@ -9,11 +9,13 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { Homecomponent } from './components/home/homecomponent/homecomponent';
 import { CommonModule } from '@angular/common';
+import { IsStockLimited } from './directives/structural/is-stock-limited';
 
 @NgModule({
   declarations: [
     Attribute, // Registering the Attribut directive
     AppComponent,
+    IsStockLimited // Registering the IsStockLimited directive
   ],
   imports: [
     BrowserModule,

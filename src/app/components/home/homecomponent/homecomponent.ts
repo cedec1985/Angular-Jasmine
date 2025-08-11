@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CounterComponent } from 'app/components/counter/counter-component';
+import { IsStockLimited } from 'app/directives/structural/is-stock-limited';
 
 
 @Component({

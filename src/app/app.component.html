@@ -22,14 +22,14 @@
 
 <p>(3) changer un style précis suivant une condition</p>
 <button (click)="changeStyle3()">changer le style - flag3={{flag3}}</button>
-<div [style.color]="flag3 ? colorA : colorB">"C'est des malades !" (Les visiteurs)</div>      <!-- flag3=true ou false. si true -> la classe : colorA sinon la classe : colorB -->
+<div [style.color]="flag3 ? colorA : colorB">"C'est des malades !" (Les visiteurs)</div>      
 
 <hr>
 <h2>NgClass</h2>
 
 <p>(4) appliquer simplement une classe</p>
-<div [className]="'maClasse4'">"Luke, je suis ton père…" (Dark vador)</div>       <!--  voir la classe: maClasse4 dans : app.component.css -->
-<div [className]="dataClasse4">"Luke, je suis ton père…" (Dark vador)</div>       <!--  voir la variable dataClasse4 dans : app.component.ts qui contient la classe -->
+<div [className]="'maClasse4'">"Luke, je suis ton père…" (Dark vador)</div>
+<div [className]="dataClasse4">"Luke, je suis ton père…" (Dark vador)</div>
 <hr>
 
 <p>(5) (une condition)? 'classeX' : 'classeY"</p>
@@ -50,7 +50,22 @@
 <hr>
 <hr>
 
-<h1>PARTIE 2 : ATTRIBUTES DIRECTIVES PERSONNALISES</h1>
+<h1>PARTIE 2 : STRUCTURAL DIRECTIVES </h1>
 
-<p>(8) <span appAttribute>"survolez-moi!" - par défaut</span></p>
-<br><br><br>
+
+<p>*** (3)</p>
+<ng-container *ngIf="isok;then content_ok else content_not_ok"></ng-container>
+<ng-template #content_ok>isok={{isok}} - "it's OK"</ng-template>
+<ng-template #content_not_ok>isok={{isok}} - "is <b>not</b> OK"</ng-template>
+
+<p>*** (6)</p>
+<p *ngIf="numbs">
+  numbs=<ng-container *ngFor="let n of numbs">{{n}} </ng-container>
+</p>
+
+<hr>
+<hr>
+
+(7) <span *isStockLimited = "nb1">stock limité 1 !</span>     <!--  "stock limité 1 !" s'affiche parce que nb1 est inférieur à 10 -->
+<br>
+(8) <span *isStockLimited = "nb2">stock limité 2 !</span>     <!--  "stock limité 2 !" ne s'affiche pas parce que nb2 est supérieur à 10 -->
