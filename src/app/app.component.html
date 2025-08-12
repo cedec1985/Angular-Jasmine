@@ -66,3 +66,15 @@
 (7) <span *isStockLimited = "nb1">stock limité 1 !</span>     <!--  "stock limité 1 !" s'affiche parce que nb1 est inférieur à 10 -->
 <br>
 (8) <span *isStockLimited = "nb2">stock limité 2 !</span>     <!--  "stock limité 2 !" ne s'affiche pas parce que nb2 est supérieur à 10 -->
+
+<h1>PARTIE 3 : PIPES </h1>
+
+<!-- Afficher uniquement les produits en stock -->
+<div *ngFor="let product of products | stockFilter:true">
+  {{ product.name }} (Stock: {{ product.stock }})
+</div>
+
+<!-- Afficher uniquement les produits en rupture -->
+<div *ngFor="let product of products | stockFilter:false">
+  {{ product.name }} est en rupture de stock.
+</div>

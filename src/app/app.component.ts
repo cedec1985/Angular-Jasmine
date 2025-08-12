@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { IsStockLimited } from './directives/structural/is-stock-limited';
+import { Product, StockFilterPipe } from './pipes/stock-filter-pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, StockFilterPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -44,6 +44,13 @@ export class AppComponent {
   numbs: Array<number> = [10, 50, 6, 18, 32, ];
 
 
+  // Liste des produits
+  // Ces données sont souvent récupérées via une API REST
+products: Product[] = [
+    { id: 1, name: "Bouteilles d'eau", stock: 10 },
+    { id: 2, name: "Pain", stock: 10 },
+    { id: 3, name: "Viande", stock: 10 },
+  ];
 
 
 }
