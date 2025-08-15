@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-global-almond {
+  padding: 12px;
+  background: blanchedalmond;
+}
+
+.bg-1 {
+  padding: 12px;
+  background: magenta;
+  color: black;
+  border: 1px solid black;
+}

@@ -1,10 +1,13 @@
 import { Observable } from 'rxjs';
 import { CounterState } from '../../reducers/counter-reducer/counter-reducer';
-import { Injectable } from '@angular/core';
 import { CounterService } from '../../services/counter-service';
+import { Component } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
+@Component({
+  selector: 'app-service-counter',
+  imports: [],
+  templateUrl: './service-counter.html',
+  styleUrl: './service-counter.css'
 })
 export class ServiceCounterComponent {
 

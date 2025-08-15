@@ -1,8 +1,9 @@
 import { Component,EventEmitter,Input, Output, OnChanges} from '@angular/core';
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-counter-component',
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './counter-component.html',
   styleUrl: './counter-component.css'
 })

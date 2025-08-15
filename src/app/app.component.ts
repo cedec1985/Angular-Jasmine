@@ -2,15 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Product, StockFilterPipe } from './pipes/stock-filter-pipe';
+import { CounterComponent } from "./components/counter/counter-component";
+import { ServiceCounterComponent } from "./components/service-counter/service-counter";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, StockFilterPipe],
+  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, ServiceCounterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   protected readonly title = signal('testdemo');
+
+  servcount3Id =2024;
 
   flag3 = false;
   colorA = 'darkblue';

@@ -1,3 +1,5 @@
+<app-counter-component></app-counter-component> <!--selecteur pour le routing-->
+<app-service-counter></app-service-counter>     <!--selecteur pour le routing-->
 
 <h1>
   {{title()}}
@@ -6,7 +8,7 @@
   <a routerLink="todos"></a>
 </nav>
 <router-outlet></router-outlet>
-<router-outlet />
+
 
 <h1>PARTIE 1: ATTRIBUTES DIRECTIVES ANGULAR</h1>
 
@@ -78,3 +80,15 @@
 <div *ngFor="let product of products | stockFilter:false">
   {{ product.name }} est en rupture de stock.
 </div>
+
+<!-- PARTIE ROUTING -->
+
+<nav>
+  <ul>
+    <li><a routerLink="/counter-component">aller à la page: /counter-component</a></li>
+    <li><a routerLink ="/counter-component/counter1"> aller à la page : /counter-component/counter1</a></li>   <!--ONGLET 1 = counter1-->
+    <li><a routerLink ="/counter-component/counter2"> aller à la page : /counter-component/counter2</a></li>   <!--ONGLET 2 = counter2-->
+    <li><a routerLink="/service-counter/:servcount3Id">aller à la page : /service-counter/...via variable servcount3Id du composant...</a></li>
+  </ul>
+</nav>
+

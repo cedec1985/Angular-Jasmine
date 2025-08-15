@@ -2,10 +2,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CounterComponent } from './components/counter/counter-component';
 import { Homecomponent } from './components/home/homecomponent/homecomponent';
+import { ServiceCounterComponent } from './components/service-counter/service-counter';
+import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3';
+import { Counter1 } from './components/counter/countercomponent/counter1/counter1';
+import { Counter2 } from './components/counter/countercomponent/counter2/counter2';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', component: Homecomponent },
-  { path: 'counter-component', component: CounterComponent }
+  { path : 'home', component: Homecomponent},                   // page d'accueil
+  { path: '', pathMatch: 'full', redirectTo: '/home' },          // redirection vers la page d'accueil
+  { path: 'counter-component', component: CounterComponent,
+    children :[
+      {path : 'counter1', component : Counter1},                 // permet d'indiquer une route vers un onglet 1
+      {path : 'counter2', component : Counter2}                  // permet d'indiquer une route vers un onglet 2
+    ]
+   },
+  {path: 'service-counter', component: ServiceCounterComponent},
+  { path: 'service-counter/:servcount3Id', component: ServiceCounterComponent3 },        // ':' pour indiquer que c'est une variable qui peut prendre n'importe quelle valeur
+//  { path: '**', component: PageNotFoundComponent },           // une route inconnue
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

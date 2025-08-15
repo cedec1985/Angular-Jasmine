@@ -3,7 +3,7 @@
 <h1>Counter connected to the service</h1>
 
 <p>
-  <strong data-testid="count">{{ count$ | async }}</strong>
+  <strong data-testid="count">{{ count$ }}</strong>
 </p>
 
 <p>
@@ -15,3 +15,7 @@
   <input  title ="input" type="number" #input data-testid="reset-input" />
   <button (click)="reset(input.value)" data-testid="reset-button">Reset</button>
 </p>
+
+<p>service - counter works !</p>
+
+<div class="bg-1">prise en compte de la classe css : 'bg-1' du composant : service-counter.component.css</div>
