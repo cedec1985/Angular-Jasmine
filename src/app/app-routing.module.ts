@@ -18,7 +18,7 @@ export const routes: Routes = [
    },
   {path: 'service-counter', component: ServiceCounterComponent},
   { path: 'service-counter/:servcount3Id', component: ServiceCounterComponent3 },        // ':' pour indiquer que c'est une variable qui peut prendre n'importe quelle valeur
-//  { path: '**', component: PageNotFoundComponent },           // une route inconnue
+  { path: '**', component: PageNotFoundComponent },           // une route inconnue
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
