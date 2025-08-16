@@ -41,7 +41,6 @@
     "app/**/*.html",
     "app/**/*.json",
     "app/**/*.js",
-  //  "app/**/*.css",
-  //  "app/**/*.scss"
+    "main.ts"
   ],
 }
