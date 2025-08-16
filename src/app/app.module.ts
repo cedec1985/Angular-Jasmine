@@ -19,6 +19,8 @@ import { Counter1 } from './components/counter/countercomponent/counter1/counter
 import { Counter2 } from './components/counter/countercomponent/counter2/counter2';
 import { TodosService } from './services/todos-service';
 import { CounterService } from './services/counter-service';
+import { reducers } from './reducers/counter-reducer';
+import { PageNotFound } from './components/page-not-found/page-not-found';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { CounterService } from './services/counter-service';
     ServiceCounterComponent3,
     CounterComponent,
     Counter1,
-    Counter2
+    Counter2,
+    PageNotFound
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,17 @@ import { CounterService } from './services/counter-service';
     Homecomponent,
     ServiceCounterComponent,
     StoreModule.forRoot({}),
-    CommonModule
+    CommonModule,
+     // NgRx Store
+    StoreModule.forRoot(reducers, {
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true,
+      },
+    }),
+
+    // NgRx Effects
+  //  EffectsModule.forRoot([CounterEffects]),
   ],
   exports:[
     TodosService, CounterService
