@@ -19,7 +19,7 @@ import { Counter1 } from './components/counter/countercomponent/counter1/counter
 import { Counter2 } from './components/counter/countercomponent/counter2/counter2';
 import { TodosService } from './services/todos-service';
 import { CounterService } from './services/counter-service';
-import { reducers } from './reducers/counter-reducer';
+import { counterReducer } from './reducers/counter-reducer/counter-reducer';
 import { PageNotFound } from './components/page-not-found/page-not-found';
 
 @NgModule({
@@ -49,7 +49,7 @@ import { PageNotFound } from './components/page-not-found/page-not-found';
     StoreModule.forRoot({}),
     CommonModule,
      // NgRx Store
-    StoreModule.forRoot(reducers, {
+    StoreModule.forRoot(counterReducer, {
       runtimeChecks: {
         strictStateImmutability: true,
         strictActionImmutability: true,

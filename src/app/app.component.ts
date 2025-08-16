@@ -4,10 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { Product, StockFilterPipe } from './pipes/stock-filter-pipe';
 import { CounterComponent } from "./components/counter/counter-component";
 import { ServiceCounterComponent } from "./components/service-counter/service-counter";
+import { IsStockLimited } from './directives/structural/is-stock-limited';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, ServiceCounterComponent],
+  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, ServiceCounterComponent, IsStockLimited],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
