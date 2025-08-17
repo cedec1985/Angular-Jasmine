@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ServiceCounterComponent } from '../service-counter/service-counter';
+import { ServiceCounterComponent } from '../service-counter/service-counter.js';
 
 describe('ServiceCounter', () => {
   let component: ServiceCounterComponent;

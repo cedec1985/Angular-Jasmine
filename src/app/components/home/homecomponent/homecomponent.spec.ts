@@ -1,6 +1,6 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Homecomponent } from './homecomponent';
+import { Homecomponent } from './homecomponent.js';
 
 describe('Homecomponent', () => {
   let component: Homecomponent;
