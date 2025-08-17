@@ -1,5 +1,6 @@
-import { counterReducer } from '../../reducers/counter-reducer/counter-reducer';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { counterReducer, initialState } from './counter-reducer.js';
 
 describe('counterReducer', () => {
   let component: typeof counterReducer;
@@ -13,16 +14,16 @@ describe('counterReducer', () => {
     .compileComponents();
 
   });
+
 })
-
 /*
-
    fixture = TestBed.createComponent();
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(counterReducer).toBeTruthy();
   });
 */
+
