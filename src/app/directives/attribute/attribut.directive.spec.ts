@@ -1,5 +1,5 @@
 import { ElementRef } from '@angular/core';
-import { Attribute } from './attribut.directive';
+import { Attribute } from './attribut.directive.js';
 
 describe('Attribute', () => {
   it('should create an instance', () => {

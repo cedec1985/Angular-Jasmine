@@ -1,5 +1,5 @@
 import { TemplateRef, ViewContainerRef } from '@angular/core';
-import { IsStockLimited } from './is-stock-limited';
+import { IsStockLimited } from './is-stock-limited.js';
 
 describe('IsStockLimited', () => {
   it('should create an instance', () => {
