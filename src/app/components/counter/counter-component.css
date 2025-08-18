@@ -3,3 +3,10 @@
   background: blue;
   color: white;
 }
+:host {
+  display: block;
+  margin-bottom: 1rem;
+  border: 4px solid navy;
+  border-radius: 2px;
+  padding: 0 1rem;
+}
