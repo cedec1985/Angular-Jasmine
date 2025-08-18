@@ -27,10 +27,10 @@ import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
-    Attribute, // Registering the Attribut directive
+    Attribute, // Déclarer la directive
     AppComponent,
     Homecomponent,
-    IsStockLimited,  // Registering the IsStockLimited directive,
+    IsStockLimited,  // Déclarer la directive
     StockFilterPipe,
     ServiceCounterComponent,
     ServiceCounterComponent3,

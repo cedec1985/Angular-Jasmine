@@ -17,8 +17,7 @@ beforeEach(() => {
       providers: [
     {provide: APP_BASE_HREF, useValue: '/'}
   ]
-      // Prefer to declare child components unless things are too complex, else use schema
-      // schemas: [NO_ERRORS_SCHEMA]
+      
     }).compileComponents();
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;

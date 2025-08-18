@@ -3,8 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class CounterService {
-  // Technically, this property is not necessary since the BehaviorSubject
-  // below already holds the current count. We are keeping it for clarity.
+
   private count = 0;
 
   private subject: BehaviorSubject<number>;
@@ -13,9 +12,9 @@ export class CounterService {
     this.subject = new BehaviorSubject(this.count);
   }
 
-  // Every BehaviorSubject is an Observable and Observer.
-  // We do not want to expose the Observer trait to the outside,
-  // so we downcast the BehaviorSubject to a simple Observable only.
+  // Chaque BehaviorSubject est un Observable et un Observer.
+  // Nous voulons ne pas exposer l'observable à l'extérieur
+  // Nous transformons BehaviorSubject en un simple Observable.
   public getCount(): Observable<number> {
     return this.subject.asObservable();
   }

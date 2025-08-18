@@ -1,6 +1,6 @@
 /**
- * This service is not used in the counter app,
- * but here as an example for Jasmine Spies.
+ * Ce service n'est pas utilisé dans app counter,
+ * mais permet de montrer un exemple d'utilisation des spies jasmine .
  */
 
 import { TestBed } from '@angular/core/testing';
@@ -8,7 +8,7 @@ import { TestBed } from '@angular/core/testing';
 
 class TodosService {
 constructor(
-  // Bind `fetch ` to `window` to ensure that `window` is the `this` context
+  // Lier fetch à window pour être sûr que window est le contexte
   private fetch = window.fetch.bind(window),
 )
 {}
@@ -23,7 +23,7 @@ public async getTodos(): Promise<string[]> {
   return await response.json();
 }
 }
-// Fake todos and response object
+// Créer un Fake todos et un objet pour la réponse 
 const todos=['shop groceries', 'clean the house', 'pay bills'];
 const okResponse = new Response(JSON.stringify(todos), {
 status : 200,

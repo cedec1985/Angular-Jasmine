@@ -1,16 +1,15 @@
-/* istanbul ignore file */
 import { DebugElement } from '@angular/core';
 import { ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 /**
- * Spec helpers for working with the DOM
+ * "Spec helpers" pour un accès au DOM
  */
 
 /**
- * Returns a selector for the `data-testid` attribute with the given attribute value.
+ * Retourne un sélecteur pour l'attribut data-testid avec la valeur donnée.
  *
- * @param testId Test id set by `data-testid`
+ * @param testId Test id = data-testid pour le test
  *
  */
 export function testIdSelector(testId: string): string {
@@ -18,22 +17,21 @@ export function testIdSelector(testId: string): string {
 }
 
 /**
- * Finds a single element inside the Component by the given CSS selector.
- * Throws an error if no element was found.
+ * Trouver un élément unique du composant qui se rapporte au sélecteur CSS
+ * Lancer une erreur si cet élément n'est pas trouvé.
  *
- * @param fixture Component fixture
- * @param selector CSS selector
+ * @param fixture
+ * @param selector sélecteur CSS
  *
  */
 export function queryByCss<T>(
   fixture: ComponentFixture<T>,
   selector: string,
 ): DebugElement {
-  // The return type of DebugElement#query() is declared as DebugElement,
-  // but the actual return type is DebugElement | null.
-  // See https://github.com/angular/angular/issues/22449.
+  // Le type de retour de DebugElement#query() est déclaré DebugElement,
+  // Mais le type de retour actuel est DebugElement ou Null.
   const debugElement = fixture.debugElement.query(By.css(selector));
-  // Fail on null so the return type is always DebugElement.
+  // Echoue si l'élément n'existe pas donc le type de retour est toujours debugElement.
   if (!debugElement) {
     throw new Error(`queryByCss: Element with ${selector} not found`);
   }
@@ -41,11 +39,11 @@ export function queryByCss<T>(
 }
 
 /**
- * Finds an element inside the Component by the given `data-testid` attribute.
- * Throws an error if no element was found.
+ * Trouver un élément unique du composant qui se rapporte à data-testid
+ * Lancer une erreur si cet élément n'est pas trouvé
  *
- * @param fixture Component fixture
- * @param testId Test id set by `data-testid`
+ * @param fixture
+ * @param testId attribut de test pour testId
  *
  */
 export function findEl<T>(fixture: ComponentFixture<T>, testId: string): DebugElement {
@@ -53,32 +51,32 @@ export function findEl<T>(fixture: ComponentFixture<T>, testId: string): DebugEl
 }
 
 /**
- * Finds all elements with the given `data-testid` attribute.
+ * Trouver les éléments du composant qui ont pour attribut data-testid.
  *
- * @param fixture Component fixture
- * @param testId Test id set by `data-testid`
+ * @param fixture
+ * @param testId Attribut de test pour data-testid
  */
 export function findEls<T>(fixture: ComponentFixture<T>, testId: string): DebugElement[] {
   return fixture.debugElement.queryAll(By.css(testIdSelector(testId)));
 }
 
 /**
- * Gets the text content of an element with the given `data-testid` attribute.
+ * Obtenir un élément de type texte pour l'attribut donné data-testid.
  *
- * @param fixture Component fixture
- * @param testId Test id set by `data-testid`
+ * @param fixture
+ * @param testId Attribut de test pour data-testid
  */
 export function getText<T>(fixture: ComponentFixture<T>, testId: string): string {
   return findEl(fixture, testId).nativeElement.textContent;
 }
 
 /**
- * Expects that the element with the given `data-testid` attribute
- * has the given text content.
+ * S'attendre à ce que l'attribut donné data-testid indique le même contenu de texte.
  *
- * @param fixture Component fixture
- * @param testId Test id set by `data-testid`
- * @param text Expected text
+ *
+ * @param fixture
+ * @param testId Attribut de test pour data-testid
+ * @param text texte attendu
  */
 export function expectText<T>(
   fixture: ComponentFixture<T>,
@@ -89,33 +87,32 @@ export function expectText<T>(
 }
 
 /**
- * Expects that the element with the given `data-testid` attribute
- * has the given text content.
+ *S'attendre à ce que l'attribut donné data-testid indique le même contenu de texte.
  *
- * @param fixture Component fixture
- * @param text Expected text
+ *
+ * @param fixture
+ * @param text texte attendu
  */
 export function expectContainedText<T>(fixture: ComponentFixture<T>, text: string): void {
   expect(fixture.nativeElement.textContent).toContain(text);
 }
 
 /**
- * Expects that a component has the given text content.
- * Both the component text content and the expected text are trimmed for reliability.
+ * S'attendre à ce que le composant comporte le même contenu de texte.
  *
- * @param fixture Component fixture
- * @param text Expected text
+ * @param fixture
+ * @param text texte attendu
  */
 export function expectContent<T>(fixture: ComponentFixture<T>, text: string): void {
   expect(fixture.nativeElement.textContent).toBe(text);
 }
 
 /**
- * Dispatches a fake event (synthetic event) at the given element.
+ * Dispatche un "fake event" à l'élément donné.
  *
- * @param element Element that is the target of the event
- * @param type Event name, e.g. `input`
- * @param bubbles Whether the event bubbles up in the DOM tree
+ * @param element élément cible de "event"
+ * @param type nom de l' "event"
+ * @param bubbles si l'élément est visible dans le DOM
  */
 export function dispatchFakeEvent(
   element: EventTarget,
@@ -128,31 +125,28 @@ export function dispatchFakeEvent(
 }
 
 /**
- * Enters text into a form field (`input`, `textarea` or `select` element).
- * Triggers appropriate events so Angular takes notice of the change.
- * If you listen for the `change` event on `input` or `textarea`,
- * you need to trigger it separately.
+ * Rentre un texte dans le champ du formulaire (`input`, `textarea` ou `select').
+ * Déclenche les événements appropriés pour que Angular remarque le changement.
  *
- * @param element Form field
- * @param value Form field value
+ * @param element Champ de formulaire
+ * @param value La valeur du champ
  */
 export function setFieldElementValue(
   element: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement,
   value: string,
 ): void {
   element.value = value;
-  // Dispatch an `input` or `change` fake event
-  // so Angular form bindings take notice of the change.
+  //  fake event
   const isSelect = element instanceof HTMLSelectElement;
   dispatchFakeEvent(element, isSelect ? 'change' : 'input');
 }
 
 /**
- * Sets the value of a form field with the given `data-testid` attribute.
+ * Mettre une valeur pour le champ du formulaire qui correspond à l'attribut data-testid donné.
  *
- * @param fixture Component fixture
- * @param testId Test id set by `data-testid`
- * @param value Form field value
+ * @param fixture
+ * @param testId
+ * @param value
  */
 export function setFieldValue<T>(
   fixture: ComponentFixture<T>,
@@ -163,12 +157,12 @@ export function setFieldValue<T>(
 }
 
 /**
- * Checks or unchecks a checkbox or radio button.
- * Triggers appropriate events so Angular takes notice of the change.
+ * Contrôle ou non un radio button ou un checkbox
+ * Déclenche les événements appropriés pour que Angular remarque le changement
  *
- * @param fixture Component fixture
- * @param testId Test id set by `data-testid`
- * @param checked Whether the checkbox or radio should be checked
+ * @param fixture
+ * @param testId
+ * @param checked Contrôler on non
  */
 export function checkField<T>(
   fixture: ComponentFixture<T>,
@@ -177,16 +171,15 @@ export function checkField<T>(
 ): void {
   const { nativeElement } = findEl(fixture, testId);
   nativeElement.checked = checked;
-  // Dispatch a `change` fake event so Angular form bindings take notice of the change.
   dispatchFakeEvent(nativeElement, 'change');
 }
 
 /**
- * Makes a fake click event that provides the most important properties.
- * Sets the button to left.
- * The event can be passed to DebugElement#triggerEventHandler.
+ * Réaliser un "fake event" sur un événement cliquer
+ * Mets le bouton à gauche
+ * l'événement est passé à la méthode triggerEventHandler.
  *
- * @param target Element that is the target of the click event
+ * @param target
  */
 export function makeClickEvent(target: EventTarget): Partial<MouseEvent> {
   return {
@@ -203,10 +196,10 @@ export function makeClickEvent(target: EventTarget): Partial<MouseEvent> {
 }
 
 /**
- * Emulates a left click on the element with the given `data-testid` attribute.
+ * Emuler un clique gauche
  *
- * @param fixture Component fixture
- * @param testId Test id set by `data-testid`
+ * @param fixture
+ * @param testId
  */
 export function click<T>(fixture: ComponentFixture<T>, testId: string): void {
   const element = findEl(fixture, testId);
@@ -215,13 +208,10 @@ export function click<T>(fixture: ComponentFixture<T>, testId: string): void {
 }
 
 /**
- * Finds a nested Component by its selector, e.g. `app-example`.
- * Throws an error if no element was found.
- * Use this only for shallow component testing.
- * When finding other elements, use `findEl` / `findEls` and `data-testid` attributes.
  *
- * @param fixture Fixture of the parent Component
- * @param selector Element selector, e.g. `app-example`
+ *
+ * @param fixture
+ * @param selector
  */
 export function findComponent<T>(
   fixture: ComponentFixture<T>,
@@ -230,9 +220,6 @@ export function findComponent<T>(
   return queryByCss(fixture, selector);
 }
 
-/**
- * Finds all nested Components by its selector, e.g. `app-example`.
- */
 export function findComponents<T>(
   fixture: ComponentFixture<T>,
   selector: string,
