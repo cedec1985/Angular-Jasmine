@@ -21,3 +21,18 @@
 <h2 style="background: lightsalmon;">comp1 works!</h2>
 
 <router-outlet></router-outlet> <!-- permet de projeter le composant (onglet 1) counter1 ou le composant (onglet 2) counter2 -->
+
+<!-- Partie NgRx counter-->
+
+@let counter = counter$ | async;
+
+@if (counter) {
+<div> chargement du compteur en cours... Veuillez patienter</div>
+}
+@else {
+<ul>
+  @if (counter){
+<li>{{count}}</li>
+  }
+</ul>
+}

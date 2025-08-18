@@ -1,5 +1,8 @@
-import { CounterState } from './counter-reducer';
 
 export interface AppState {
-  counter: CounterState;
+  counter: number;
 }
+
+const initialState : AppState = {
+    counter :0
+};

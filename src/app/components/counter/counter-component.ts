@@ -1,13 +1,18 @@
-import { Component,EventEmitter,Input, Output, OnChanges} from '@angular/core';
+import { Component,EventEmitter,Input, Output, OnChanges, OnInit, inject} from '@angular/core';
 import { RouterOutlet } from "@angular/router";
+import { AsyncPipe } from '@angular/common';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { selectCounterLoading } from 'app/reducers/counter-reducer/selectors';
+import { increment } from 'app/actions/counter-actions';
 
 @Component({
   selector: 'app-counter-component',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, AsyncPipe],
   templateUrl: './counter-component.html',
   styleUrl: './counter-component.css'
 })
-export class CounterComponent implements OnChanges {
+export class CounterComponent implements OnChanges, OnInit {
 @Input()
 public startCount = 0;
 @Output()
@@ -39,4 +44,23 @@ public reset() : void {
 public notify() : void {
     this.countChange.emit(this.count);
   }
+
+private store = inject(Store)
+  counter$: Observable<number> = this.store.select(selectCounterLoading);
+  ngOnInit(): void {
+    this.store.dispatch(increment());
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

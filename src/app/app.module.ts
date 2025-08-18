@@ -1,5 +1,7 @@
+import { CounterApiService } from 'app/services/services/counter-api-service';
+import { CounterEffects } from './effects/counter-effects';
 import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Attribute, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +23,7 @@ import { TodosService } from './services/todos-service';
 import { CounterService } from './services/counter-service';
 import { counterReducer } from './reducers/counter-reducer/counter-reducer';
 import { PageNotFound } from './components/page-not-found/page-not-found';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,7 @@ import { PageNotFound } from './components/page-not-found/page-not-found';
     BrowserModule,
     BrowserTestingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClient,
     RouterModule.forRoot(routes),
     AppRoutingModule,
     AppComponent,
@@ -57,10 +60,10 @@ import { PageNotFound } from './components/page-not-found/page-not-found';
     }),
 
     // NgRx Effects
-  //  EffectsModule.forRoot([CounterEffects]),
+   EffectsModule.forRoot([CounterEffects]),
   ],
   exports:[
-    TodosService, CounterService
+    TodosService, CounterService, CounterApiService
   ],
   providers: [],
   bootstrap: [AppComponent]
