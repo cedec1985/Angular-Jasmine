@@ -1,4 +1,4 @@
-import { TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -10,10 +10,12 @@ import { Counter2 } from './components/counter/countercomponent/counter2/counter
 import { ServiceCounterComponent } from './components/service-counter/service-counter.js';
 import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3.js';
 import { PageNotFound } from './components/page-not-found/page-not-found.js';
+import { By } from '@angular/platform-browser';
 
 describe('AppRoutingModule', () => {
   let router: Router;
   let location: Location;
+  let fixture : ComponentFixture<AppRoutingModule>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -31,6 +33,7 @@ describe('AppRoutingModule', () => {
 
     router = TestBed.inject(Router);
     location = TestBed.inject(Location);
+    fixture = TestBed.createComponent(AppRoutingModule);
     router.initialNavigation(); // Initialise la navigation
   });
 
@@ -71,14 +74,16 @@ describe('AppRoutingModule', () => {
   }));
 
   it('devrait charger ServiceCounterComponent3 avec paramètre :id', fakeAsync(() => {
-    router.navigate(['/service-counter/abc123']);
+    router.navigate(['/service-counter/servcount3Id']);
     tick();
-    expect(location.path()).toBe('/service-counter/abc123');
+    expect(location.path()).toBe('/service-counter/servcount3Id');
   }));
-
-  it('devrait charger PageNotFound pour une route inconnue', fakeAsync(() => {
-    router.navigate(['/route-inconnue']);
+  
+  it('devrait afficher un message pour une route inconnue', fakeAsync(() => {
+    router.navigate(['**']);
     tick();
-    expect(location.path()).toBe('/route-inconnue');
+    fixture.detectChanges();
+    const h1 = fixture.debugElement.query(By.css('h1')).nativeElement;
+    expect(h1.textContent).toContain('Oups, page non trouvée !');
   }));
 });
