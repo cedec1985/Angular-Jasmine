@@ -1,7 +1,8 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { CounterApiService } from 'app/services/services/counter-api-service';
 import { CounterEffects } from './effects/counter-effects';
 import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Attribute, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -46,9 +47,12 @@ import { EffectsModule } from '@ngrx/effects';
     HttpClient,
     RouterModule.forRoot(routes),
     AppRoutingModule,
+    RouterTestingModule,
     AppComponent,
     Homecomponent,
+    CounterComponent,
     ServiceCounterComponent,
+    ServiceCounterComponent3,
     StoreModule.forRoot({}),
     CommonModule,
      // NgRx Store

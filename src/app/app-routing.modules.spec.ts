@@ -1,0 +1,84 @@
+import { TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { AppRoutingModule } from './app-routing.module.js';
+import { Homecomponent } from './components/home/homecomponent/homecomponent.js';
+import { CounterComponent } from './components/counter/counter-component.js';
+import { Counter1 } from './components/counter/countercomponent/counter1/counter1.js';
+import { Counter2 } from './components/counter/countercomponent/counter2/counter2.js';
+import { ServiceCounterComponent } from './components/service-counter/service-counter.js';
+import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3.js';
+import { PageNotFound } from './components/page-not-found/page-not-found.js';
+
+describe('AppRoutingModule', () => {
+  let router: Router;
+  let location: Location;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [RouterTestingModule.withRoutes([]), AppRoutingModule],
+      declarations: [
+        Homecomponent,
+        CounterComponent,
+        Counter1,
+        Counter2,
+        ServiceCounterComponent,
+        ServiceCounterComponent3,
+        PageNotFound
+      ]
+    }).compileComponents();
+
+    router = TestBed.inject(Router);
+    location = TestBed.inject(Location);
+    router.initialNavigation(); // Initialise la navigation
+  });
+
+  it('devrait rediriger "" vers "/home"', fakeAsync(() => {
+    router.navigate(['']);
+    tick();
+    expect(location.path()).toBe('/home');
+  }));
+
+  it('devrait charger Homecomponent pour /home', fakeAsync(() => {
+    router.navigate(['/home']);
+    tick();
+    expect(location.path()).toBe('/home');
+  }));
+
+  it('devrait charger CounterComponent pour /counter-component', fakeAsync(() => {
+    router.navigate(['/counter-component']);
+    tick();
+    expect(location.path()).toBe('/counter-component');
+  }));
+
+  it('devrait charger Counter1 pour /counter-component/counter1', fakeAsync(() => {
+    router.navigate(['/counter-component/counter1']);
+    tick();
+    expect(location.path()).toBe('/counter-component/counter1');
+  }));
+
+  it('devrait charger Counter2 pour /counter-component/counter2', fakeAsync(() => {
+    router.navigate(['/counter-component/counter2']);
+    tick();
+    expect(location.path()).toBe('/counter-component/counter2');
+  }));
+
+  it('devrait charger ServiceCounterComponent pour /service-counter', fakeAsync(() => {
+    router.navigate(['/service-counter']);
+    tick();
+    expect(location.path()).toBe('/service-counter');
+  }));
+
+  it('devrait charger ServiceCounterComponent3 avec paramètre :id', fakeAsync(() => {
+    router.navigate(['/service-counter/abc123']);
+    tick();
+    expect(location.path()).toBe('/service-counter/abc123');
+  }));
+
+  it('devrait charger PageNotFound pour une route inconnue', fakeAsync(() => {
+    router.navigate(['/route-inconnue']);
+    tick();
+    expect(location.path()).toBe('/route-inconnue');
+  }));
+});
