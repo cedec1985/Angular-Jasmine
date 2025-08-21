@@ -1,3 +1,4 @@
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CounterApiService } from 'app/services/services/counter-api-service';
 import { CounterEffects } from './effects/counter-effects';

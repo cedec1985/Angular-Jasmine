@@ -22,7 +22,6 @@ export class CounterEffects {
     private counterApiService: CounterApiService,
   ) {}
 
-
   public saveOnChange$ = createEffect(() =>
     this.actions$.pipe(
       ofType(increment, decrement, reset),
