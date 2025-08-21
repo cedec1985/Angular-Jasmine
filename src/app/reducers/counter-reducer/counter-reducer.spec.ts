@@ -1,29 +1,25 @@
+import { decrement, increment, reset } from "src/app/actions/counter-actions.js";
+import { counterReducer, CounterState } from "./counter-reducer.js";
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { counterReducer, initialState } from './counter-reducer.js';
+describe('Counter Reducer', () => {
+  const initialState: CounterState = 0;
 
-describe('counterReducer', () => {
-  let component: typeof counterReducer;
-  let fixture: ComponentFixture<typeof counterReducer>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [counterReducer],
-      declarations: [counterReducer]
-    })
-    .compileComponents();
-
+  it('devrait incrémenter', () => {
+    const action = increment();
+    const result = counterReducer(initialState, action);
+    expect(result).toBe(1);
   });
 
-})
-/*
-   fixture = TestBed.createComponent();
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  it('devrait décrémenter', () => {
+    const action = decrement();
+    const result = counterReducer(1, action);
+    expect(result).toBe(0);
   });
 
-  it('should create', () => {
-    expect(counterReducer).toBeTruthy();
+  it('devrait reseter l/état à une valeur donnée', () => {
+    const action = reset({ count: 42 });
+    const result = counterReducer(10, action);
+    expect(result).toBe(42);
   });
-*/
+});
 

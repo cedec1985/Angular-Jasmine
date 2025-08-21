@@ -44,41 +44,41 @@ describe('AppRoutingModule', () => {
   }));
 
   it('devrait charger Homecomponent pour /home', fakeAsync(() => {
-    router.navigate(['/home']);
+    router.navigate(['home']);
     tick();
     expect(location.path()).toBe('/home');
   }));
 
   it('devrait charger CounterComponent pour /counter-component', fakeAsync(() => {
-    router.navigate(['/counter-component']);
+    router.navigate(['counter-component']);
     tick();
     expect(location.path()).toBe('/counter-component');
   }));
 
   it('devrait charger Counter1 pour /counter-component/counter1', fakeAsync(() => {
-    router.navigate(['/counter-component/counter1']);
+    router.navigate(['counter-component/counter1']);
     tick();
     expect(location.path()).toBe('/counter-component/counter1');
   }));
 
   it('devrait charger Counter2 pour /counter-component/counter2', fakeAsync(() => {
-    router.navigate(['/counter-component/counter2']);
+    router.navigate(['counter-component/counter2']);
     tick();
     expect(location.path()).toBe('/counter-component/counter2');
   }));
 
   it('devrait charger ServiceCounterComponent pour /service-counter', fakeAsync(() => {
-    router.navigate(['/service-counter']);
+    router.navigate(['service-counter']);
     tick();
     expect(location.path()).toBe('/service-counter');
   }));
 
   it('devrait charger ServiceCounterComponent3 avec paramètre :id', fakeAsync(() => {
-    router.navigate(['/service-counter/servcount3Id']);
+    router.navigate(['service-counter/servcount3Id']);
     tick();
     expect(location.path()).toBe('/service-counter/servcount3Id');
   }));
-  
+
   it('devrait afficher un message pour une route inconnue', fakeAsync(() => {
     router.navigate(['**']);
     tick();
