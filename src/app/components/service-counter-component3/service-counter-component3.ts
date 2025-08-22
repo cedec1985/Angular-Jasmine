@@ -18,7 +18,7 @@ export class ServiceCounterComponent3 implements OnInit {
  constructor(private route: ActivatedRoute) { }
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-    params.get('servcount3Id'); // récupère la valeur de servcount3Id dans l'URL
+    this.id = params.get('servcount3Id') || ''; // récupère la valeur de servcount3Id dans l'URL
     });
   }
 }

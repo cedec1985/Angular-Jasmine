@@ -28,33 +28,33 @@ function expectCount(count: number): void {
     fixture.detectChanges();
   });
 
-  it('shows the start count', () => {
+  it('affiche le début du compteur', () => {
     expectCount(startCount);
   });
-  it('increments the count', () => {
+  it('incremente le compteur', () => {
     click(fixture, 'increment-button');
     fixture.detectChanges();
     expectCount(startCount + 1);
   });
-  it('decrements the count', () => {
+  it('decremente le compteur', () => {
     click(fixture, 'decrement-button');
     fixture.detectChanges();
     expectCount(startCount - 1);
   });
-  it('resets the count', () => {
+  it('resete le compteur', () => {
     setFieldValue(fixture, 'reset-input', newCount.toString());
     click(fixture, 'reset-button');
     fixture.detectChanges();
     expectCount(newCount);
   });
-  it('does not reset if the value is not a number', () => {
+  it('ne resete pas si la valeur n/est pas un nombre', () => {
     const value = 'not a number';
     setFieldValue(fixture, 'reset-input', value);
     click(fixture, 'reset-button');
     fixture.detectChanges();
     expectCount(startCount);
     });
-  it('emits countChanges events', () => {
+  it('émet les événements', () => {
     let actualCounts: number[] | undefined;
     component.countChange.pipe(take(3), toArray()).subscribe(counts => actualCounts = counts);
 

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 import { PageNotFound } from './page-not-found.js';
 
 describe('PageNotFound', () => {
@@ -7,18 +8,20 @@ describe('PageNotFound', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageNotFound]
-    })
-    .compileComponents();
+      declarations: [PageNotFound]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PageNotFound);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('le composant devrait être créé', () => {
+  it('should create the component', () => {
     expect(component).toBeTruthy();
   });
 
-  
+  it('should have the correct message', () => {
+    expect(component.message).toBe('Oups, page non trouvée !');
+  });
 });
+

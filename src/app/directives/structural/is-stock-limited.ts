@@ -16,7 +16,7 @@ export class IsStockLimited {
 
   @Input() set isStockLimited(nb: number) {
 
-                                                                // nb = value = 4      -> réception de la valeur transmise à la balise : *isStockLimit = "4"
+                                                                // nb = value = 4      -> réception de la valeur transmise à la balise : *isStockLimited = "4"
     if (nb < ShopStructure.StockLimited && !this.hasView) {        // 4 < 10 et pas affiché
       this.viewContainer.createEmbeddedView(this.templateRef);  // c'est OK !  le contenu de templateRef : "stock limité 1!" est envoyé à l'emplacement (container)
       this.hasView = true;

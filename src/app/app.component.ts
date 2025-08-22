@@ -54,7 +54,7 @@ export class AppComponent {
 products: Product[] = [
     { id: 1, name: "Bouteilles d'eau", stock: 10 },
     { id: 2, name: "Pain", stock: 10 },
-    { id: 3, name: "Viande", stock: 10 },
+    { id: 3, name: "Viande", stock: 8 },
   ];
 
 

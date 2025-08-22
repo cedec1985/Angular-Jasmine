@@ -14,37 +14,37 @@
 
 <h2>ngStyle</h2>
 
-<p>(1) appliquer plusieurs styles</p>
+<p>appliquer plusieurs styles</p>
 <div [ngStyle]="{'background-color': 'yellow', 'color': 'blue'}">"message in a bottle" (The police)</div>
 <hr>
 
-<p>(2) appliquer un style précis</p>
+<p>appliquer un style précis</p>
 <div [style.color]="'red'">"C'est pas ma guerre !" (Rambo)</div>
 <hr>
 
-<p>(3) changer un style précis suivant une condition</p>
+<p>changer un style précis suivant une condition</p>
 <button (click)="changeStyle3()">changer le style - flag3={{flag3}}</button>
 <div [style.color]="flag3 ? colorA : colorB">"C'est des malades !" (Les visiteurs)</div>
 
 <hr>
 <h2>NgClass</h2>
 
-<p>(4) appliquer simplement une classe</p>
+<p>appliquer simplement une classe</p>
 <div [className]="'maClasse4'">"Luke, je suis ton père…" (Dark vador)</div>
 <div [className]="dataClasse4">"Luke, je suis ton père…" (Dark vador)</div>
 <hr>
 
-<p>(5) (une condition)? 'classeX' : 'classeY"</p>
+<p>(une condition)? 'classeX' : 'classeY"</p>
 <button (click)="this.flag5 = !this.flag5">changer la classe - flag5={{flag5}}</button>
 <div [className]="(flag5) ? 'maClasse51' : 'maClasse52'">"J’ai les mains faites pour l’or, et elles sont dans la merde !" (Scarface)" </div>
 <hr>
 
-<p>(6) une classe précise, (une condition)?</p>
+<p>une classe précise, (une condition)?</p>
 <button (click)="changeClasse6()">changer la classe - flag6={{flag6}}</button>
 <div [class.maClasse6]="flag6">"On se serait shooté à la vitamine C si cela avait été illégal" (Trainspotting )</div>
 <hr>
 
-<p>(7) plusieurs classes, plusieurs (conditions)?</p>
+<p>plusieurs classes, plusieurs (conditions)?</p>
 <button (click)="flag71 = !flag71">changer la 1re condition - flag71={{flag71}}</button>
 <button (click)="flag72 = !flag72">changer la 2e condition - flag72={{flag72}}</button>
 <div [ngClass]="{'maClasse71': flag71 == flag72, 'maClasse72': !flag71 && !flag72}">"C’est à moi que tu parles ? C’est à moi que tu parles ??..." (Taxi driver)</div>
@@ -65,9 +65,9 @@
 <hr>
 <hr>
 
-(7) <span *appIsStockLimited = "nb1">stock limité 1 !</span>     <!--  "stock limité 1 !" s'affiche parce que nb1 est inférieur à 10 -->
+<span *appIsStockLimited = "nb1">stock limité 1 !</span>     <!-- Directive d'attribut  "stock limité 1 !" s'affiche parce que nb1 est inférieur à 10 -->
 <br>
-(8) <span *appIsStockLimited = "nb2">stock limité 2 !</span>     <!--  "stock limité 2 !" ne s'affiche pas parce que nb2 est supérieur à 10 -->
+<span *appIsStockLimited = "nb2">stock limité 2 !</span>     <!-- Directive d'attribut  "stock limité 2 !" ne s'affiche pas parce que nb2 est supérieur à 10 -->
 
 <h1>PARTIE 3 : PIPES </h1>
 
