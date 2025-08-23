@@ -1,6 +1,6 @@
 ## Description
 
-This project shows how to do tests with Typescript and the framework Jasmine.
+This project shows how to do tests with Typescript and the framework Jasmine inside an Angular project.
 
 ## Initialize node configuration 
 
