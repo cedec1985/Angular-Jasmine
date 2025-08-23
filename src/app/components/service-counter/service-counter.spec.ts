@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { ServiceCounterComponent } from './service-counter.js';
+import { ServiceCounterComponent } from './service-counter';
 import { CounterService } from 'src/app/services/counter-service.js';
 import { CounterState } from 'src/app/reducers/counter-reducer/counter-reducer.js';
 
