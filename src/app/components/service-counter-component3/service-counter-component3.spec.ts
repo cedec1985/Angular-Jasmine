@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ServiceCounterComponent3 } from './service-counter-component3';
+import { ServiceCounterComponent3 } from './service-counter-component3.js';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 
