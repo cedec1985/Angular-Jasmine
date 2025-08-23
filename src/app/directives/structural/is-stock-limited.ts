@@ -1,5 +1,6 @@
 import { Directive, TemplateRef, ViewContainerRef, Input } from '@angular/core';
-import { ShopStructure } from 'app/enums/shop-structure';
+import { ShopStructure } from 'app/enums/shop-structure.js';
+
 /**
  * Directive to check if stock is limited.
  * This directive can be used to conditionally display elements based on stock availability.

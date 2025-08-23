@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { CounterComponent } from 'app/components/counter/counter-component';
-import { ServiceCounterComponent } from 'app/components/service-counter/service-counter';
+import { CounterComponent } from 'app/components/counter/counter-component.js';
 
 
 @Component({
   selector: 'app-homecomponent',
-  imports: [CounterComponent,ServiceCounterComponent],
+  imports: [CounterComponent],
   templateUrl: './homecomponent.html',
   styleUrl: './homecomponent.css'
 })
