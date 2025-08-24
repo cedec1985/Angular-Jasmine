@@ -1,12 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { ServiceCounterComponent } from './service-counter';
-import { CounterService } from 'src/app/services/counter-service';
-import { CounterState } from 'src/app/reducers/counter-reducer/counter-reducer';
+import { CounterService } from '../../services/counter-service';
+import { CounterState } from '../../reducers/counter-reducer/counter-reducer';
+
 
 describe('ServiceCounterComponent', () => {
   let component: ServiceCounterComponent;
-  let fixture: ComponentFixture<ServiceCounterComponent>;
+  let fixture: ComponentFixture<ServiceCounterComponent>
   let counterServiceSpy: jasmine.SpyObj<CounterService>;
 
   beforeEach(async () => {

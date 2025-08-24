@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { CounterComponent } from 'app/components/counter/counter-component';
-import { ServiceCounterComponent } from "app/components/service-counter/service-counter";
+import { CounterComponent } from '../../counter/counter-component';
 
 
 @Component({
