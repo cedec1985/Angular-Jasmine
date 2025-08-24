@@ -26,6 +26,7 @@ import { CounterService } from './services/counter-service';
 import { counterReducer } from './reducers/counter-reducer/counter-reducer';
 import { PageNotFound } from './components/page-not-found/page-not-found';
 import { EffectsModule } from '@ngrx/effects';
+import { FormComponent } from './components/form/form';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { EffectsModule } from '@ngrx/effects';
     CounterComponent,
     Counter1,
     Counter2,
-    PageNotFound
+    PageNotFound,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,7 @@ import { EffectsModule } from '@ngrx/effects';
     ServiceCounterComponent3,
     StoreModule.forRoot({}),
     CommonModule,
+    FormComponent,
      // NgRx Store
     StoreModule.forRoot(counterReducer, {
       runtimeChecks: {

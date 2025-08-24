@@ -4,7 +4,6 @@ import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './components/counter/counter-component';
 import { IsStockLimited } from './directives/structural/is-stock-limited';
 import { StockFilterPipe, Product } from './pipes/stock-filter-pipe';
-import { CounterService } from './services/counter-service';
 import { ServiceCounterComponent } from "./components/service-counter/service-counter";
 
 
