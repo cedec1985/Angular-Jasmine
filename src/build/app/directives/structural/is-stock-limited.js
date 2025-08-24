@@ -1,6 +1,6 @@
 import { __decorate } from "tslib";
 import { Directive, Input } from '@angular/core';
-import { ShopStructure } from "../../enums/shop-structure";
+import { ShopStructure } from "../../enums/shop-structure.js";
 
 /**
  * Directive to check if stock is limited.
