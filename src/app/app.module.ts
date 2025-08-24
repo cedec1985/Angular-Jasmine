@@ -48,6 +48,7 @@ import { EffectsModule } from '@ngrx/effects';
     HttpClient,
     RouterModule.forRoot(routes),
     AppRoutingModule,
+    CounterService,
     RouterTestingModule,
     AppComponent,
     Homecomponent,

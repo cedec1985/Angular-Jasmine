@@ -1,10 +1,11 @@
 
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { routes } from './app.routes';
+
 import { provideState, provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-import { counterReducer, initialState } from './reducers/counter-reducer/counter-reducer';
+import { routes } from './app-routing.module.js';
+
 
 export const appConfig: ApplicationConfig = {
   providers: [

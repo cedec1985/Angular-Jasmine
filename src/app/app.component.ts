@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Product, StockFilterPipe } from './pipes/stock-filter-pipe';
-import { CounterComponent } from "./components/counter/counter-component";
-import { ServiceCounterComponent } from "./components/service-counter/service-counter";
-import { IsStockLimited } from './directives/structural/is-stock-limited';
+import { CounterComponent } from './components/counter/counter-component.js';
+import { IsStockLimited } from './directives/structural/is-stock-limited.js';
+import { StockFilterPipe, Product } from './pipes/stock-filter-pipe.js';
+import { CounterService } from './services/counter-service.js';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, ServiceCounterComponent, IsStockLimited],
+  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, IsStockLimited, CounterService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
