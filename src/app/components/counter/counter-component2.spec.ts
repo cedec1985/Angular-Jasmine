@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { CounterComponent } from './counter-component';
+import { CounterComponent } from './counter-component.js';
 
 describe('CounterComponent', () => {
   let fixture: ComponentFixture<CounterComponent>;
