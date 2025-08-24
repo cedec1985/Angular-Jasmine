@@ -3,7 +3,8 @@ import { RouterOutlet } from "@angular/router";
 import { AsyncPipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-
+import { selectCounterLoading } from '../../reducers/counter-reducer/selectors';
+import { increment } from '../../actions/counter-actions';
 
 @Component({
   selector: 'app-counter-component',

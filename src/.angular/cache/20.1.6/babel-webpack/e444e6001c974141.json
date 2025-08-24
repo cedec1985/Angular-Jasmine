@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var ShopStructure = /*#__PURE__*/function (ShopStructure) {\n  ShopStructure[ShopStructure[\"StockLimited\"] = 10] = \"StockLimited\"; // 10 produits en stock \n  return ShopStructure;\n}(ShopStructure || {});","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
