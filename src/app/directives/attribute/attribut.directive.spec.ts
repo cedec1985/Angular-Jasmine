@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { Attribute } from './attribut.directive.js';
+import { Attribute } from './attribut.directive';
 
 @Component({
   template: `<p [appAttribute]="'lightblue'">Texte de test</p>`

@@ -1,5 +1,5 @@
 import { Directive, TemplateRef, ViewContainerRef, Input } from '@angular/core';
-import { ShopStructure } from 'app/enums/shop-structure.js';
+import { ShopStructure } from 'app/enums/shop-structure';
 
 /**
  * Directive to check if stock is limited.

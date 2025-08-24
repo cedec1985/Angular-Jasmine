@@ -4,7 +4,7 @@ import { provideRouter } from '@angular/router';
 
 import { provideState, provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-import { routes } from './app-routing.module.js';
+import { routes } from './app-routing.module';
 
 
 export const appConfig: ApplicationConfig = {

@@ -1,4 +1,4 @@
-import { Product, StockFilterPipe } from "./stock-filter-pipe.js";
+import { Product, StockFilterPipe } from "./stock-filter-pipe";
 
 describe('StockFilterPipe', () => {
   let pipe: StockFilterPipe;

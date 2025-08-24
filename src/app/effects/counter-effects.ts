@@ -3,9 +3,9 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { of } from 'rxjs';
 import { catchError, map, mergeMap, withLatestFrom } from 'rxjs/operators';
-import { AppState } from 'app/reducers/counter-reducer/app-state.js';
-import { CounterApiService } from 'app/services/services/counter-api-service.js';
-import { increment, decrement, reset, saveSuccess, saveError } from 'app/actions/counter-actions.js';
+import { AppState } from 'app/reducers/counter-reducer/app-state';
+import { CounterApiService } from 'app/services/services/counter-api-service';
+import { increment, decrement, reset, saveSuccess, saveError } from 'app/actions/counter-actions';
 
 @Injectable()
 export class CounterEffects {

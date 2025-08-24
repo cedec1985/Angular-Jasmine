@@ -1,7 +1,7 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { IsStockLimited } from './is-stock-limited.js';
+import { IsStockLimited } from './is-stock-limited';
 
 // Mock de l'enum ShopStructure
 export enum ShopStructure {

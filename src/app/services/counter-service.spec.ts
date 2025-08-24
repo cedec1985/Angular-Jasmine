@@ -1,4 +1,4 @@
-import { CounterService } from "./counter-service.js";
+import { CounterService } from "./counter-service";
 
 
 describe('CounterService', () => {
