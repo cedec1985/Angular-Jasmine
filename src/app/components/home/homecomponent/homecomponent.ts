@@ -4,7 +4,7 @@ import { CounterComponent } from '../../counter/counter-component';
 
 @Component({
   selector: 'app-homecomponent',
-  imports: [CounterComponent, ServiceCounterComponent],
+  imports: [CounterComponent],
   templateUrl: './homecomponent.html',
   styleUrl: './homecomponent.css'
 })

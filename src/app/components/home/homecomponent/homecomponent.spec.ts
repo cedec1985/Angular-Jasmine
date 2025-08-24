@@ -1,7 +1,7 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Homecomponent } from './homecomponent';
-import { findComponent } from 'src/app/helpers/spec.helpers.component';
+import { findComponent } from '../../../helpers/spec.helpers.component';
 
 describe('HomeComponent', () => {
   let fixture: ComponentFixture<Homecomponent>;

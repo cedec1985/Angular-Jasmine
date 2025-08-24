@@ -5,11 +5,12 @@ import { CounterComponent } from './components/counter/counter-component';
 import { IsStockLimited } from './directives/structural/is-stock-limited';
 import { StockFilterPipe, Product } from './pipes/stock-filter-pipe';
 import { CounterService } from './services/counter-service';
+import { ServiceCounterComponent } from "./components/service-counter/service-counter";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, IsStockLimited],
+  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, IsStockLimited, ServiceCounterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

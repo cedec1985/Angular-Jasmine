@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
+import { increment, decrement, reset, saveSuccess, saveError } from '../actions/counter-actions';
+import { AppState } from '../reducers/counter-reducer/app-state';
 import { of } from 'rxjs';
 import { catchError, map, mergeMap, withLatestFrom } from 'rxjs/operators';
-import { AppState } from 'app/reducers/counter-reducer/app-state';
-import { CounterApiService } from 'app/services/services/counter-api-service';
-import { increment, decrement, reset, saveSuccess, saveError } from 'app/actions/counter-actions';
+import { CounterApiService } from '../services/services/counter-api-service';
 
 @Injectable()
 export class CounterEffects {

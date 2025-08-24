@@ -1,4 +1,4 @@
-import { decrement, increment, reset } from "src/app/actions/counter-actions";
+import { decrement, increment, reset } from "../../actions/counter-actions";
 import { counterReducer, CounterState } from "./counter-reducer";
 
 describe('Counter Reducer', () => {
