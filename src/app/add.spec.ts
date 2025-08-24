@@ -1,4 +1,4 @@
-import { add } from "src/build/app/add";
+import { add } from "./add";
 
 describe("add", () => {
   it("should add two numbers", () => {
