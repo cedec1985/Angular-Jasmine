@@ -2,7 +2,7 @@ import { TestBed,ComponentFixture } from '@angular/core/testing';
 import {APP_BASE_HREF}    from '@angular/common';
 import { AppComponent } from './app.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { findComponent } from './helpers/spec.helpers.component';
+import { findComponent } from './spec.helpers.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
