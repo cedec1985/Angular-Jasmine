@@ -83,7 +83,7 @@ export function expectText<T>(
   testId: string,
   text: string,
 ): void {
-  expect(getText(fixture, testId)).toBe(text);
+  expect(getText(fixture,text)).toBe(text);
 }
 
 /**
