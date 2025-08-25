@@ -1,3 +1,4 @@
+import { CounterApiService } from 'app/services/services/counter-api-service';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -29,17 +30,40 @@ export class FormComponent {
   email: string = '';
   avis: string = '';
 
+  constructor(private counterApiService : CounterApiService){}
+
   @ViewChild('formRef') formRef!: NgForm;
   onSubmit() {
     console.log(`Nom: ${this.nom}`);
     console.log(`Email: ${this.email}`);
     console.log(`Avis: ${this.avis}`);
     //Ici on peut envoyer les données à un service ou à une API
-    if (this.formRef.invalid) {
-      // Le formulaire contient des erreurs de validation
-      // Affichez les erreurs de validation ici
-    } else {
-      // Le formulaire est valide, envoyez-le ou faites ce que vous avez besoin de faire
-    }
-  }
+     if (this.formRef.invalid) {
+    console.warn('Le formulaire contient des erreurs :', this.formRef.controls);
+    Object.values(this.formRef.controls).forEach((control) => {
+      control.markAsTouched();
+    });
+
+  } else {
+
+    const formData = {
+      nom: this.nom,
+      email: this.email,
+      avis: this.avis
+    };
+
+    // Sauvegarde dans le stockage local
+    localStorage.setItem('formData', JSON.stringify(formData));
+    console.log('Données sauvegardées localement.');
+
+    // Envoyer vers une API
+    this.counterApiService.envoyerFormulaire(formData).subscribe({
+      next: (response) => {
+        console.log('Formulaire envoyé avec succès à l’API :', response);
+      },
+      error: (error) => {
+        console.error('Erreur lors de l’envoi à l’API :', error);
+      }
+    });
+  }}
 }

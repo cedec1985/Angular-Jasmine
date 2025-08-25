@@ -1,6 +1,10 @@
+import { provideHttpClient } from '@angular/common/http';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from 'app/app.component';
 import { appConfig } from 'app/app.config';
+import { FormComponent } from 'app/components/form/form';
 
 bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+.catch((err) => console.error(err));
+
+
