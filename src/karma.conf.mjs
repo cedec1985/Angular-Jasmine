@@ -1,5 +1,4 @@
 // Karma configuration
-// Generated on Fri Aug 01 2025 10:10:26 GMT+0200 (heure d’été d’Europe centrale)
 
 export default {
     // base path that will be used to resolve all patterns (eg. files, exclude)
