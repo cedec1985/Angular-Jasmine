@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { __awaiter } from "tslib";
 import { TestBed } from '@angular/core/testing';
-import { Homecomponent } from './homecomponent';
-import { CounterComponent } from '../../counter/counter-component';
-import { ServiceCounterComponent } from '../../service-counter/service-counter';
+import { Homecomponent } from './homecomponent.js';
+import { CounterComponent } from '../../counter/counter-component.js';
+import { ServiceCounterComponent } from '../../service-counter/service-counter.js';
 describe('Homecomponent', () => {
     // @ts-ignore
     let component;
