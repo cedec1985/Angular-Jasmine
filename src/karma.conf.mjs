@@ -14,13 +14,13 @@ export default {
     "app/**/*.spec.js","app/**/**/*.spec.js"
     ],
     Plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-coverage'),
-      require('karma-webpack'),
-      require('karma-junit-reporter'),
+      import('karma-jasmine'),
+      import('karma-chrome-launcher'),
+      import('karma-jasmine-html-reporter'),
+      import('@angular-devkit/build-angular/plugins/karma'),
+      import('karma-coverage'),
+      import('karma-webpack'),
+      import('karma-junit-reporter'),
     ],
 
     // list of files / patterns to exclude
