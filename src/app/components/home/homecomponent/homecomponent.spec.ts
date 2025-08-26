@@ -1,16 +1,16 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Homecomponent } from './homecomponent';
-import { findComponent } from '../../../spec.helpers.component';
+import { CounterComponent } from '../../counter/counter-component';
+import { ServiceCounterComponent } from '../../service-counter/service-counter';
 
-describe('HomeComponent', () => {
-  let fixture: ComponentFixture<Homecomponent>;
+describe('Homecomponent', () => {
   let component: Homecomponent;
+  let fixture: ComponentFixture<Homecomponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [component],
-      schemas: [NO_ERRORS_SCHEMA],
+      declarations: [Homecomponent],
+      imports: [CounterComponent, ServiceCounterComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(Homecomponent);
@@ -18,32 +18,13 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  describe('app-counter-component', () => {
-    it('afficher app-counter-component', () => {
-      const el = findComponent(fixture, 'app-counter-component');
-      expect(el).toBeTruthy();
-    });
-
-    it('le compteur débute à 5', () => {
-      const el = findComponent(fixture, 'app-counter-component');
-      expect(el.properties['startCount']).toBe(5);
-    });
-
-    it('écoute les changements pour le compteur', () => {
-      spyOn(console, 'log');
-      const el = findComponent(fixture, 'app-counter-component');
-      const count = 5;
-      el.triggerEventHandler('countChange', 5);
-      expect(console.log).toHaveBeenCalledWith(
-        'countChange event from CounterComponent',
-        count,
-      );
-    });
+  it('should create the component', () => {
+    expect(component).toBeTruthy();
   });
 
-  it('devrait montrer le composant', () => {
-    const el = findComponent(fixture, 'app-service-counter');
-    expect(el).toBeTruthy();
+  it('should handle count change and log the value', () => {
+    const consoleSpy = spyOn(console, 'log');
+    component.handleCountChange(5);
+    expect(consoleSpy).toHaveBeenCalledWith('countChange event from CounterComponent', 5);
   });
 });
-

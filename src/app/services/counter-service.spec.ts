@@ -1,6 +1,5 @@
 import { CounterService } from "./counter-service";
 
-
 describe('CounterService', () => {
   let service: CounterService;
 
@@ -12,7 +11,7 @@ describe('CounterService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return the initial count as 0', (done) => {
+  it('should return the initial count as 0', (done) => {                // ou utiliser fakeAsync()
     service.getCount().subscribe(count => {
       expect(count).toBe(0);
       done();

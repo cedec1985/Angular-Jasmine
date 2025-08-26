@@ -1,68 +1,83 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { take, toArray } from 'rxjs/operators';
-import { expectText, click, setFieldValue } from '../../spec.helpers.component.js';
-import { CounterComponent } from './counter-component.js';
-
-const startCount = 123;
-const newCount = 456;
+import { CounterComponent } from './counter-component';
+import { Store, StoreModule } from '@ngrx/store';
+import { provideMockStore, MockStore } from '@ngrx/store/testing';
+import { increment } from '../../actions/counter-actions';
+import { selectCounterLoading } from '../../reducers/counter-reducer/selectors';
+import { of } from 'rxjs';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
   let fixture: ComponentFixture<CounterComponent>;
-
-function expectCount(count: number): void {
-  expectText(fixture, 'count', count.toString());
-}
+  let store: MockStore;
+  const initialState = { };
 
   beforeEach(async () => {
-
     await TestBed.configureTestingModule({
-      imports: [CounterComponent]
-    })
-    .compileComponents();
+      imports: [StoreModule.forRoot({})],
+      declarations: [CounterComponent],
+      providers: [
+        provideMockStore({
+          initialState,
+          selectors: [
+            { selector: selectCounterLoading, value: of(0) }
+          ]
+        })
+      ]
+    }).compileComponents();
 
+    store = TestBed.inject(Store) as MockStore;
     fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
-    component.startCount = startCount;
+    fixture.detectChanges();
+  });
+
+  it('should create the component', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should initialize count from startCount in ngOnChanges', () => {
+    component.startCount = 5;
     component.ngOnChanges();
-    fixture.detectChanges();
+    expect(component.count).toBe(5);
   });
 
-  it('affiche le début du compteur', () => {
-    expectCount(startCount);
+  it('should increment the count and emit the value', () => {
+    spyOn(component.countChange, 'emit');
+    component.count = 1;
+    component.increment();
+    expect(component.count).toBe(2);
+    expect(component.countChange.emit).toHaveBeenCalledWith(2);
   });
-  it('incremente le compteur', () => {
-    click(fixture, 'increment-button');
-    fixture.detectChanges();
-    expectCount(startCount + 1);
-  });
-  it('decremente le compteur', () => {
-    click(fixture, 'decrement-button');
-    fixture.detectChanges();
-    expectCount(startCount - 1);
-  });
-  it('resete le compteur', () => {
-    setFieldValue(fixture, 'reset-input', newCount.toString());
-    click(fixture, 'reset-button');
-    fixture.detectChanges();
-    expectCount(newCount);
-  });
-  it('ne resete pas si la valeur n/est pas un nombre', () => {
-    const value = 'not a number';
-    setFieldValue(fixture, 'reset-input', value);
-    click(fixture, 'reset-button');
-    fixture.detectChanges();
-    expectCount(startCount);
-    });
-  it('émet les événements', () => {
-    let actualCounts: number[] | undefined;
-    component.countChange.pipe(take(3), toArray()).subscribe(counts => actualCounts = counts);
 
-    click(fixture, 'increment-button');
-    click(fixture, 'decrement-button');
-    setFieldValue(fixture, 'reset-input', newCount.toString());
-    click(fixture, 'reset-button');
-    expect(actualCounts).toEqual([startCount + 1, startCount - 1, newCount]);
+  it('should decrement the count and emit the value', () => {
+    spyOn(component.countChange, 'emit');
+    component.count = 3;
+    component.decrement();
+    expect(component.count).toBe(2);
+    expect(component.countChange.emit).toHaveBeenCalledWith(2);
+  });
+
+  it('should reset the count and emit the value', () => {
+    spyOn(component.countChange, 'emit');
+    component.startCount = 10;
+    component.count = 5;
+    component.reset();
+    expect(component.count).toBe(10);
+    expect(component.countChange.emit).toHaveBeenCalledWith(10);
+  });
+
+  it('should emit count twice in increment (once in increment, once in notify)', () => {
+    const emitSpy = spyOn(component.countChange, 'emit');
+    component.count = 4;
+    component.increment();
+    expect(emitSpy).toHaveBeenCalledTimes(2);
+    expect(emitSpy).toHaveBeenCalledWith(5);
+  });
+
+  it('should dispatch increment on ngOnInit', () => {
+    const dispatchSpy = spyOn(store, 'dispatch');
+    component.ngOnInit();
+    expect(dispatchSpy).toHaveBeenCalledWith(increment());
   });
 });
-

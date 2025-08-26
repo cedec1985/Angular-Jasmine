@@ -14,7 +14,7 @@ import { ServiceCounterComponent } from "./components/service-counter/service-co
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  protected readonly title = signal('testdemo');
+  readonly title = signal('testdemo');
 
   servcount3Id =2024;
 
