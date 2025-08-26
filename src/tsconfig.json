@@ -37,8 +37,7 @@
     "strictTemplates": true
   },
   "include": [
-   "app/**/*.ts","app/**/**/*.ts",
-    "app/**/*.js","app/**/**/*.js",
+   "app/**/*.ts","app/*.ts",
     "main.ts"
   ],
 //  "exclude": ["app/**/*.ts","app/**/*.js"],       // exclure les fichiers de test de la compilation
