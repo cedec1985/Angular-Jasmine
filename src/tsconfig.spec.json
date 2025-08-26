@@ -15,6 +15,7 @@
     "app/**/*.spec.ts",
     "app/**/*spec.ts",
     "app/**/*.ts",
-    "app/*.spec.ts"
+    "app/*.spec.ts",
+    "app/*.ts"
   ]
 }
