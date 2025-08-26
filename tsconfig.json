@@ -36,6 +36,6 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
-    "exclude": ["app/**/*.spec.ts","app/**/*.spec.js"],
+  //  "exclude": ["app/**/*.spec.ts","app/**/*.spec.js"],
           // exclure les fichiers de test de la compilation
 }
