@@ -1,7 +1,8 @@
 // Karma configuration
-import { config } from 'karma';
+// Generated on Fri Aug 01 2025 10:10:26 GMT+0200 (heure d’été d’Europe centrale)
 
-export default config({
+export default ({
+
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
     // frameworks to use
@@ -54,4 +55,5 @@ export default config({
     // how many browser instances should be started simultaneously
     concurrency: Infinity
 })
+
 
