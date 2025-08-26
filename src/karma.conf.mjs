@@ -35,7 +35,7 @@ export default function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
-    reporters: ['progress','kjhtml','junit','karma-typescript'],
+    reporters: ['progress','kjhtml','junit'],
     // web server port
     port: 9876,
     // enable / disable colors in the output (reporters and logs)

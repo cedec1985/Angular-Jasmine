@@ -1,20 +1,10 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome 139.0.0.0 (Windows 10)" package="" timestamp="2025-08-26T11:07:00" id="0" hostname="HPSSQV" tests="0" errors="1" failures="0" time="0">
+<testsuite name="Chrome 139.0.0.0 (Windows 10)" package="" timestamp="2025-08-26T11:10:52" id="0" hostname="HPSSQV" tests="0" errors="0" failures="0" time="0">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"/>
   </properties>
   <system-out>
-    <![CDATA[Chrome 139.0.0.0 (Windows 10) ERROR
-  You need to include some adapter that implements __karma__.start method!
-,Chrome 139.0.0.0 (Windows 10) ERROR
-  Some of your tests did a full page reload!
-,Chrome 139.0.0.0 (Windows 10) ERROR
-  Disconnected Client disconnected from CONNECTED state (transport close)
-,Chrome 139.0.0.0 (Windows 10) ERROR
-  You need to include some adapter that implements __karma__.start method!
-,Chrome 139.0.0.0 (Windows 10) ERROR
-  Disconnected , because no message in 30000 ms.
-
+    <![CDATA[
 ]]>
   </system-out>
   <system-err/>
