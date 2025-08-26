@@ -8,7 +8,5 @@
     "module": "ES2015",
     "forceConsistentCasingInFileNames": true
   },
-
   "exclude": []
-
 }
