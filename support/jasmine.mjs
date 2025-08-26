@@ -1,8 +1,8 @@
 export default {
   spec_dir: "./build",
   spec_files: [
-    'app/**/**/**/*.spec.ts',
-    'app/**/**/**/*.ts',
+    '*.spec.ts',
+    '*.ts',
   ],
   helpers: [
     "helpers/*.ts"

@@ -10,7 +10,7 @@
   },
 
   "exclude": [
-   "app/**/**/**/*.spec.ts",
+   "*.spec.ts",
 
   ]
 }
