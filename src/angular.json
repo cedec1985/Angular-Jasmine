@@ -9,7 +9,7 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-     
+
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -71,11 +71,11 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "main": "test.ts",
+            "main": "src/test.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.mjs",
             "styles": [
-              "styles.css"
+              "src/styles.css"
             ]
           }
         }
