@@ -1,7 +1,6 @@
-// Karma configuration
-// Generated on Fri Aug 01 2025 10:10:26 GMT+0200 (heure d’été d’Europe centrale)
 
-export default ({
+export default function(config) {
+  config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -16,13 +15,13 @@ export default ({
     "app/**/*.spec.js","app/**/**/*.spec.js"
     ],
     Plugins: [
-      import('karma-jasmine'),
-      import('karma-chrome-launcher'),
-      import('karma-jasmine-html-reporter'),
-      import('@angular-devkit/build-angular/plugins/karma'),
-      import('karma-coverage'),
-      import('karma-webpack'),
-      import('karma-junit-reporter'),
+      ('karma-jasmine'),
+      ('karma-chrome-launcher'),
+      ('karma-jasmine-html-reporter'),
+      ('@angular-devkit/build-angular/plugins/karma'),
+      ('karma-coverage'),
+      ('karma-webpack'),
+      ('karma-junit-reporter'),
     ],
 
     // list of files / patterns to exclude
@@ -54,6 +53,6 @@ export default ({
     // Concurrency level
     // how many browser instances should be started simultaneously
     concurrency: Infinity
-})
+})}
 
 
