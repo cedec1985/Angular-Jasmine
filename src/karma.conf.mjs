@@ -6,7 +6,7 @@ export default function(config) {
     basePath: '',
     // frameworks to use
     // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
-    frameworks: ['jasmine','@angular-devkit/build-angular','karma-typescript'],
+    frameworks: ['jasmine'],
     // list of files / patterns to load in the browser
     files: [
     "app/**/*.ts","app/**/**/*.ts",
@@ -29,8 +29,9 @@ export default function(config) {
     ],
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
-    preprocessors: {"**/*.ts": "karma-typescript"
-    },
+
+  //  preprocessors: {"**/*.ts": "karma-typescript"
+
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
