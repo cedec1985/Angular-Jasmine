@@ -44,12 +44,10 @@ module.exports = function(/** @type {{ set: (arg0: {
     frameworks: ['jasmine','@angular-devkit/build-angular','karma-typescript'],
     // list of files / patterns to load in the browser
     files: [
-    '**/app/*.spec.ts',
-    '**/app/*spec.ts',
-    '**/app/*.ts',
-    '**/app/*.spec.js',
-    '**/app/*spec.js',
-    '**/app/*.js'
+    "app/**/*.ts","app/**/**/*.ts",
+    "app/**/*.js","app/**/**/*.js",
+    "app/**/*.spec.ts","app/**/**/*.spec.ts",
+    "app/**/*.spec.js","app/**/**/*.spec.js"
     ],
     Plugins: [
       require('karma-jasmine'),
