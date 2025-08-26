@@ -1,6 +1,7 @@
 import { CounterApiService } from 'app/services/services/counter-api-service';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-form',
