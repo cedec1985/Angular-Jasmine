@@ -1,6 +1,6 @@
 // Karma configuration
 
-export default {
+export default config({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
     // frameworks to use
@@ -52,5 +52,5 @@ export default {
     // Concurrency level
     // how many browser instances should be started simultaneously
     concurrency: Infinity
-}
+})
 
