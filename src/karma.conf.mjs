@@ -53,7 +53,6 @@ module.exports = function(/** @type {{ set: (arg0: {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
-      // @ts-ignore
       require('@angular-devkit/build-angular/plugins/karma'),
       require('karma-coverage'),
       require('karma-webpack'),
