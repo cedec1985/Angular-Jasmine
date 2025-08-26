@@ -1,7 +1,8 @@
 import { __decorate } from "tslib";
 import { Component } from '@angular/core';
-import { CounterComponent } from '../../counter/counter-component';
+import { CounterComponent } from "../../counter/counter-component";
 import { ServiceCounterComponent } from "../../service-counter/service-counter";
+
 let Homecomponent = class Homecomponent {
     /**
    * @param {any} count

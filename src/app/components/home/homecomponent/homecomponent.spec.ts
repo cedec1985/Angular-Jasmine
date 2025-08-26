@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Homecomponent } from './homecomponent.js';
-import { CounterComponent } from '../../counter/counter-component.js';
-import { ServiceCounterComponent } from '../../service-counter/service-counter.js';
+import { Homecomponent } from './homecomponent';
+import { CounterComponent } from '../../counter/counter-component';
+import { ServiceCounterComponent } from '../../service-counter/service-counter';
 
 describe('Homecomponent', () => {
   let component: Homecomponent;
