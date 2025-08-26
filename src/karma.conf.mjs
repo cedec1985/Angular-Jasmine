@@ -1,4 +1,5 @@
 // Karma configuration
+import { config } from 'karma';
 
 export default config({
     // base path that will be used to resolve all patterns (eg. files, exclude)
