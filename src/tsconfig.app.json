@@ -3,7 +3,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./build/app",
+    "outDir": "./build",
     "type": "module",
     "module": "ES2015",
     "forceConsistentCasingInFileNames": true
