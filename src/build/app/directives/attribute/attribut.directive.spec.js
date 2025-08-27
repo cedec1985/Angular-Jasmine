@@ -1,0 +1,43 @@
+import { __awaiter, __decorate } from "tslib";
+import { Component } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { Attribute } from './attribut.directive';
+let TestComponent = class TestComponent {
+};
+TestComponent = __decorate([
+    Component({
+        template: `<p [appAttribute]="'lightblue'">Texte de test</p>`
+    })
+], TestComponent);
+describe('Attribute Directive', () => {
+    let fixture;
+    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
+        yield TestBed.configureTestingModule({
+            declarations: [TestComponent, Attribute]
+        }).compileComponents();
+        fixture = TestBed.createComponent(TestComponent);
+        fixture.detectChanges();
+    }));
+    it('should create an instance of the directive', () => {
+        const debugEl = fixture.debugElement.query(By.directive(Attribute));
+        expect(debugEl).not.toBeNull();
+    });
+    it('should apply background color on mouseenter', () => {
+        const pEl = fixture.debugElement.query(By.css('p'));
+        pEl.triggerEventHandler('mouseenter', {});
+        fixture.detectChanges();
+        expect(pEl.nativeElement.style.backgroundColor).toBe('lightblue');
+    });
+    it('should remove background color on mouseleave', () => {
+        const pEl = fixture.debugElement.query(By.css('p'));
+        // Simulate mouseenter first
+        pEl.triggerEventHandler('mouseenter', {});
+        fixture.detectChanges();
+        // Then simulate mouseleave
+        pEl.triggerEventHandler('mouseleave', {});
+        fixture.detectChanges();
+        expect(pEl.nativeElement.style.backgroundColor).toBe('');
+    });
+});
+//# sourceMappingURL=attribut.directive.spec.js.map
