@@ -4,7 +4,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./build/app",
-//    "type": "module",
+    "type": "module",
     "module": "ES2015",
     "forceConsistentCasingInFileNames": true
   },
