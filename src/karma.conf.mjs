@@ -5,7 +5,7 @@ export default function(config) {
     basePath: '',
     // frameworks to use
     // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine','@angular-devkit/build-angular'],
     // list of files / patterns to load in the browser
     files: [
     "build/app/**/*.js","build/app/**/*.spec.js"

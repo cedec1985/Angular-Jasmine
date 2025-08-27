@@ -71,11 +71,11 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "main": "src/test.ts",
+            "main": "test.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.mjs",
             "styles": [
-              "src/styles.css"
+              "styles.css"
             ]
           }
         }
