@@ -8,5 +8,6 @@
     "module": "ES2015",
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": []
+  "exclude": [],
+  "include": "app/**/*.json"
 }
