@@ -12,6 +12,6 @@
     "test.ts"
   ],
   "include": [
-    "build/app/**/*.spec.js","build/app/**/*.js","build/*.[sS]pec.?(m)js",
+    "app/**/*.spec.ts","app/**/*.ts"
   ]
 }

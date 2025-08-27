@@ -4,7 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
-    "baseUrl": "/",
+    "baseUrl": "",
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -37,7 +37,7 @@
     "strictTemplates": true
   },
   "include": [
-    "build/app/**/*.spec.js","build/app/**/*.js",
+    "app/**/*.spec.ts","app/**/*.ts",
     "main.ts"
   ],
 }
