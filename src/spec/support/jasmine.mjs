@@ -4,7 +4,7 @@ export default {
     "build/app/**/*.spec.js","build/app/**/*.js","build/*.[sS]pec.?(m)js",
   ],
   helpers: [
-    "helpers/*.ts"
+    "helpers/*.js"
   ],
   env: {
     stopSpecOnExpectationFailure: false,
