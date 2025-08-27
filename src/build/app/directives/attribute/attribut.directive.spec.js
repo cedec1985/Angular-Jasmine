@@ -13,7 +13,7 @@ TestComponent = __decorate([
 describe('Attribute Directive', () => {
     let fixture;
     beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
-       getTestBed().initTestEnvironment(
+       TestBed().initTestEnvironment(
          BrowserTestingModule,
        platformBrowserTesting(),
        );
