@@ -4,7 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
-    "baseUrl": "",
+    "baseUrl": "/",
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -23,7 +23,7 @@
     "outDir": "./build",
     "allowJs": true,
     "checkJs": true,
-    "types": ["jasmine","node"],
+    "types": ["jasmine"],
       "paths": {
       "zone.js/node": ["node_modules/zone.js/dist/zone-node.js"]
     },
