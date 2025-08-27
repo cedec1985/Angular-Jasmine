@@ -1,0 +1,94 @@
+<app-counter-component></app-counter-component> <!--selecteur pour le routing-->
+<app-service-counter></app-service-counter>     <!--selecteur pour le routing-->
+
+<h1>
+  {{title()}}
+</h1>
+<nav>
+  <a routerLink="todos"></a>
+</nav>
+<router-outlet></router-outlet>
+
+
+<h1>PARTIE 1: ATTRIBUTES DIRECTIVES ANGULAR</h1>
+
+<h2>ngStyle</h2>
+
+<p>appliquer plusieurs styles</p>
+<div [ngStyle]="{'background-color': 'yellow', 'color': 'blue'}">"message in a bottle" (The police)</div>
+<hr>
+
+<p>appliquer un style précis</p>
+<div [style.color]="'red'">"C'est pas ma guerre !" (Rambo)</div>
+<hr>
+
+<p>changer un style précis suivant une condition</p>
+<button (click)="changeStyle3()">changer le style - flag3={{flag3}}</button>
+<div [style.color]="flag3 ? colorA : colorB">"C'est des malades !" (Les visiteurs)</div>
+
+<hr>
+<h2>NgClass</h2>
+
+<p>appliquer simplement une classe</p>
+<div [className]="'maClasse4'">"Luke, je suis ton père…" (Dark vador)</div>
+<div [className]="dataClasse4">"Luke, je suis ton père…" (Dark vador)</div>
+<hr>
+
+<p>(une condition)? 'classeX' : 'classeY"</p>
+<button (click)="this.flag5 = !this.flag5">changer la classe - flag5={{flag5}}</button>
+<div [className]="(flag5) ? 'maClasse51' : 'maClasse52'">"J’ai les mains faites pour l’or, et elles sont dans la merde !" (Scarface)" </div>
+<hr>
+
+<p>une classe précise, (une condition)?</p>
+<button (click)="changeClasse6()">changer la classe - flag6={{flag6}}</button>
+<div [class.maClasse6]="flag6">"On se serait shooté à la vitamine C si cela avait été illégal" (Trainspotting )</div>
+<hr>
+
+<p>plusieurs classes, plusieurs (conditions)?</p>
+<button (click)="flag71 = !flag71">changer la 1re condition - flag71={{flag71}}</button>
+<button (click)="flag72 = !flag72">changer la 2e condition - flag72={{flag72}}</button>
+<div [ngClass]="{'maClasse71': flag71 == flag72, 'maClasse72': !flag71 && !flag72}">"C’est à moi que tu parles ? C’est à moi que tu parles ??..." (Taxi driver)</div>
+
+<hr>
+<hr>
+
+<h1>PARTIE 2 : STRUCTURAL DIRECTIVES </h1>
+
+<ng-container *ngIf="isok;then content_ok else content_not_ok"></ng-container>
+<ng-template #content_ok>isok={{isok}} - "it's OK"</ng-template>
+<ng-template #content_not_ok>isok={{isok}} - "is <b>not</b> OK"</ng-template>
+
+<p *ngIf="numbs">
+  numbs=<ng-container *ngFor="let n of numbs">{{n}} </ng-container>
+</p>
+
+<hr>
+<hr>
+
+<span *appIsStockLimited = "nb1">stock limité 1 !</span>     <!-- Directive d'attribut  "stock limité 1 !" s'affiche parce que nb1 est inférieur à 10 -->
+<br>
+<span *appIsStockLimited = "nb2">stock limité 2 !</span>     <!-- Directive d'attribut  "stock limité 2 !" ne s'affiche pas parce que nb2 est supérieur à 10 -->
+
+<h1>PARTIE 3 : PIPES </h1>
+
+<!-- Afficher uniquement les produits en stock -->
+<div *ngFor="let product of products | stockFilter:true">
+  {{ product.name }} (Stock: {{ product.stock }})
+</div>
+
+<!-- Afficher uniquement les produits en rupture -->
+<div *ngFor="let product of products | stockFilter:false">
+  {{ product.name }} est en rupture de stock.
+</div>
+
+<!-- PARTIE ROUTING -->
+
+<nav>
+  <ul>
+    <li><a routerLink="/counter-component">aller à la page: /counter-component</a></li>
+    <li><a routerLink ="/counter-component/counter1"> aller à la page : /counter-component/counter1</a></li>   <!--ONGLET 1 = counter1-->
+    <li><a routerLink ="/counter-component/counter2"> aller à la page : /counter-component/counter2</a></li>   <!--ONGLET 2 = counter2-->
+    <li><a routerLink="/service-counter/:servcount3Id">aller à la page : /service-counter/...via variable servcount3Id du composant...</a></li>
+  </ul>
+</nav>
+

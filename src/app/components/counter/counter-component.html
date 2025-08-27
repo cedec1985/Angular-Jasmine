@@ -1,0 +1,38 @@
+<h1>Independent counter</h1>
+
+<p>
+<strong data-testid="count">Count: {{ count }}</strong>
+</p>
+
+<p>
+<button (click)="increment()" data-testid="increment-button">+</button>
+<button (click)="decrement()" data-testid="decrement-button">-</button>
+</p>
+
+<p>
+  <input type="number" title="reset" #resetInput data-testid="reset-input" />
+  <button (click)="reset()" data-testid="reset-button">Reset</button>
+</p>
+
+<p>counter component works!</p>
+<div class="bg-global-almond">classe css : bg-global-almond   du fichier global : /src/style.css</div>
+<div class="bg-1">prise en compte de la classe css : bg-1 du composant : counter.component.css</div>
+
+<h2 style="background: lightsalmon;">comp1 works!</h2>
+
+<router-outlet></router-outlet> <!-- permet de projeter le composant (onglet 1) counter1 ou le composant (onglet 2) counter2 -->
+
+<!-- Partie NgRx counter-->
+
+@let counter = counter$ | async;
+
+@if (counter) {
+<div> chargement du compteur en cours... Veuillez patienter</div>
+}
+@else {
+<ul>
+  @if (counter){
+<li>{{count}}</li>
+  }
+</ul>
+}
