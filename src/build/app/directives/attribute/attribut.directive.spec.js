@@ -2,7 +2,7 @@ import { __awaiter, __decorate } from "tslib";
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { Attribute } from './attribut.directive';
+import { Attribute } from './attribut.directive.js';
 let TestComponent = class TestComponent {
 };
 TestComponent = __decorate([
