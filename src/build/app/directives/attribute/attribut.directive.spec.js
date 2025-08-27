@@ -13,8 +13,13 @@ TestComponent = __decorate([
 describe('Attribute Directive', () => {
     let fixture;
     beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
+       getTestBed().initTestEnvironment(
+         BrowserTestingModule,
+       platformBrowserTesting(),
+       );
         yield TestBed.configureTestingModule({
-            declarations: [TestComponent, Attribute]
+            declarations: [TestComponent, Attribute],
+            import :[TestComponent]
         }).compileComponents();
         fixture = TestBed.createComponent(TestComponent);
         fixture.detectChanges();
