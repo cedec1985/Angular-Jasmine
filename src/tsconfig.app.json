@@ -3,8 +3,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./build",
-    "type": "module",
+    "outDir": "./build/app",
+    "types": ["jasmine","node"],
     "module": "ES2015",
     "forceConsistentCasingInFileNames": true
   },
