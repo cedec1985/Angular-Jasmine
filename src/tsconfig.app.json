@@ -5,9 +5,9 @@
   "compilerOptions": {
     "outDir": "./build/app",
     "types": [],
-    "module": "ES2015",
     "forceConsistentCasingInFileNames": true
   },
   "exclude": ["app/*.spec.ts","app/**/*.spec.ts","app/**/**/*.spec.ts"],
-  "include": ["app/*.ts","app/**/*.ts","app/**/**/*.ts","*.ts"]
+  "include": ["app/*.ts","app/**/*.ts","app/**/**/*.ts","*.ts","app/*.d.ts"],
+  "files":["main.ts"]
 }

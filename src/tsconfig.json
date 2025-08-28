@@ -4,7 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
-    "baseUrl": "",
+    "baseUrl": "./",
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -14,16 +14,16 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "es2015",
-    "target": "es2015",
-    // "lib": ["es2015", "dom"],
+    "module": "es2020",
+    "target": "es2022",
+     "lib": ["es2018", "dom"],
     "moduleResolution": "node",
     "sourceMap": true,
     "esModuleInterop": true,
     "outDir": "./build",
     "allowJs": true,
     "checkJs": true,
-    "types": ["jasmine"],
+    "useDefineForClassFields": false,
       "paths": {
       "zone.js/node": ["node_modules/zone.js/dist/zone-node.js"]
     },
@@ -37,7 +37,7 @@
     "strictTemplates": true
   },
   "include": [
-    "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts",
+    "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts","app/*.d.ts",
     "main.ts"
   ],
 }
