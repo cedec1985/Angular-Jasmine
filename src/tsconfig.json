@@ -14,9 +14,9 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "es2020",
-    "target": "es2022",
-     "lib": ["es2018", "dom"],
+    "module": "es2015",
+    "target": "es2015",
+     "lib": ["es2015","dom"],
     "moduleResolution": "node",
     "sourceMap": true,
     "esModuleInterop": true,
@@ -37,7 +37,7 @@
     "strictTemplates": true
   },
   "include": [
-    "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts","app/*.d.ts",
+    "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts","app/*.d.ts","app/*.spec.helpers.ts",
     "main.ts"
   ],
 }
