@@ -1,12 +1,11 @@
-import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { CounterApiService } from './services/services/counter-api-service';
 import { CounterEffects } from './effects/counter-effects';
 import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3';
-import { HttpClient, HttpClientModule, provideHttpClient} from '@angular/common/http';
-import { Attribute, NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule} from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
@@ -21,19 +20,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { CounterComponent } from './components/counter/counter-component';
 import { Counter1 } from './components/counter/countercomponent/counter1/counter1';
 import { Counter2 } from './components/counter/countercomponent/counter2/counter2';
-import { TodosService } from './services/todos-service';
-import { CounterService } from './services/counter-service';
 import { counterReducer } from './reducers/counter-reducer/counter-reducer';
 import { PageNotFound } from './components/page-not-found/page-not-found';
 import { EffectsModule } from '@ngrx/effects';
 import { FormComponent } from './components/form/form';
 import { AttributeDirective } from './directives/attribute/attribut.directive';
-import { appConfig } from './app.config';
+
 
 @NgModule({
   declarations: [
   ],
   imports: [
+    AttributeDirective,
+    PageNotFound,
     BrowserModule,
     BrowserTestingModule,
     FormsModule,
@@ -41,8 +40,14 @@ import { appConfig } from './app.config';
     RouterModule.forRoot(routes),
     AppRoutingModule,
     RouterTestingModule,
+    Counter1,
+    Counter2,
     AppComponent,
     Homecomponent,
+    IsStockLimited,
+    StockFilterPipe,
+    HttpClientModule,
+    HttpClientTestingModule,
     CounterComponent,
     ServiceCounterComponent,
     ServiceCounterComponent3,
@@ -62,6 +67,6 @@ import { appConfig } from './app.config';
   ],
   exports:[ ],
   providers: [],
-  bootstrap: []
+  bootstrap: [AppModule]
 })
 export class AppModule { }
