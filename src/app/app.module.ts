@@ -3,10 +3,10 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { CounterApiService } from './services/services/counter-api-service';
 import { CounterEffects } from './effects/counter-effects';
 import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpClientModule, provideHttpClient} from '@angular/common/http';
 import { Attribute, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
@@ -28,19 +28,18 @@ import { PageNotFound } from './components/page-not-found/page-not-found';
 import { EffectsModule } from '@ngrx/effects';
 import { FormComponent } from './components/form/form';
 import { AttributeDirective } from './directives/attribute/attribut.directive';
+import { appConfig } from './app.config';
 
 @NgModule({
   declarations: [
-
   ],
   imports: [
     BrowserModule,
     BrowserTestingModule,
     FormsModule,
-    HttpClient,
+    HttpClientModule,
     RouterModule.forRoot(routes),
     AppRoutingModule,
-    CounterService,
     RouterTestingModule,
     AppComponent,
     Homecomponent,
@@ -61,10 +60,8 @@ import { AttributeDirective } from './directives/attribute/attribut.directive';
     // NgRx Effects
    EffectsModule.forRoot([CounterEffects]),
   ],
-  exports:[
-   
-  ],
+  exports:[ ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }
