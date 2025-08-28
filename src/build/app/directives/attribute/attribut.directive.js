@@ -1,6 +1,6 @@
 import { __decorate } from "tslib";
 import { Directive, HostListener, Input } from '@angular/core';
-let Attribute = class Attribute {
+let Attribute = class AttributeDirective {
     constructor(el) {
         this.el = el;
         console.log(el);

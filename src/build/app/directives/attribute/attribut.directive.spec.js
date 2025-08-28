@@ -2,7 +2,7 @@ import { __awaiter, __decorate } from "tslib";
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { Attribute } from './attribut.directive.js';
+import { AttributeDirective } from './attribut.directive.js';
 let TestComponent = class TestComponent {
 };
 TestComponent = __decorate([
@@ -18,14 +18,14 @@ describe('Attribute Directive', () => {
        platformBrowserTesting(),
        );
         yield TestBed.configureTestingModule({
-            declarations: [TestComponent, Attribute],
+            declarations: [TestComponent, AttributeDirective],
             import :[TestComponent]
         }).compileComponents();
         fixture = TestBed.createComponent(TestComponent);
         fixture.detectChanges();
     }));
     it('should create an instance of the directive', () => {
-        const debugEl = fixture.debugElement.query(By.directive(Attribute));
+        const debugEl = fixture.debugElement.query(By.directive(AttributeDirective));
         expect(debugEl).not.toBeNull();
     });
     it('should apply background color on mouseenter', () => {
