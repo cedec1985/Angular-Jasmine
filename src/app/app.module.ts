@@ -27,21 +27,11 @@ import { counterReducer } from './reducers/counter-reducer/counter-reducer';
 import { PageNotFound } from './components/page-not-found/page-not-found';
 import { EffectsModule } from '@ngrx/effects';
 import { FormComponent } from './components/form/form';
+import { AttributeDirective } from './directives/attribute/attribut.directive';
 
 @NgModule({
   declarations: [
-    Attribute, // Déclarer la directive
-    AppComponent,
-    Homecomponent,
-    IsStockLimited,  // Déclarer la directive
-    StockFilterPipe,
-    ServiceCounterComponent,
-    ServiceCounterComponent3,
-    CounterComponent,
-    Counter1,
-    Counter2,
-    PageNotFound,
-    FormComponent
+
   ],
   imports: [
     BrowserModule,
@@ -72,7 +62,7 @@ import { FormComponent } from './components/form/form';
    EffectsModule.forRoot([CounterEffects]),
   ],
   exports:[
-    TodosService, CounterService, CounterApiService
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

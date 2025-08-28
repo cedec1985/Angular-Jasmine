@@ -1,8 +1,10 @@
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { routes } from './app-routing.module';
+import { AppModule } from './app.module';
 
 
 export const appConfig: ApplicationConfig = {
@@ -15,3 +17,6 @@ export const appConfig: ApplicationConfig = {
    // provideState({state :initialState})
   ]
 };
+
+platformBrowserDynamic()
+.bootstrapModule(AppModule).catch((err)=>console.error(err))
