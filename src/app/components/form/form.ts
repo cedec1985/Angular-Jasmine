@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,ReactiveFormsModule],
   template: `
     <form #formRef ="ngForm">
       <label for ="name">Nom :</label>
