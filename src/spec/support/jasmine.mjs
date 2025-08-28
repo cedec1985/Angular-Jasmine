@@ -5,7 +5,6 @@ export default {
     "build/app/*.js","build/app/*.spec.js"
   ],
   helpers: [
-    "*.spec.helpers.js"
   ],
   env: {
     stopSpecOnExpectationFailure: false,
