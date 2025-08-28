@@ -1,13 +1,12 @@
 import { TestBed,ComponentFixture } from '@angular/core/testing';
-import {APP_BASE_HREF}    from '@angular/common';
 import { AppComponent } from './app.component';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { findComponent } from './spec.helpers.component';
+import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
-
+  let debugElement : DebugElement;
 beforeEach(async() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -24,14 +23,12 @@ beforeEach(async() => {
   });
 
   it('devrait créer le composant', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
    it('contient un router-outlet', () => {
-    const el = findComponent(fixture, 'router-outlet');
-    expect(el).toBeTruthy();
+   const router = fixture.debugElement.query(By.css('router-outlet'));
+    expect(router).toBeTruthy();
   });
 });
 })
