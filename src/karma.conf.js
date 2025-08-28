@@ -1,23 +1,23 @@
-export default function(config) {
+module.exports  = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
     // frameworks to use
     // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine','@angular-devkit/build-angular'],
     // list of files / patterns to load in the browser
     files: [
       "build/app/*.spec.js","build/**/*.js","build/*.js","build/*.[sS]pec.?(m)js","build/app/**/*.spec.js","build/app/**/*.js","build/app/**/**/*.spec.js","build/app/**/**/*.js","build/*.spec.helpers.js"
     ],
     Plugins: [
-      ('karma-jasmine'),
-      ('karma-chrome-launcher'),
-      ('karma-jasmine-html-reporter'),
-      ('@angular-devkit/build-angular/plugins/karma'),
-      ('karma-coverage'),
-      ('karma-webpack'),
-      ('karma-junit-reporter'),
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma'),
+      require('karma-coverage'),
+      require('karma-webpack'),
+      require('karma-junit-reporter'),
     ],
 
     // list of files / patterns to exclude
@@ -27,11 +27,27 @@ export default function(config) {
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
 
   //  preprocessors: {"**/*.ts": "karma-typescript"
-
+   client : {
+    jasmine :{
+      failSpecWithNoExpectations: false
+    },
+    clearContext: false
+   },
+   jasmineHtmlReporter:{
+   suppressAll : true
+   },
+   coverageReporter:{
+    dir : require('path').join(__dirname,'./coverage/typescript-jasmine'),
+    subdir :'.',
+    reporters:[
+      {type : 'html'},
+      {type : 'text-summary'}
+    ]
+   },
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
-    reporters: ['progress','kjhtml','junit'],
+    reporters: ['progress','kjhtml'],
     // web server port
     port: 9876,
     // enable / disable colors in the output (reporters and logs)
@@ -47,6 +63,7 @@ export default function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,
+    restartOnFileChange:true,
     // Concurrency level
     // how many browser instances should be started simultaneously
     concurrency: Infinity
