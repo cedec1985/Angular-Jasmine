@@ -37,7 +37,7 @@
     "strictTemplates": true
   },
   "include": [
-    "app/**/*.spec.ts","app/**/*.ts","app/**/*.json",
+    "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts",
     "main.ts"
   ],
 }

@@ -8,6 +8,6 @@
     "module": "ES2015",
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": [],
-  "include": "app/**/*.json"
+  "exclude": ["app/*.spec.ts","app/**/*.spec.ts","app/**/**/*.spec.ts"],
+  "include": ["app/*.ts","app/**/*.ts","app/**/**/*.ts","*.ts"]
 }
