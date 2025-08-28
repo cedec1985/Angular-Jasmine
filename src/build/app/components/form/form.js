@@ -1,6 +1,6 @@
 import { __decorate } from "tslib";
 import { Component, ViewChild } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 let FormComponent = class FormComponent {
     constructor() {
         this.nom = '';
@@ -28,7 +28,7 @@ FormComponent = __decorate([
     Component({
         selector: 'app-form',
         standalone: true,
-        imports: [FormsModule],
+        imports: [FormsModule, ReactiveFormsModule],
         template: `
     <form #formRef ="ngForm">
       <label for ="name">Nom :</label>
