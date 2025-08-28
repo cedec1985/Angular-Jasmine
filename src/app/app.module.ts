@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserTestingModule } from '@angular/platform-browser/testing';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
@@ -40,6 +40,8 @@ import { AttributeDirective } from './directives/attribute/attribut.directive';
     RouterModule.forRoot(routes),
     AppRoutingModule,
     RouterTestingModule,
+    RouterModule,
+    RouterOutlet,
     Counter1,
     Counter2,
     AppComponent,
