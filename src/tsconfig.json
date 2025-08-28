@@ -38,7 +38,7 @@
   },
   "include": [
     "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts","app/*.d.ts","app/*.spec.helpers.ts",
-    "app/main.ts"
+    "main.ts"
   ],
 }
 
