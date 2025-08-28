@@ -1,4 +1,3 @@
-import { __awaiter } from "tslib";
 import { TestBed } from '@angular/core/testing';
 import { take, toArray } from 'rxjs/operators';
 import { expectText, click, setFieldValue } from '../../spec.helpers.component.js';
@@ -11,8 +10,8 @@ describe('CounterComponent', () => {
     function expectCount(count) {
         expectText(fixture, 'count', count.toString());
     }
-    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
-        yield TestBed.configureTestingModule({
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
             imports: [CounterComponent]
         })
             .compileComponents();
@@ -21,7 +20,7 @@ describe('CounterComponent', () => {
         component.startCount = startCount;
         component.ngOnChanges();
         fixture.detectChanges();
-    }));
+    });
     it('affiche le début du compteur', () => {
         expectCount(startCount);
     });

@@ -1,4 +1,3 @@
-import { __awaiter } from "tslib";
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { Homecomponent } from './homecomponent';
@@ -6,15 +5,15 @@ import { findComponent } from '../../../spec.helpers.component';
 describe('HomeComponent', () => {
     let fixture;
     let component;
-    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
-        yield TestBed.configureTestingModule({
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
             declarations: [component],
             schemas: [NO_ERRORS_SCHEMA],
         }).compileComponents();
         fixture = TestBed.createComponent(Homecomponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
-    }));
+    });
     describe('app-counter-component', () => {
         it('afficher app-counter-component', () => {
             const el = findComponent(fixture, 'app-counter-component');

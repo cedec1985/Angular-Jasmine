@@ -1,4 +1,3 @@
-import { __awaiter } from "tslib";
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
@@ -6,7 +5,7 @@ import { findComponent } from './spec.helpers.component';
 describe('AppComponent', () => {
     let component;
     let fixture;
-    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
+    beforeEach(async () => {
         TestBed.configureTestingModule({
             declarations: [
                 AppComponent
@@ -27,6 +26,6 @@ describe('AppComponent', () => {
             const el = findComponent(fixture, 'router-outlet');
             expect(el).toBeTruthy();
         });
-    }));
+    });
 });
 //# sourceMappingURL=app.component.spec.js.map

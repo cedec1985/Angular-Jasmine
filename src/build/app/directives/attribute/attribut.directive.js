@@ -1,6 +1,6 @@
 import { __decorate } from "tslib";
 import { Directive, HostListener, Input } from '@angular/core';
-let Attribute = class AttributeDirective {
+let AttributeDirective = class AttributeDirective {
     constructor(el) {
         this.el = el;
         console.log(el);
@@ -19,17 +19,17 @@ let Attribute = class AttributeDirective {
 };
 __decorate([
     Input('appAttribute')
-], Attribute.prototype, "color", void 0);
+], AttributeDirective.prototype, "color", void 0);
 __decorate([
     HostListener('mouseenter')
-], Attribute.prototype, "onMouseEnter", null);
+], AttributeDirective.prototype, "onMouseEnter", null);
 __decorate([
     HostListener('mouseleave')
-], Attribute.prototype, "onMouseLeave", null);
-Attribute = __decorate([
+], AttributeDirective.prototype, "onMouseLeave", null);
+AttributeDirective = __decorate([
     Directive({
         selector: '[appAttribute]'
     })
-], Attribute);
-export { Attribute };
+], AttributeDirective);
+export { AttributeDirective };
 //# sourceMappingURL=attribut.directive.js.map
