@@ -1,4 +1,4 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+
 import { RouterTestingModule } from '@angular/router/testing';
 import { CounterEffects } from './effects/counter-effects';
 import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3';
@@ -25,6 +25,7 @@ import { PageNotFound } from './components/page-not-found/page-not-found';
 import { EffectsModule } from '@ngrx/effects';
 import { FormComponent } from './components/form/form';
 import { AttributeDirective } from './directives/attribute/attribut.directive';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 
 @NgModule({
