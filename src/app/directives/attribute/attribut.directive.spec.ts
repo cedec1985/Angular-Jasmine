@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import {Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { Attribute } from './attribut.directive';
+import { AttributeDirective } from './attribut.directive';
 
 @Component({
   template: `<p [appAttribute]="'lightblue'">Texte de test</p>`
@@ -13,7 +13,7 @@ class TestComponent {}
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TestComponent, Attribute]
+      declarations: [TestComponent, AttributeDirective]
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
@@ -21,7 +21,7 @@ class TestComponent {}
   });
 
   it('should create an instance of the directive', () => {
-    const debugEl = fixture.debugElement.query(By.directive(Attribute));
+    const debugEl = fixture.debugElement.query(By.directive(AttributeDirective));
     expect(debugEl).not.toBeNull();
   });
 

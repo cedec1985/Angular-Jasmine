@@ -3,7 +3,7 @@ import { Directive,ElementRef,HostListener, Input } from '@angular/core';
 @Directive({
   selector: '[appAttribute]'
 })
-export class Attribute {
+export class AttributeDirective {
 
   constructor(private el :ElementRef) {
  console.log(el);
