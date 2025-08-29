@@ -8,9 +8,9 @@ export default function (config) {
     frameworks: ['jasmine'],
     // list of files / patterns to load in the browser
     files: [
-      "app/*.spec.ts","app/*.ts",
-      "app/**/*.ts","app/**/*.spec.ts",
-      "app/**/**/*.ts","app/**/**/*.spec.ts",
+      "build/app/*.spec.js","build/app/*.js",
+      "build/app/**/*.js","build/app/**/*.spec.js",
+      "build/app/**/**/*.ts","build/app/**/**/*.spec.js",
     ],
     Plugins: [
      ('karma-jasmine'),
