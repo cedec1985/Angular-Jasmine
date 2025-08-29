@@ -1,7 +1,7 @@
 import { __decorate } from "tslib";
 import { Injectable } from '@angular/core';
 import { createEffect, ofType } from '@ngrx/effects';
-import { increment, decrement, reset, saveSuccess, saveError } from '../actions/counter-actions';
+import { increment, decrement, reset, saveSuccess, saveError } from '../actions/counter-actions.js';
 import { of } from 'rxjs';
 import { catchError, map, mergeMap, withLatestFrom } from 'rxjs/operators';
 let CounterEffects = class CounterEffects {

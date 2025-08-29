@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
-import { CounterComponent } from './counter-component';
+import { CounterComponent } from './counter-component.js';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
-import { selectCounterLoading } from '../../reducers/counter-reducer/selectors';
-import { increment } from '../../actions/counter-actions';
+import { selectCounterLoading } from '../../reducers/counter-reducer/selectors.js';
+import { increment } from '../../actions/counter-actions.js';
 describe('CounterComponent', () => {
     let component;
     let fixture;

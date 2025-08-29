@@ -1,4 +1,4 @@
-import { StockFilterPipe } from "./stock-filter-pipe";
+import { StockFilterPipe } from "./stock-filter-pipe.js";
 describe('StockFilterPipe', () => {
     let pipe;
     beforeEach(() => {

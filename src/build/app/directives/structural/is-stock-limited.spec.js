@@ -2,11 +2,11 @@ import { __decorate } from "tslib";
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { IsStockLimited } from './is-stock-limited';
+import { IsStockLimited } from './is-stock-limited.js';
 // Mock de l'enum ShopStructure
 export var ShopStructure;
 (function (ShopStructure) {
-    ShopStructure[ShopStructure["StockLimited"] = 10] = "StockLimited";
+    ShopStructure[ShopStructure["StockLimited"] == 10] = "StockLimited";
 })(ShopStructure || (ShopStructure = {}));
 // Composant hôte pour tester la directive
 let TestHostComponent = class TestHostComponent {

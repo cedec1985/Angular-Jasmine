@@ -2,8 +2,8 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { MockComponent } from 'ng-mocks';
-import { CounterComponent } from '../../counter/counter-component';
-import { Homecomponent } from './homecomponent';
+import { Homecomponent } from './homecomponent.js';
+import { CounterComponent } from '../../counter/counter-component.js';
 describe('HomeComponent with ng-mocks', () => {
     let fixture;
     let component;

@@ -2,7 +2,7 @@ import { provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '
 import { provideRouter } from '@angular/router';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-import { routes } from './app-routing.module';
+import { routes } from './app-routing.module.js';
 export const appConfig = {
     providers: [
         provideBrowserGlobalErrorListeners(),

@@ -1,6 +1,6 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { Homecomponent } from './homecomponent';
+import { Homecomponent } from './homecomponent.js';
 import { By } from '@angular/platform-browser';
 describe('HomeComponent', () => {
     let fixture;

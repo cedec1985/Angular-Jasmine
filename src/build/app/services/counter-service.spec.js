@@ -1,4 +1,4 @@
-import { CounterService } from "./counter-service";
+import { CounterService } from "./counter-service.js";
 describe('CounterService', () => {
     let service;
     beforeEach(() => {

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-import { FormComponent } from './form';
+import { FormComponent } from './form.js';
 describe('FormComponent', () => {
     let component;
     let fixture;

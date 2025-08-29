@@ -1,5 +1,5 @@
-import { decrement, increment, reset } from "../../actions/counter-actions";
-import { counterReducer } from "./counter-reducer";
+import { decrement, increment, reset } from "../../actions/counter-actions.js";
+import { counterReducer } from "./counter-reducer.js";
 describe('Counter Reducer', () => {
     const initialState = 0;
     it('devrait incrémenter', () => {

@@ -2,10 +2,10 @@ import { __decorate } from "tslib";
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CounterComponent } from './components/counter/counter-component';
-import { IsStockLimited } from './directives/structural/is-stock-limited';
-import { StockFilterPipe } from './pipes/stock-filter-pipe';
-import { ServiceCounterComponent } from "./components/service-counter/service-counter";
+import { CounterComponent } from './components/counter/counter-component.js';
+import { IsStockLimited } from './directives/structural/is-stock-limited.js';
+import { StockFilterPipe } from './pipes/stock-filter-pipe.js';
+import { ServiceCounterComponent } from "./components/service-counter/service-counter.js";
 let AppComponent = class AppComponent {
     constructor() {
         this.title = signal('testdemo');
