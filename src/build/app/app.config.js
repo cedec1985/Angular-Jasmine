@@ -2,12 +2,12 @@ import { provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '
 import { provideRouter } from '@angular/router';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-import { routes } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 export const appConfig = {
     providers: [
         provideBrowserGlobalErrorListeners(),
         provideZoneChangeDetection({ eventCoalescing: true }),
-        provideRouter(routes),
+        provideRouter(AppRoutingModule.routes),
         provideStore(),
         provideEffects(),
         // provideState({state :initialState})

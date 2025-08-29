@@ -27,4 +27,8 @@ export const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  static routes(routes: any): import("@angular/core").Provider | import("@angular/core").EnvironmentProviders {
+    throw new Error('Method not implemented.');
+  }
+}
