@@ -36,14 +36,7 @@ export default function (config) {
    jasmineHtmlReporter:{
    suppressAll : true
    },
-   coverageReporter:{
-    dir :('path').join(__dirname,'./coverage/typescript-jasmine'),
-    subdir :'.',
-    reporters:[
-      {type : 'html'},
-      {type : 'text-summary'}
-    ]
-   },
+  
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
