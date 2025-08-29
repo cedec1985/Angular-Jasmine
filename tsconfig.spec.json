@@ -9,9 +9,10 @@
     ]
   },
   "files": [
-    "test.ts"
+    "src/test.ts"
   ],
   "include": [
-    "./app/**/*.spec.ts","./app/**/*.ts","./app/**/**/*.spec.ts","./app/**/**/*.ts","./app/*.ts","./app/*.spec.ts","./app/*.d.ts","./app/*.spec.helpers.ts"
-  ]
+    "**/*.spec.ts",
+    "**/*.d.ts"
+  ],
 }
