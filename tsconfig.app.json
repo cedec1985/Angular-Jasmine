@@ -7,7 +7,7 @@
     "types": [],
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["app/*.spec.ts","app/**/*.spec.ts","app/**/**/*.spec.ts","app/*.spec.helpers.ts"],
-  "include": ["app/*.ts","app/**/*.ts","app/**/**/*.ts","*.ts","app/*.d.ts"],
+  "exclude": ["./app/*.spec.ts","./app/**/*.spec.ts","./app/**/**/*.spec.ts","./app/*.spec.helpers.ts"],
+  "include": ["./app/*.ts","./app/**/*.ts","./app/**/**/*.ts","*.ts","./app/*.d.ts"],
   "files":["src/main.ts"]
 }
