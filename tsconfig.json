@@ -38,9 +38,7 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
-  "include": [
-    "./app/**/*.spec.ts","./app/**/*.ts","./app/**/**/*.spec.ts","./app/**/**/*.ts","./app/*.ts","./app/*.spec.ts","*.ts","./app/*.d.ts","./app/*.spec.helpers.ts",
-    "./main.ts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "src/test.ts", "src/**/*.spec.ts"]
 }
 
