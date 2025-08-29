@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { CounterComponent } from './counter-component.js';
+import { CounterComponent } from './counter-component';
 describe('CounterComponent', () => {
     let fixture;
     let debugElement;
