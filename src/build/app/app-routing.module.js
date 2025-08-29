@@ -22,6 +22,9 @@ export const routes = [
     { path: '**', component: PageNotFound }, // une route inconnue
 ];
 let AppRoutingModule = class AppRoutingModule {
+    static routes(routes) {
+        throw new Error('Method not implemented.');
+    }
 };
 AppRoutingModule = __decorate([
     NgModule({
