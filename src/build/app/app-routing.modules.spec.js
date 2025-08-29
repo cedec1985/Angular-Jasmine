@@ -1,3 +1,4 @@
+import { __awaiter } from "tslib";
 import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
@@ -15,8 +16,8 @@ describe('AppRoutingModule', () => {
     let router;
     let location;
     let fixture;
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
+        yield TestBed.configureTestingModule({
             imports: [RouterTestingModule.withRoutes([]), AppRoutingModule],
             declarations: [
                 Homecomponent,
@@ -32,7 +33,7 @@ describe('AppRoutingModule', () => {
         location = TestBed.inject(Location);
         fixture = TestBed.createComponent(AppRoutingModule);
         router.initialNavigation(); // Initialise la navigation
-    });
+    }));
     it('devrait rediriger "" vers "/home"', fakeAsync(() => {
         router.navigate(['']);
         tick();

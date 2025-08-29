@@ -11,13 +11,14 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
     "module": "es2015",
     "target": "es2015",
     "lib": ["es2015", "dom"],
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "ignoreDeprecations": "6.0",
     "sourceMap": true,
     "esModuleInterop": true,
@@ -40,6 +41,6 @@
   "include": [
     "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts","app/*.d.ts","app/*.spec.helpers.ts",
     "main.ts"
-  ],
+  ]
 }
 

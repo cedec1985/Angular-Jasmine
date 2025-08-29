@@ -1,3 +1,4 @@
+import { __awaiter } from "tslib";
 import { TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
@@ -5,26 +6,26 @@ import { FormComponent } from './form';
 describe('FormComponent', () => {
     let component;
     let fixture;
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
+        yield TestBed.configureTestingModule({
             imports: [FormsModule, ReactiveFormsModule], // Importe les modules nécessaires pour ngModel
             declarations: [FormComponent], // Déclare le composant à tester
         }).compileComponents();
         fixture = TestBed.createComponent(FormComponent); // Crée une instance du composant pour les tests
         component = fixture.componentInstance; // Récupère l'instance du composant
         fixture.detectChanges(); // Déclenche la détection des changements
-    });
+    }));
     it('devrait créer le composant', () => {
         expect(component).toBeTruthy(); // Vérifie que le composant est bien créé
     });
-    it('devrait afficher une erreur si le champ email est vide après blur', async () => {
+    it('devrait afficher une erreur si le champ email est vide après blur', () => __awaiter(void 0, void 0, void 0, function* () {
         const emailInput = fixture.debugElement.query(By.css('#email')).nativeElement;
         emailInput.dispatchEvent(new Event('blur')); // Simule la perte de focus
         fixture.detectChanges(); // Met à jour la vue
         const errorMsg = fixture.debugElement.query(By.css('div div')); // Recherche le message d'erreur
         expect(errorMsg).toBeTruthy(); // Vérifie que le message d'erreur s'affiche
         expect(errorMsg.nativeElement.textContent).toContain("L'adresse email est obligatoire"); // Vérifie le contenu du message
-    });
+    }));
     it('devrait ne pas afficher d\'erreur si le champ email est rempli correctement', () => {
         const emailInput = fixture.debugElement.query(By.css('#email')).nativeElement;
         emailInput.value = 'test@example.com'; // Donne une valeur correcte
