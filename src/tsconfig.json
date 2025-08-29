@@ -19,6 +19,7 @@
     "target": "es2022",
     "lib": ["es2022", "dom"],
     "moduleResolution": "node16",
+    "ignoreDeprecations": "5.0",
     "sourceMap": true,
     "esModuleInterop": true,
     "outDir": "./build",
