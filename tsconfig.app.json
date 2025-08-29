@@ -10,6 +10,6 @@
   "include": [
     "src/**/*.ts"
   ],
-  "exclude": ["./app/*.spec.ts","./app/**/*.spec.ts","./app/**/**/*.spec.ts","./app/*.spec.helpers.ts"],
+  "exclude": ["src/app/*.spec.ts","src/app/**/*.spec.ts","src/app/**/**/*.spec.ts","src/app/*.spec.helpers.ts"],
   "files":["src/main.ts"]
 }
