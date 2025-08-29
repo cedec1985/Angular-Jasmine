@@ -1,4 +1,4 @@
-export default function (config) {
+exports.module = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -11,6 +11,7 @@ export default function (config) {
       "build/app/*.spec.js","build/app/*.js",
       "build/app/**/*.js","build/app/**/*.spec.js",
       "build/app/**/**/*.ts","build/app/**/**/*.spec.js",
+      "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts","app/*.d.ts","app/*.spec.helpers.ts",
     ],
     Plugins: [
      ('karma-jasmine'),
