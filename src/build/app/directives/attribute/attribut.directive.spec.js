@@ -1,4 +1,4 @@
-import { __awaiter, __decorate } from "tslib";
+import { __decorate } from "tslib";
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -12,13 +12,13 @@ TestComponent = __decorate([
 ], TestComponent);
 describe('Attribute Directive', () => {
     let fixture;
-    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
-        yield TestBed.configureTestingModule({
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
             declarations: [TestComponent, AttributeDirective]
         }).compileComponents();
         fixture = TestBed.createComponent(TestComponent);
         fixture.detectChanges();
-    }));
+    });
     it('should create an instance of the directive', () => {
         const debugEl = fixture.debugElement.query(By.directive(AttributeDirective));
         expect(debugEl).not.toBeNull();

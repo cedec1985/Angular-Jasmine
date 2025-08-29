@@ -2,7 +2,6 @@
  * Ce service n'est pas utilisé dans app counter,
  * mais permet de montrer un exemple d'utilisation des spies jasmine .
  */
-import { __awaiter } from "tslib";
 class TodosService {
     constructor(
     // Lier fetch à window pour être sûr que window est le contexte
@@ -12,14 +11,12 @@ class TodosService {
     /**
      * getTodos
      */
-    getTodos() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.fetch('/todos');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);
-            }
-            return yield response.json();
-        });
+    async getTodos() {
+        const response = await this.fetch('/todos');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);
+        }
+        return await response.json();
     }
 }
 // Créer un Fake todos et un objet pour la réponse 
@@ -34,24 +31,24 @@ const errorResponse = new Response('Not Found', {
     statusText: 'Not Found',
 });
 describe('TodosService', () => {
-    it('gets todos successfully', () => __awaiter(void 0, void 0, void 0, function* () {
+    it('gets todos successfully', async () => {
         // Arrange
         const fetchspy = jasmine.createSpy('fetch').and.returnValue(okResponse);
         const todoService = new TodosService(fetchspy);
         // Act
-        const actualTods = yield todoService.getTodos();
+        const actualTods = await todoService.getTodos();
         // Assert
         expect(actualTods).toEqual(todos);
         expect(fetchspy).toHaveBeenCalledWith('/todos');
-    }));
-    it('handles an HTTP error when getting todos', () => __awaiter(void 0, void 0, void 0, function* () {
+    });
+    it('handles an HTTP error when getting todos', async () => {
         // Arrange
         const fetchspy = jasmine.createSpy('fetch').and.returnValue(errorResponse);
         const todoService = new TodosService(fetchspy);
         // Act
         let error;
         try {
-            yield todoService.getTodos();
+            await todoService.getTodos();
         }
         catch (e) {
             error = e;
@@ -59,6 +56,7 @@ describe('TodosService', () => {
         // Assert
         expect(error).toEqual(new Error('HTTP error! status: 404 Not Found'));
         expect(fetchspy).toHaveBeenCalledWith('/todos');
-    }));
+    });
 });
+export {};
 //# sourceMappingURL=todos-service.spec.js.map

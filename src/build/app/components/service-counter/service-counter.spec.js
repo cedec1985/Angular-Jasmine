@@ -1,4 +1,3 @@
-import { __awaiter } from "tslib";
 import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { ServiceCounterComponent } from './service-counter';
@@ -7,9 +6,9 @@ describe('ServiceCounterComponent', () => {
     let component;
     let fixture;
     let counterServiceSpy;
-    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
+    beforeEach(async () => {
         const spy = jasmine.createSpyObj('CounterService', ['getCount', 'increment', 'decrement', 'reset']);
-        yield TestBed.configureTestingModule({
+        await TestBed.configureTestingModule({
             declarations: [ServiceCounterComponent],
             providers: [
                 { provide: CounterService, useValue: spy }
@@ -22,7 +21,7 @@ describe('ServiceCounterComponent', () => {
         const fakeState = 0;
         counterServiceSpy.getCount.and.returnValue(of(fakeState));
         fixture.detectChanges(); // Triggers ngOnInit
-    }));
+    });
     it('should create', () => {
         expect(component).toBeTruthy();
     });

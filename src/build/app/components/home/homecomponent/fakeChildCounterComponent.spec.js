@@ -1,4 +1,4 @@
-import { __awaiter, __decorate } from "tslib";
+import { __decorate } from "tslib";
 import { Component, EventEmitter, Input, NO_ERRORS_SCHEMA, Output } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -25,8 +25,8 @@ describe('HomeComponent (faking a child Component)', () => {
     let fixture;
     let component;
     let counter;
-    beforeEach(() => __awaiter(void 0, void 0, void 0, function* () {
-        yield TestBed.configureTestingModule({
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
             declarations: [Homecomponent, FakeCounterComponent],
             schemas: [NO_ERRORS_SCHEMA],
         }).compileComponents();
@@ -35,7 +35,7 @@ describe('HomeComponent (faking a child Component)', () => {
         fixture.detectChanges();
         const counterEl = fixture.debugElement.query(By.directive(FakeCounterComponent));
         counter = counterEl.componentInstance;
-    }));
+    });
     it('renders an independent counter', () => {
         expect(counter).toBeTruthy();
     });
