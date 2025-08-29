@@ -1,4 +1,5 @@
-export default {
+export default function (config){
+  config.set({
   spec_dir: "./build",
   spec_files: [
     "build/app/**/**/*.spec.js","build/app/**/**/*.js","build/*.[sS]pec.?(m)js","build/*.js","build/app/**/*.spec.js","build/app/**/*.js",
@@ -12,4 +13,5 @@ export default {
     random: true,
     forbidDuplicateNames: true
   }
+  })
 }
