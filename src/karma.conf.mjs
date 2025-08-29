@@ -11,7 +11,7 @@ export default function (config) {
       "app/*.spec.ts","app/*.ts",
       "app/**/*.ts","app/**/*.spec.ts",
       "app/**/**/*.ts","app/**/**/*.spec.ts",
-    {type: 'js'}],
+    ],
     Plugins: [
      ('karma-jasmine'),
      ('karma-chrome-launcher'),
