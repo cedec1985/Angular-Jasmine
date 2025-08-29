@@ -4,7 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
-    "baseUrl": "./",
+    "baseUrl": "",
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -39,8 +39,8 @@
     "strictTemplates": true
   },
   "include": [
-    "app/**/*.spec.ts","app/**/*.ts","app/**/**/*.spec.ts","app/**/**/*.ts","app/*.ts","app/*.spec.ts","*.ts","app/*.d.ts","app/*.spec.helpers.ts",
-    "main.ts"
+    "./app/**/*.spec.ts","./app/**/*.ts","./app/**/**/*.spec.ts","./app/**/**/*.ts","./app/*.ts","./app/*.spec.ts","*.ts","./app/*.d.ts","./app/*.spec.helpers.ts",
+    "./main.ts"
   ]
 }
 
