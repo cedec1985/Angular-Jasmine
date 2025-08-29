@@ -18,7 +18,6 @@
     "target": "esnext",
      "lib": ["es2015","dom"],
     "moduleResolution": "NodeNext",
-    "ignoreDeprecations": "6.0",
     "sourceMap": true,
     "esModuleInterop": true,
     "outDir": "./build",
