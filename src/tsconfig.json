@@ -18,6 +18,7 @@
     "target": "es2020",
      "lib": ["es2018","dom"],
     "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
     "sourceMap": true,
     "esModuleInterop": true,
     "outDir": "./build",

@@ -1,4 +1,3 @@
-
 import { RouterTestingModule } from '@angular/router/testing';
 import { CounterEffects } from './effects/counter-effects';
 import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3';
@@ -29,7 +28,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 
 @NgModule({
-  declarations: [
+  declarations: [   
   ],
   imports: [
     AttributeDirective,
