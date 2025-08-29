@@ -1,4 +1,4 @@
-module.exports  = function(config) {
+export default function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -11,13 +11,13 @@ module.exports  = function(config) {
       "build/app/*.spec.js","build/**/*.js","build/*.js","build/*.[sS]pec.?(m)js","build/app/**/*.spec.js","build/app/**/*.js","build/app/**/**/*.spec.js","build/app/**/**/*.js","build/*.spec.helpers.js"
     ],
     Plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-coverage'),
-      require('karma-webpack'),
-      require('karma-junit-reporter'),
+      ('karma-jasmine'),
+      ('karma-chrome-launcher'),
+      ('karma-jasmine-html-reporter'),
+      ('@angular-devkit/build-angular/plugins/karma'),
+      ('karma-coverage'),
+      ('karma-webpack'),
+      ('karma-junit-reporter'),
     ],
 
     // list of files / patterns to exclude
