@@ -1,23 +1,23 @@
-export default function(config) {
+exports.module = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
     // frameworks to use
     // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine','@angular-devkit/build-angular'],
     // list of files / patterns to load in the browser
     files: [
       "build/app/*.spec.js","build/**/*.js","build/*.js","build/*.[sS]pec.?(m)js","build/app/**/*.spec.js","build/app/**/*.js","build/app/**/**/*.spec.js","build/app/**/**/*.js","build/*.spec.helpers.js"
     ],
     Plugins: [
-      ('karma-jasmine'),
-      ('karma-chrome-launcher'),
-      ('karma-jasmine-html-reporter'),
-      ('@angular-devkit/build-angular/plugins/karma'),
-      ('karma-coverage'),
-      ('karma-webpack'),
-      ('karma-junit-reporter'),
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma'),
+      require('karma-coverage'),
+      require('karma-webpack'),
+      require('karma-junit-reporter'),
     ],
 
     // list of files / patterns to exclude
