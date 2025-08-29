@@ -1,4 +1,4 @@
-export function module(config) {
+exports.module = function module(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
