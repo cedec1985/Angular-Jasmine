@@ -3,6 +3,7 @@
         "attribut",
         "Homecomponent",
         "ngrx",
+        "servcount",
         "testdemo"
     ]
 }
