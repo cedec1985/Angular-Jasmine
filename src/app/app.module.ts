@@ -69,6 +69,6 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
   ],
   exports:[ ],
   providers: [],
-  bootstrap: [AppModule]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
