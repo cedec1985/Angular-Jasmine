@@ -5,14 +5,13 @@
   "compilerOptions": {
     "outDir": "./build",
      "types": [
-      "jasmine","node"
+      "jasmine"
     ]
   },
   "files": [
     "src/test.ts"
   ],
   "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.spec.ts"
   ],
 }
