@@ -9,7 +9,7 @@ import { ServiceCounterComponent } from "./components/service-counter/service-co
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, IsStockLimited, ServiceCounterComponent,homecomponent],
+  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, IsStockLimited, ServiceCounterComponent,Homecomponent],
   providers :  [CounterService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
