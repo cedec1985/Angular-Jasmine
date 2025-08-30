@@ -15,10 +15,10 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "es2015",
-    "target": "es2015",
-    "lib": ["es2015", "dom"],
-    "moduleResolution": "nodenext",
+    "module": "es2020",
+    "target": "ES2022",
+    "lib": ["es2018", "dom"],
+    "moduleResolution": "bundler",
     "sourceMap": true,
     "esModuleInterop": true,
     "outDir": "./build",
@@ -37,7 +37,5 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "src/test.ts", "src/**/*.spec.ts"]
 }
 
