@@ -10,6 +10,7 @@ import { ServiceCounterComponent } from "./components/service-counter/service-co
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, IsStockLimited, ServiceCounterComponent],
+  providers :  [CounterService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
