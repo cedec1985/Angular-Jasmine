@@ -18,8 +18,8 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
         required
         #nomRef="ngModel"
       />
-      <div *ngIf="nomRef.invalid && nomRef.touched">
-        <div *ngIf="nomRef.errors?.required">Le nom est obligatoire</div>
+      <div NgIf="nomRef.invalid && nomRef.touched">
+        <div NgIf="nomRef.errors?.required">Le nom est obligatoire</div>
       </div>
       <br />
 
@@ -33,9 +33,9 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
         required
         #emailRef="ngModel"
       />
-      <div *ngIf="emailRef.invalid && emailRef.touched">
-        <div *ngIf="emailRef.errors?.required">L'adresse email est obligatoire</div>
-        <div *ngIf="emailRef.errors?.email">L'adresse email n'est pas valide</div>
+      <div NgIf="emailRef.invalid && emailRef.touched">
+        <div NgIf="emailRef.errors?.required">L'adresse email est obligatoire</div>
+        <div NgIf="emailRef.errors?.email">L'adresse email n'est pas valide</div>
       </div>
       <br />
 
@@ -48,18 +48,18 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
         required
         #avisRef="ngModel"
       ></textarea>
-      <div *ngIf="avisRef.invalid && avisRef.touched">
-        <div *ngIf="avisRef.errors?.required">L'avis est obligatoire</div>
+      <div NgIf="avisRef.invalid && avisRef.touched">
+        <div NgIf="avisRef.errors?.required">L'avis est obligatoire</div>
       </div>
       <br />
 
       <button type="submit">Soumettre</button>
     </form>
 
-    <div *ngIf="submitted && successMessage" style="color: green; margin-top: 10px;">
+    <div NgIf="submitted && successMessage" style="color: green; margin-top: 10px;">
       {{ successMessage }}
     </div>
-    <div *ngIf="submitted && errorMessage" style="color: red; margin-top: 10px;">
+    <div NgIf="submitted && errorMessage" style="color: red; margin-top: 10px;">
       {{ errorMessage }}
     </div>
   `,
