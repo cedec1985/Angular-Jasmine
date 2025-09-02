@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { ServiceCounterComponent3 } from './service-counter-component3.js';
+import { ServiceCounterComponent3 } from './service-counter-component3.mjs';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 describe('ServiceCounterComponent3', () => {
