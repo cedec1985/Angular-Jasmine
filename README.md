@@ -24,6 +24,6 @@ Run 'npm run build'.
 
 ## Running unit tests
 
-Run `npm test'or Run 'jasmine [filename.spec.js]' from the build respository or Run 'ng test'
+Run 'jasmine [filename.spec.mjs]' from the build respository
 
 
