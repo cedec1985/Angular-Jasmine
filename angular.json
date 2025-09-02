@@ -72,7 +72,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "polyfills.js"
             ],
             "main": "src/test.ts",
             "tsConfig": "tsconfig.spec.json",
