@@ -3,7 +3,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./build",
+    "outDir": "src/build",
      "types": [
       "jasmine","node"
     ]
