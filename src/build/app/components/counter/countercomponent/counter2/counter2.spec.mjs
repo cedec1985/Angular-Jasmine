@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Counter2 } from './counter2.js';
+import { Counter2 } from './counter2.mjs';
 describe('Counter2', () => {
     let component;
     let fixture;
