@@ -1,4 +1,4 @@
-import { add } from "./add.js";
+import { add } from "./add.mjs";
 describe("add", () => {
     it("should add two numbers", () => {
         expect(add(1, 2)).toBe(3);
