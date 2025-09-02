@@ -2,7 +2,7 @@ import { __decorate } from "tslib";
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { AttributeDirective } from './attribut.directive.js';
+import { AttributeDirective } from './attribut.directive.mjs';
 let TestComponent = class TestComponent {
 };
 TestComponent = __decorate([
