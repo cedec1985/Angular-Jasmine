@@ -3,8 +3,8 @@ import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { RouterOutlet } from "@angular/router";
 import { AsyncPipe } from '@angular/common';
 import { Store } from '@ngrx/store';
-import { selectCounterLoading } from '../../reducers/counter-reducer/selectors.js';
-import { increment } from '../../actions/counter-actions.js';
+import { selectCounterLoading } from '../../reducers/counter-reducer/selectors.mjs';
+import { increment } from '../../actions/counter-actions.mjs';
 let CounterComponent = class CounterComponent {
     constructor() {
         this.startCount = 0;
