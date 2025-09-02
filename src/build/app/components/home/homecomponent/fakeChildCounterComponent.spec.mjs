@@ -2,7 +2,7 @@ import { __decorate } from "tslib";
 import { Component, EventEmitter, Input, NO_ERRORS_SCHEMA, Output } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { Homecomponent } from './homecomponent.js';
+import { Homecomponent } from './homecomponent.mjs';
 let FakeCounterComponent = class FakeCounterComponent {
     constructor() {
         this.startCount = 0;
