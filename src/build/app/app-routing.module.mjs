@@ -1,13 +1,13 @@
 import { __decorate } from "tslib";
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CounterComponent } from './components/counter/counter-component.js';
-import { Counter1 } from './components/counter/countercomponent/counter1/counter1.js';
-import { Counter2 } from './components/counter/countercomponent/counter2/counter2.js';
-import { Homecomponent } from './components/home/homecomponent/homecomponent.js';
-import { PageNotFound } from './components/page-not-found/page-not-found.js';
-import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3.js';
-import { ServiceCounterComponent } from './components/service-counter/service-counter.js';
+import { CounterComponent } from './components/counter/counter-component.mjs';
+import { Counter1 } from './components/counter/countercomponent/counter1/counter1.mjs';
+import { Counter2 } from './components/counter/countercomponent/counter2/counter2.mjs';
+import { Homecomponent } from './components/home/homecomponent/homecomponent.mjs';
+import { PageNotFound } from './components/page-not-found/page-not-found.mjs';
+import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3.mjs';
+import { ServiceCounterComponent } from './components/service-counter/service-counter.mjs';
 export const routes = [
     { path: 'home', component: Homecomponent }, // page d'accueil
     { path: '', pathMatch: 'full', redirectTo: '/home' }, // redirection vers la page d'accueil
