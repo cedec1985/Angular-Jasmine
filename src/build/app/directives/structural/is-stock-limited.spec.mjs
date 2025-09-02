@@ -2,7 +2,7 @@ import { __decorate } from "tslib";
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { IsStockLimited } from './is-stock-limited.js';
+import { IsStockLimited } from './is-stock-limited.mjs';
 // Mock de l'enum ShopStructure
 export var ShopStructure;
 (function (ShopStructure) {
