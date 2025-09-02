@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { PageNotFound } from './page-not-found.js';
+import { PageNotFound } from './page-not-found.mjs';
 describe('PageNotFound', () => {
     let component;
     let fixture;
