@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { CounterApiService } from './counter-api-service.js';
+import { CounterApiService } from './counter-api-service.mjs';
 import { HttpClientTestingModule, HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 describe('CounterApiService', () => {
     let service;
