@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { ServiceCounterComponent } from './service-counter.js';
-import { CounterService } from '../../services/counter-service.js';
+import { ServiceCounterComponent } from './service-counter.mjs';
+import { CounterService } from '../../services/counter-service.mjs';
 describe('ServiceCounterComponent', () => {
     let component;
     let fixture;
