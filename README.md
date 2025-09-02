@@ -9,7 +9,7 @@ Run 'npm init', this will create the files for the packages
 ## Install Jasmine and dependencies 
 
 Run 'npm i --save-dev typescript jasmine @types/jasmine', 
-notice : --save-dev is for a local repository access and -g is for a general repository access
+notice : --save-dev is for a local repository access and -g is for a general repository access.
 Make sure to install all the dependencies for the framework to be functionnal
 
 ## Initialize project with Typescript 
