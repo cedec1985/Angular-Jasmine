@@ -11,6 +11,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideStore(),
     provideEffects(),
+    provideClientHydration(),
+    provideHttpClient()
    // provideState({state :initialState})
   ]
 };
