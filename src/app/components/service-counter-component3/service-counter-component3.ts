@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-service-counter-component3',
-  imports: [],
+  imports: [CommonModule,RouterOutlet,RouterLink,HttpClientModule],
   templateUrl: './service-counter-component3.html',
   styleUrl: './service-counter-component3.css'
 })
