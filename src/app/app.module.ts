@@ -68,7 +68,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
    EffectsModule.forRoot([CounterEffects]),
   ],
   exports:[ ],
-  providers: [],
+  providers: [CounterService,CounterApiService,TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
