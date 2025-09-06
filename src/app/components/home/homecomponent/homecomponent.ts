@@ -4,7 +4,7 @@ import { ServiceCounterComponent } from "../../service-counter/service-counter";
 
 @Component({
   selector: 'app-homecomponent',
-  imports: [CounterComponent, ServiceCounterComponent],
+  imports: [CounterComponent, ServiceCounterComponent, CommonModule, FormComponent],
   templateUrl: './homecomponent.html',
   styleUrl: './homecomponent.css'
 })
