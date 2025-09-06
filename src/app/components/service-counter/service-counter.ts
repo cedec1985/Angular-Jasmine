@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-service-counter',
   imports: [],
+  providers :['CounterService'],
   templateUrl: './service-counter.html',
   styleUrl: './service-counter.css'
 })
