@@ -8,17 +8,17 @@ export default function (config) {
     frameworks: ['jasmine'],
     // list of files / patterns to load in the browser
     files: [
-      "src/build/**/*.spec.js","src/build/**/*.js",
-      "src/build/**/**/*.js","src/build/**/**/*.spec.js",
-      "src/build/*.js","src/build/*.spec.js"
+    "build/app/*.spec.js","build/app/*.js","build/app/**/*.spec.js","build/app/**/*.js","build/*.spec.js","build/*.js","build/app/**/**/*.spec.js","build/app/**/**/*.js"  ,   // spec files
     ],
+
     Plugins: [
-     ('karma-jasmine'),
-     ('karma-chrome-launcher'),
-     ('@angular-devkit/build-angular/plugins/karma'),
-     ('karma-coverage'),
-     ('karma-webpack'),
-     ('karma-spec-reporter'),
+    ('karma-jasmine'),
+    ('karma-chrome-launcher'),
+    ('karma-jasmine-html-reporter'),
+    ('karma-spec-reporter'),
+    ('@angular-devkit/build-angular/plugins/karma'),
+    ('karma-coverage'),
+    ('karma-webpack')
     ],
 
     // list of files / patterns to exclude
@@ -27,15 +27,21 @@ export default function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
 
-  //  preprocessors: {"**/*.ts": "karma-typescript"
+  // preprocessors: {'**/*.ts': ['karma-typescript']},
    client : {
     jasmine :{
       failSpecWithNoExpectations: false
     },
-    clearContext: false
+    clearContext: false,
+    random: false
    },
    jasmineHtmlReporter:{
-   suppressAll : true
+   suppressAll : false
+  },
+   jasminespecReporter:{
+    maxLogLines: 5,         // limit number of lines logged per test
+    suppressErrorSummary: false,  // do not print error summary
+    suppressFailed: false,    // do not print information about failed tests
    },
 
     // test results reporter to use
@@ -61,6 +67,5 @@ export default function (config) {
     // Concurrency level
     // how many browser instances should be started simultaneously
     concurrency: Infinity
-})}
-
-
+}
+   )}

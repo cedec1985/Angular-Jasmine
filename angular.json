@@ -4,11 +4,11 @@
   "newProjectRoot": "projects",
   "projects": {
     "testdemo": {
-      "projectType": "application", 
+      "projectType": "application",
       "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        },
+        "@schematics/angular:component": {
+          "style": "css"
+        }},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -21,12 +21,17 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-             "outputPath": "src/dist",
+             "outputPath": "dist",
              "index": "src/index.html",
-            "main": "src/main.ts",
+             "main": "main.ts",
             "styles": [
               "src/styles.css"
+            ],
+            "assets": [
+              "src/favicon.ico",
+              "src/app/assets"
             ]
+
           },
           "configurations": {
             "production": {
@@ -73,9 +78,9 @@
             "polyfills": [
               "zone.js",
               "zone.js/testing",
-              "polyfills.js"
+              "polyfills.ts"
             ],
-            "main": "src/test.ts",
+            "main": "test.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.mjs",
             "styles": [
