@@ -2,11 +2,12 @@ import { Observable } from 'rxjs';
 import { CounterState } from '../../reducers/counter-reducer/counter-reducer';
 import { CounterService } from '../../services/counter-service';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-service-counter',
-  imports: [],
-  providers :['CounterService'],
+  imports: [CommonModule],
+  providers :[CounterService],
   templateUrl: './service-counter.html',
   styleUrl: './service-counter.css'
 })
