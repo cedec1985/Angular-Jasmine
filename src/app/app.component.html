@@ -1,13 +1,13 @@
 <app-counter-component></app-counter-component> <!--selecteur pour le routing-->
 <app-service-counter></app-service-counter>     <!--selecteur pour le routing-->
-<app-homecomponent></app-homecomponent>
-<app-form></app-form>
+<app-homecomponent></app-homecomponent>         <!--selecteur pour le routing-->
+<section aria-label ="Formulaire">
+  <app-form></app-form>
+</section>
 <h1>
   {{title()}}
 </h1>
-<nav>
-  <a routerLink="todos"></a>
-</nav>
+
 <router-outlet></router-outlet>
 
 
@@ -92,4 +92,3 @@
     <li><a routerLink="/service-counter/:servcount3Id">aller à la page : /service-counter/...via variable servcount3Id du composant...</a></li>
   </ul>
 </nav>
-

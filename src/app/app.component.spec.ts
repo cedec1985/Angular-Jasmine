@@ -6,7 +6,7 @@ import { By } from '@angular/platform-browser';
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
-  let debugElement : DebugElement;
+
 beforeEach(async() => {
     TestBed.configureTestingModule({
       declarations: [

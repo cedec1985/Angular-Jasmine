@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { CounterComponent } from './components/counter/counter-component';
 import { Counter1 } from './components/counter/countercomponent/counter1/counter1';
 import { Counter2 } from './components/counter/countercomponent/counter2/counter2';
@@ -28,7 +28,4 @@ export const routes: Routes = [
 })
 
 export class AppRoutingModule {
-  static routes(routes: any): import("@angular/core").Provider | import("@angular/core").EnvironmentProviders {
-    throw new Error('Method not implemented.');
-  }
 }

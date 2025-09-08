@@ -1,16 +1,24 @@
+import { NgrxCounter } from './components/ngrx/ngrxCounter';
+import { PageNotFound } from './components/page-not-found/page-not-found';
+import { ServiceCounterComponent3 } from './components/service-counter-component3/service-counter-component3';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule} from '@angular/common/http';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { CounterComponent } from './components/counter/counter-component';
-import { IsStockLimited } from './directives/structural/is-stock-limited';
-import { StockFilterPipe, Product } from './pipes/stock-filter-pipe';
+import { Homecomponent } from './components/home/homecomponent/homecomponent';
 import { ServiceCounterComponent } from "./components/service-counter/service-counter";
+import { IsStockLimited } from './directives/structural/is-stock-limited';
+import { Product, StockFilterPipe } from './pipes/stock-filter-pipe';
+import { CounterService } from './services/counter-service';
+import { FormComponent } from './components/form/form';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, IsStockLimited, ServiceCounterComponent,Homecomponent],
-  providers :  [CounterService,CounterApiService],
+  standalone :true,
+  imports: [RouterOutlet, CommonModule, StockFilterPipe, CounterComponent, IsStockLimited, ServiceCounterComponent,Homecomponent,RouterLink,FormComponent,NgrxCounter],
+  providers :  [CounterService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
