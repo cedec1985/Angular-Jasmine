@@ -5,7 +5,7 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule,Homecomponent],
+  imports: [FormsModule,ReactiveFormsModule, CommonModule],
   template:  `
     <form #formRef="ngForm" (ngSubmit)="onSubmit()">
       <label for="name">Nom :</label>
