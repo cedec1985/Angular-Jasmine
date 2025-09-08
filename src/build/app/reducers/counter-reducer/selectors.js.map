@@ -1,1 +1,0 @@
-{"version":3,"file":"selectors.js","sourceRoot":"","sources":["../../../../app/reducers/counter-reducer/selectors.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,qBAAqB,EAAE,cAAc,EAAE,MAAM,aAAa,CAAC;AAIpE,MAAM,CAAC,MAAM,WAAW,GAAG,qBAAqB,CAAW,SAAS,CAAC,CAAC;AAEtE,MAAM,CAAC,MAAM,oBAAoB,GAAG,cAAc,CAChD,WAAW,EACX,CAAC,KAAc,EAAE,EAAE,CAAC,KAAK,CAAC,OAAO,CAClC,CAAC"}
