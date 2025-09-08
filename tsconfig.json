@@ -6,6 +6,7 @@
     "strict": true,
     "baseUrl": "./",
     "noImplicitOverride": true,
+    "moduleDetection": "auto",
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -15,28 +16,30 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "es2020",
-    "target": "ES2022",
-    "lib": ["es2018", "dom"],
+    "module": "es2015",
+    "target": "ES2015",
+    "lib": ["es2015", "dom"],
     "moduleResolution": "bundler",
-/ //"ignoreDeprecations": "6.0",
+  //  "ignoreDeprecations": "6.0",
     "sourceMap": true,
     "esModuleInterop": true,
-    "outDir": "src/build",
     "allowJs": true,
-    "checkJs": true,
-    "useDefineForClassFields": false,
-      "paths": {
+     "paths": {
       "zone.js/node": ["node_modules/zone.js/dist/zone-node.js"]
     },
-    "typeRoots": ["./types", "./node_modules/@types"]
+    "typeRoots": ["node_modules/@types"],
+    "outDir": "build"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "typeCheckHostBindings": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "disableTypeScriptVersionCheck": true
   },
+  "files": ["main.ts"],
+  "include": ["src/**/*.d.ts"],
+
 }
 
