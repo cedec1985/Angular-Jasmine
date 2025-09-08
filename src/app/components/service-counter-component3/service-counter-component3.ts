@@ -1,9 +1,11 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-service-counter-component3',
-  imports: [CommonModule,RouterOutlet,RouterLink,HttpClientModule],
+  imports: [CommonModule,HttpClientModule],
   templateUrl: './service-counter-component3.html',
   styleUrl: './service-counter-component3.css'
 })
