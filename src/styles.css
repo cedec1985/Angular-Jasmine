@@ -10,3 +10,28 @@
   color: black;
   border: 1px solid black;
 }
+
+button,
+input[type='text'],
+input[type='number'],
+input[type='email'] {
+  border: 0;
+  padding: 0 0.5rem;
+  font-size: inherit;
+  line-height: 1;
+  height: 2rem;
+}
+
+button {
+  min-width: 2rem;
+  font-size: 1.1rem;
+}
+
+button + button {
+  margin-left: 3px;
+}
+
+button {
+  background-color: #1976d2;
+  color: #fff;
+}
