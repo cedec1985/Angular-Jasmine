@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { CounterApiService } from 'src/app/services/services/counter-api-service';
 
 @Component({
   selector: 'app-form',
@@ -11,6 +12,7 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
       <label for="name">Nom :</label>
       <input
         type="text"
+        title="nom"
         [(ngModel)]="nom"
         [ngModelOptions]="{ updateOn: 'blur' }"
         name="nom"
@@ -26,6 +28,7 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
       <label for="email">Email :</label>
       <input
         type="email"
+        title="email"
         [(ngModel)]="email"
         [ngModelOptions]="{ updateOn: 'blur' }"
         name="email"
@@ -44,6 +47,7 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
         [(ngModel)]="avis"
         [ngModelOptions]="{ updateOn: 'blur' }"
         name="avis"
+        title="avis"
         id="avis"
         required
         #avisRef="ngModel"
@@ -63,7 +67,7 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
       {{ errorMessage }}
     </div>
   `,
-  styles: [],
+  styleUrl: './form.css',
 })
 export class FormComponent {
   nom: string = '';
@@ -73,6 +77,8 @@ export class FormComponent {
   submitted = false; // Indique si le formulaire a été soumis
   successMessage = '';
   errorMessage = '';
+  Message ='';
+  constructor(private counterapiservice: CounterApiService){}
 
   @ViewChild('formRef') formRef!: NgForm;
   onSubmit() {
@@ -80,22 +86,33 @@ export class FormComponent {
     this.submitted = true; // Active les messages de retour
     this.successMessage = '';
     this.errorMessage = '';
+    this.Message='';
 
     // Vérifie si le formulaire est invalide
     if (this.formRef.invalid) {
       // Le formulaire contient des erreurs de validation
       this.errorMessage = 'Le formulaire contient des erreurs. Veuillez les corriger.';
-      // Les erreurs sont déjà affichées dans le template via les directives *ngIf
+      // Les erreurs sont déjà affichées dans le template via les directives NgIf
       return;
   }
     console.log(`Nom: ${this.nom}`);
     console.log(`Email: ${this.email}`);
     console.log(`Avis: ${this.avis}`);
-    //Ici on peut envoyer les données à un service ou à une API
 
     this.successMessage = 'Formulaire soumis avec succès !';
+ //Ici on peut envoyer les données à un service ou à une API
+    this.counterapiservice.sendFormData({ nom: this.nom, email: this.email, avis: this.avis }).subscribe({
+  next: () => {
+    this.Message = 'Données du formulaire envoyées au serveur avec succès !';
+    this.formRef.resetForm(); // Réinitialisation ici après succès
+  },
+  error: () => {
+    this.Message = 'Une erreur est survenue lors de l’envoi du formulaire au serveur.';
+  }
+});
+    }
+  public resetForm():void{
+   this.submitted=false;
+  }
+    }
 
-    // Réinitialiser le formulaire
-    this.formRef.resetForm();
-    }
-    }
