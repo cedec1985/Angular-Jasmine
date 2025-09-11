@@ -9,4 +9,8 @@ export class CounterApiService {
   public saveCounter(counter: number): Observable<{}> {
     return this.http.get(`/assets/counter.json?counter=${counter}`);
   }
+  apiUrl = "http://www.localhost:5500";
+  public sendFormData (data:{}):Observable<any>{
+    return this.http.post(this.apiUrl,data)
+  }
 }
