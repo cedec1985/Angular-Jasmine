@@ -14,8 +14,8 @@
     "ng": "ng",
     "start": "ng serve",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "build": "ng build",
+    "test": "jasmine",
+    "build": "npm run build",
     "e2e": "ng e2e"
   },
   "homepage": "https://github.com/cedec1985/Typescript-Jasmine",
@@ -91,3 +91,4 @@
     "typescript": "^5.9.2"
   }
 }
+
